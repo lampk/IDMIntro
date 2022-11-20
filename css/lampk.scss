@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:monospace&display=swap);
+
+/*-- scss:defaults --*/
+
+// Override theme settings (see ../template/settings.scss)
+
+// fonts
+$font-family-sans-serif: "Yanone Kaffeesatz";
+$presentation-h1-font-size: 2em;
+
+// colors
+$body-bg: #E5E8EC !default;
+$body-color: #002147 !default;
+$link-color: #51483d !default;
+$selection-bg: #26351c !default;
+
+// headings
+$presentation-heading-font: "Yanone Kaffeesatz", sans-serif;
+$presentation-heading-color: #002147;
+
+/*-- scss:rules --*/
+
+.reveal a {
+  line-height: 1.3em;
+}
+
+.reveal .slide-number {
+  color: #002147;
+}
+
+.reveal h1 {
+  font-size: 50%;
+  text-align: left;
+}
+
+.reveal .footer {
+  font-size: 0.4em !important;
+  text-align: center !important;
+  font-style: italic;
+  color: #002147;
+}
+
+.reveal .ered {color: #E04556}
+.reveal .egrey {color: #7F7F7F}
+
+.reveal .large { font-size: 150% }
+.reveal .small { font-size: 50% }
+
+/*-- title slide --*/
+#title-slide .title, #title-slide .subtitle {
+  //opacity: 0.80;
+  //margin-top: 0px;
+  //margin-bottom: 0px;
+  //font-weight: 700;
+  font-family: "Yanone Kaffeesatz";
+  //text-shadow: 2px 2px 2px #b22222;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+#title-slide .institute, #title-slide .author, #title-slide .date {
+  //opacity: 0.50;
+  //margin-top: 0px;
+  //margin-bottom: 0px;
+  //font-weight: 400;
+  //font-style: italic;
+}
+
+#title-slide .title {
+  font-size: 1.5em;
+}
+
+#title-slide .subtitle {
+  font-size: 1.3em;
+}
+
+#title-slide .author,
+#title-slide .date,
+#title-slide .institute {
+  font-size: 1em;
+}
+
+#title-slide .title,
+#title-slide .subtitle,
+#title-slide p,
+#title-slide a,
+.slide-menu-button,
+#title-slide .footer,
+#title-slide .footer a,
+#title-slide .slide-number,
+#title-slide .reveal.has-logo .slide-number {
+  color: #ffffff !important;
+  text-align: left;
+}

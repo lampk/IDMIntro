@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "Slide_Intro.html#savitz-da-wellenius-ga.-2022-mar-1kwac037.",
+    "href": "Slide_Intro.html#savitz-da-wellenius-ga.-2022-mar-1kwac037.",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Savitz DA, Wellenius GA. 2022 Mar 1;kwac037.",
+    "text": "Savitz DA, Wellenius GA. 2022 Mar 1;kwac037."
+  },
+  {
+    "objectID": "Slide_Intro.html#vấn-đề-của-nghiên-cứu-cắt-ngang",
+    "href": "Slide_Intro.html#vấn-đề-của-nghiên-cứu-cắt-ngang",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Vấn đề của nghiên cứu cắt ngang",
+    "text": "Vấn đề của nghiên cứu cắt ngang\n\nContemporaneous Exposure May Not Be Etiologically Relevant\nDisease Prevalence May Be a Poor Proxy for Disease Incidence\nThe Association between Exposure and Disease May Be Susceptible to Reverse Causality"
+  },
+  {
+    "objectID": "Slide_Intro.html#đã",
+    "href": "Slide_Intro.html#đã",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Đã",
+    "text": "Đã"
+  },
+  {
+    "objectID": "Note.html",
+    "href": "Note.html",
+    "title": "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm",
+    "section": "",
+    "text": "Lưu ý !!!"
+  },
+  {
+    "objectID": "Note.html#nội-dung",
+    "href": "Note.html#nội-dung",
+    "title": "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm",
+    "section": "2 Nội dung",
+    "text": "2 Nội dung\n\nInfectious diseases and mathematical models.\nIntroduction to designing infectious disease models.\nThe herd effect in infectious disease epidemiology\nÝ nghĩa, ứng dụng và cách tính Ro, Rt. Dự đoán khi nào là đỉnh dịch, dịch sẽ kéo dài bao lâu, số người cảm nhiễm/tử vong. Sử dụng vẽ bằng excel."
+  },
+  {
+    "objectID": "Note.html#vì-sao-có-workshop-này",
+    "href": "Note.html#vì-sao-có-workshop-này",
+    "title": "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm",
+    "section": "3 Vì sao có workshop này?",
+    "text": "3 Vì sao có workshop này?\nKhoá học “Introduction to mathematical models of the Epidemiology & Control of Infectious Diseases”\n\nSingapore, 13-16/10/2022\nMRC Centre for Global Infectious Disease Analysis (Imperial College London) & Lee\nKong Chian School of Medicine (Nanyang Technical University)\nGS Azra Ghani và cộng sự"
+  },
+  {
+    "objectID": "Note.html#bệnh-truyền-nhiễm-và-mô-hình-toán-học",
+    "href": "Note.html#bệnh-truyền-nhiễm-và-mô-hình-toán-học",
+    "title": "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm",
+    "section": "4 Bệnh truyền nhiễm và mô hình toán học",
+    "text": "4 Bệnh truyền nhiễm và mô hình toán học\n\n4.1 Bệnh truyền nhiễm\nBệnh truyền nhiễm gây ra do sự lây truyền các tác nhân gây bệnh trong dân số cảm nhiễm. Các tác nhân gây bệnh truyền nhiễm rất đa dạng (virus, vi khuẩn, ký sinh trùng), và có nhiều cơ chế lây truyền khác nhau:\n\nKhí dung (aerosol)/giọt bắn (droplet) [sởi, quai bị, cúm, ho gà, …]\nPhân-miệng (faecal-oral)/môi trường [enterovirus, rotavirus, thương hàn, tả, …]\nQuan hệ tình dục [HIV, lậu, giang mai, chlamydia, …]\nVật trung gian (vectors/intermediate hosts) [dengue, sốt rét, onchocerciasis, schistosomiasis, …]\n\nTuy nhiên, kết quả cuối cùng rất giống nhau:\n\nTừ một/một vài người nhiễm ban đầu\nNgười/những người này sẽ lây nhiễm cho những người khác\nTạo thành chuỗi lây nhiễm, gia tăng số lượng người nhiễm bệnh, tạo ra một vụ dịch (epidemic)\n\nKhi một vụ dịch xảy ra, chúng ta sẽ muốn biết\n\nLiệu vụ dịch này có bùng phát thêm nữa hay không?\nVụ dịch này sẽ bùng phát nhanh như thế nào?\n\nĐể trả lời được câu hỏi này, chúng ta cần phải biết\n\nSố lượng ca nhiễm thứ phát từ một ca nhiễm nguyên phát ban đầu\nTốc độ xuất hiện các ca nhiễm thứ phát\n\n\n\n4.2 Hệ số lây nhiễm \\(R\\)\nHệ số lây nhiễm (Reproductive number, \\(R\\)) là số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó.\nHệ số lây nhiễm cơ bản (Reproductive number, \\(R_0\\)) là số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó, trong dân số hoàn toàn cảm nhiễm với bệnh (tại thời điểm dịch mới xuất hiện).\n\\(R_0\\) quan trọng vì:\n\n\\(R_0\\) giúp xác định:\n\nTốc độ lây truyền của bệnh trong cộng đồng\nNgưỡng cân bằng của vụ dịch\n“the age at which hosts acquire infection”\nMức độ can thiệp cần thiết để kiểm soát vụ dịch\n\nChúng ta có thể dùng \\(R_0\\) để\n\nĐánh giá liệu vụ dịch có đang được kiểm soát hay không\nHiểu về mức độ can thiệp cần thiết để kiểm soát hoàn toàn vụ dịch"
+  },
+  {
+    "objectID": "Note.html#giới-thiệu-về-thiết-kế-mô-hình-bệnh-truyền-nhiễm",
+    "href": "Note.html#giới-thiệu-về-thiết-kế-mô-hình-bệnh-truyền-nhiễm",
+    "title": "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm",
+    "section": "5 Giới thiệu về thiết kế mô hình bệnh truyền nhiễm",
+    "text": "5 Giới thiệu về thiết kế mô hình bệnh truyền nhiễm"
+  },
+  {
+    "objectID": "Note.html#tác-dụng-quần-thể-trong-dịch-tễ-học-bệnh-truyền-nhiễm",
+    "href": "Note.html#tác-dụng-quần-thể-trong-dịch-tễ-học-bệnh-truyền-nhiễm",
+    "title": "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm",
+    "section": "6 Tác dụng quần thể trong dịch tễ học bệnh truyền nhiễm",
+    "text": "6 Tác dụng quần thể trong dịch tễ học bệnh truyền nhiễm"
+  },
+  {
+    "objectID": "Note.html#hệ-số-lây-nhiễm-r-1",
+    "href": "Note.html#hệ-số-lây-nhiễm-r-1",
+    "title": "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm",
+    "section": "7 Hệ số lây nhiễm (R)",
+    "text": "7 Hệ số lây nhiễm (R)\n\n7.1 Ý nghĩa\n\n\n7.2 Ứng dụng\n\n\n7.3 Cách tính\n\n\n7.4 Đánh giá diễn tiến dịch\n\n\n7.5 Ứng dụng trên Excel\n\n\n7.6 \n\n\n7.7 Thiết kế công cụ thu thập dữ liệu\n\n\n7.8 Thu thập dữ liệu\n\nLý thuyếtVí dụBài tập\n\n\n\n\n\nGhi chú\n\n\nTRUE\n\n\n\n\n\n\n\nBài tập 1:\n\n\n\n\n A B C D\n\n\n\nXem giải thích\n\nGiải thích"
+  },
+  {
+    "objectID": "Note.html#quản-lý-dữ-liệu-nghiên-cứu",
+    "href": "Note.html#quản-lý-dữ-liệu-nghiên-cứu",
+    "title": "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm",
+    "section": "8 Quản lý dữ liệu nghiên cứu",
+    "text": "8 Quản lý dữ liệu nghiên cứu\n\nLý thuyếtVí dụBài tập\n\n\n\n\n\nGhi chú\n\n\nTRUE\n\n\n\n\n\n\n\n\n\n\nGhi chú\n\n\nTRUE"
+  },
+  {
+    "objectID": "Note.html#tóm-tắt-1",
+    "href": "Note.html#tóm-tắt-1",
+    "title": "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm",
+    "section": "9 Tóm tắt",
+    "text": "9 Tóm tắt"
+  },
+  {
+    "objectID": "Note.html#tài-liệu-tham-khảo",
+    "href": "Note.html#tài-liệu-tham-khảo",
+    "title": "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm",
+    "section": "10 Tài liệu tham khảo",
+    "text": "10 Tài liệu tham khảo"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  }
+]

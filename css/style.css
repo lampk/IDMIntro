@@ -1,0 +1,41 @@
+p.caption {
+  color: #777;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+.infobox {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  border: 2px solid orange;
+  border-radius: 10px;
+  background: #f5f5f5 5px center/3em no-repeat;
+}
+
+.caution {
+  background-image: url("../figures/notice_icon.png");
+}
+
+h1,h2,h3,h4,h5 {
+  color: #002147;
+  font-weight: bold;
+  font-size:20px;
+}
+
+caption,figcaption {
+  color: #002147;
+  font-style: italic;
+}
+
+body {
+   font-size:16px;
+ }

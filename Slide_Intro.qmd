@@ -1,0 +1,44 @@
+---
+title: "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm"
+subtitle: "ABC"
+author: "ABC"
+date: "17/11/2022"
+institute: "ABC"
+format: 
+  revealjs:
+    theme: [default, css/lampk.scss]
+    slide-number: c/t
+    chalkboard: true
+    self-contained: false
+    preview-links: auto
+    scrollable: true
+    zoom: true
+    menu: false
+title-slide-attributes:
+  data-background-color: "#002147"
+  data-color: "#ffffff"
+  data-link-color: "#ffffff"
+  data-visibility: "uncounted"
+  data-text-align: "left"
+editor: source
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(gt)
+library(gtExtras)
+```
+
+## Savitz DA, Wellenius GA. 2022 Mar 1;kwac037. 
+
+## Vấn đề của nghiên cứu cắt ngang
+
+* Contemporaneous Exposure May Not Be Etiologically Relevant
+
+* Disease Prevalence May Be a Poor Proxy for Disease Incidence
+
+* The Association between Exposure and Disease May Be Susceptible to Reverse Causality
+
+## Đã 
+
+

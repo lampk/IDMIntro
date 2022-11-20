@@ -1,0 +1,218 @@
+---
+title: "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm"
+author: "Phùng Khánh Lâm"
+date: "`r Sys.Date()`"
+language: vn.yml
+format: 
+  html:
+    css: [css/style.css, css/webex.css]
+    toc: true
+    toc-float: true
+    toc-depth: 2
+    number-sections: true
+    number-depth: 3
+    include-after-body: js/webex.js
+    self-contained: true
+bibliography: references.bib
+csl: the-new-england-journal-of-medicine.csl
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(shiny)
+library(tidyverse)
+library(webexercises)
+library(gt)
+library(glue)
+
+knitr::opts_chunk$set(
+  echo = FALSE,
+  results = "hold",
+  out.width = '100%',
+  fig.width = 8,
+  fig.height = 5,
+  fig.align = 'center',
+  fig.cap = TRUE
+)
+```
+
+## Tóm tắt
+
+::: {.infobox .caution data-latex="{caution}"}
+Lưu ý !!!
+:::
+
+## Nội dung
+
+-   Infectious diseases and mathematical models.
+
+-   Introduction to designing infectious disease models.
+
+-   The herd effect in infectious disease epidemiology
+
+-   Ý nghĩa, ứng dụng và cách tính Ro, Rt. Dự đoán khi nào là đỉnh dịch, dịch sẽ kéo dài bao lâu, số người cảm nhiễm/tử vong. Sử dụng vẽ bằng excel.
+
+## Vì sao có workshop này?
+
+Khoá học "Introduction to mathematical models of the Epidemiology & Control of Infectious Diseases"
+
+-   Singapore, 13-16/10/2022
+
+-   MRC Centre for Global Infectious Disease Analysis (Imperial College London) & Lee
+
+    Kong Chian School of Medicine (Nanyang Technical University)
+
+-   GS Azra Ghani và cộng sự
+
+## Bệnh truyền nhiễm và mô hình toán học
+
+### Bệnh truyền nhiễm
+
+Bệnh truyền nhiễm gây ra do sự lây truyền các tác nhân gây bệnh trong dân số cảm nhiễm. Các tác nhân gây bệnh truyền nhiễm rất đa dạng (virus, vi khuẩn, ký sinh trùng), và có nhiều cơ chế lây truyền khác nhau:
+
+-   Khí dung (aerosol)/giọt bắn (droplet) \[sởi, quai bị, cúm, ho gà, ...\]
+
+-   Phân-miệng (faecal-oral)/môi trường \[enterovirus, rotavirus, thương hàn, tả, ...\]
+
+-   Quan hệ tình dục \[HIV, lậu, giang mai, chlamydia, ...\]
+
+-   Vật trung gian (vectors/intermediate hosts) \[dengue, sốt rét, onchocerciasis, schistosomiasis, ...\]
+
+Tuy nhiên, kết quả cuối cùng rất giống nhau:
+
+-   Từ một/một vài người nhiễm ban đầu
+
+-   Người/những người này sẽ lây nhiễm cho những người khác
+
+-   Tạo thành chuỗi lây nhiễm, gia tăng số lượng người nhiễm bệnh, tạo ra một vụ dịch (epidemic)
+
+Khi một vụ dịch xảy ra, chúng ta sẽ muốn biết
+
+-   Liệu vụ dịch này có bùng phát thêm nữa hay không?
+
+-   Vụ dịch này sẽ bùng phát nhanh như thế nào?
+
+Để trả lời được câu hỏi này, chúng ta cần phải biết
+
+-   Số lượng ca nhiễm thứ phát từ một ca nhiễm nguyên phát ban đầu
+
+-   Tốc độ xuất hiện các ca nhiễm thứ phát
+
+### Hệ số lây nhiễm $R$
+
+Hệ số lây nhiễm (Reproductive number, $R$) là số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó.
+
+Hệ số lây nhiễm cơ bản (Reproductive number, $R_0$) là số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó, **trong dân số hoàn toàn cảm nhiễm với bệnh** (tại thời điểm dịch mới xuất hiện).
+
+$R_0$ quan trọng vì:
+
+-   $R_0$ giúp xác định:
+
+    -   Tốc độ lây truyền của bệnh trong cộng đồng
+
+    -   Ngưỡng cân bằng của vụ dịch
+
+    -   "the age at which hosts acquire infection"
+
+    -   Mức độ can thiệp cần thiết để kiểm soát vụ dịch
+
+-   Chúng ta có thể dùng $R_0$ để
+
+    -   Đánh giá liệu vụ dịch có đang được kiểm soát hay không
+
+    -   Hiểu về mức độ can thiệp cần thiết để kiểm soát hoàn toàn vụ dịch
+
+## Giới thiệu về thiết kế mô hình bệnh truyền nhiễm
+
+## Tác dụng quần thể trong dịch tễ học bệnh truyền nhiễm
+
+## Hệ số lây nhiễm (R)
+
+### Ý nghĩa
+
+### Ứng dụng
+
+### Cách tính
+
+### Đánh giá diễn tiến dịch
+
+### Ứng dụng trên Excel
+
+### 
+
+### Thiết kế công cụ thu thập dữ liệu
+
+### Thu thập dữ liệu
+
+::: panel-tabset
+### Lý thuyết
+
+```{r}
+shiny::textAreaInput(
+  value = "",
+  inputId = "note",
+  label = "Ghi chú",
+  rows = 5
+)
+```
+
+### Ví dụ
+
+### Bài tập
+
+**Bài tập 1:**
+
+```{r, echo = FALSE}
+opts <- c("A",
+          "B",
+          "C",
+          answer = "D")
+```
+
+`r longmcq(opts)`
+
+`r hide("Xem giải thích")`
+
+Giải thích
+
+`r unhide()`
+:::
+
+## Quản lý dữ liệu nghiên cứu
+
+::: panel-tabset
+### Lý thuyết
+
+```{r}
+shiny::textAreaInput(
+  inputId = "note",
+  label = "Ghi chú",
+  rows = 5
+)
+```
+
+### Ví dụ
+
+### Bài tập
+
+```{r}
+shiny::textAreaInput(
+  inputId = "note",
+  label = "Ghi chú",
+  rows = 5
+)
+```
+:::
+
+## Tóm tắt
+
+## Tài liệu tham khảo
+
+::: {#refs}
+:::
+
+<p><br><br></p>
+
+<!-- Print button -->
+
+<p><input type="button" value="In trang này" onClick="window.print()"></p>
