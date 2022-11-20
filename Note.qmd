@@ -140,10 +140,6 @@ $R_0$ quan trọng vì:
 
 ### 
 
-### Thiết kế công cụ thu thập dữ liệu
-
-### Thu thập dữ liệu
-
 ::: panel-tabset
 ### Lý thuyết
 
