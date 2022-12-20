@@ -124,6 +124,218 @@ $R_0$ quan trọng vì:
 
 ## Giới thiệu về thiết kế mô hình bệnh truyền nhiễm
 
+### Mô hình là gì?
+
+Mô hình là sự đơn giản hoá một hệ thống phức tạp, để phù hợp cho việc phân tích
+
+    -   Mô hình là công cụ cho sự suy nghĩ
+
+"Mọi mô hình đều sai, nhưng vài cái cũng có ích" -\> câu này cũng áp dụng cho các mô hình thống kê
+
+"Mô tả một hiện tượng thực tế phức tạp, khó hiểu thành một mô hình phức tạp, khó hiểu là chẳng có gì tiến triển" J. Maynard Smith
+
+Cần nắm bắt được những hành vi cốt lõi và kết hợp các thuộc tính thiết yếu
+
+Tất cả mọi người đều dùng mô hình 1 cách vô thức: việc mô tả mô hình bằng toán học làm rõ hơn quá trình tư duy và giúp người khác sử dụng / đánh giá được
+
+Mô hình toán học cho phép phân tích chính xác, chặt chẽ và dự báo định lượng
+
+### Mô hình bệnh truyền nhiễm
+
+Quan tâm đến tác động của các quá trình ở cấp độ dân số xảy ra ở cấp độ cá nhân
+
+Nguy cơ một người chưa nhiễm bệnh sẽ bị nhiễm bệnh (hay **"lực lây nhiễm"**) phụ thuộc vào:
+
+-   Tỉ lệ người lây nhiễm trong dân số
+
+-   Tần suất (rate) tiếp xúc giữa các cá thể trong dân số
+
+-   Khả năng lây truyền của những người đã nhiễm bệnh
+
+Vậy sự lây truyền bệnh trong dân số là một quá trình **động** mà nguy cơ nhiễm bệnh có thể thay đổi theo thời gian
+
+Số ca và tỉ lệ mắc phụ thuộc lẫn nhau
+
+(ko hiểu câu: non-linear relationship with time-varying positive and negative feedback)
+
+Cần dùng mô hình động để dự báo và phân tích các tình huống giả định
+
+### Những lưu ý khi xây dựng mô hình
+
+-   Diễn tiến tự nhiên của bệnh
+
+-   Thời gian ủ bệnh, thời gian tiềm ẩn, khả năng đề kháng
+
+-   Sự lây nhiễm
+
+-   Trực tiếp hay gián tiếp? Điều gì ảnh hưởng tần suất tiếp xúc?
+
+-   Đặc điểm dân số xã hội, cấu trúc dân số
+
+-   Phân tầng theo tuổi, giới, vị trí địa lý
+
+-   Can thiệp
+
+-   Nhắm đến thành phần nào trong quá trình lây nhiễm bệnh?
+
+-\> Không có mô hình nào là "đúng nhất"
+
+### Xây dựng mô hình khoang tàu
+
+#### Mô hình diễn tiến tự nhiên của bệnh
+
+Chia dân số thành nhiều khoang tàu (phân nhóm)
+
+Mỗi khoang tàu chứa những người ở các trạng thái khác nhau (ví dụ giai đoạn lây nhiễm)
+
+Người chưa bị nhiễm, người đang nhiễm, người hết khả năng lây nhiễm
+
+Trong mô hình, tất cả những người trong cùng 1 nhóm thì có các đặc tính giống nhau
+
+Được tính bằng cách lấy trung bình các đặc tính trong "thế giới thực"
+
+Mô hình khoang tàu trong bệnh truyền nhiễm được cấu tạo từ 2 thành phần cơ bản:
+
+1.  Khoang tàu: chứa những người ở các trạng thái khác nhau (ví dụ giai đoạn lây nhiễm)
+
+-   Các giá trị này được chứa trong biến trạng thái, thể hiện trạng thái của hệ thống
+
+2.  Tần suất thay đổi số người trong các khoang tàu: ví dụ tỉ suất sinh, số ca nhiễm, tỉ suất hồi phục
+
+-   Các giá trị tần suất này thường phụ thuộc vào giá trị của các biến trạng thái, vì vậy khi biến trạng thái thay đổi thì tần suất cũng thay đổi
+
+-\> Có sự phản hồi (ví dụ tỉ suất tăng dân số, tỉ suất lây truyền bệnh)
+
+Mối quan hệ giữa các giá trị của biến trạng thái và tần suất thay đổi được thể hiện bằng các hàm số (1 hàm số cho mỗi tần suất thay đổi)
+
+Mỗi khoang tàu có:
+
+-   1 biến trạng thái, thể hiện số người đang ở trong khoang tàu này, và
+
+-   1 phương trình vi phân, thể hiện tần suất thay đổi của biến trạng thái, cấu tạo từ 1 hoặc nhiều hàm số
+
+Lưu đồ -\> phương trình
+
+Mỗi số hạng trong phương trình là 1 hàm số của một hoặc nhiều biến trạng thái (S, I, R), do đó giá trị của số hạng thay đổi khi biến trạng thái thay đổi
+
+S, R die at background rate... (ko hiểu)
+
+#### Diễn tiến tự nhiên phức tạp hơn
+
+Ví dụ:
+
+-   Kháng thể từ mẹ truyền sang con ở trẻ sơ sinh
+
+-   Thời gian ủ bệnh, thời gian tiềm ẩn
+
+-   Người nhiễm bệnh không triệu chứng
+
+-   Thời kì lây nhiễm có nhiều giai đoạn
+
+-   Tình trạng sau khi kết thúc giai đoạn nhiễm bệnh: chết, đề kháng hay trở lại cảm nhiễm
+
+-   Kháng thể: diệt khuẩn hoàn toàn, bền vững hay suy yếu dần, đặc trưng cho 1 chủng hay khái quát hóa?
+
+-   Bệnh truyền qua vector
+
+#### Luôn bắt đầu bằng mô hình đơn giản nhất
+
+-   Mục tiêu là hiểu được các nguyên tắc cơ bản của quá trình chứ không phải làm cho mô hình giống thật nhất có thể
+
+-   Mô hình càng giống thật thì càng phức tạp, khó hiểu, trừ khi các nguyên tắc cơ bản của quá trình đã được hiểu rõ
+
+#### Sự luân chuyển giữa các khoang tàu
+
+Mỗi giá trị tần suất là **số người đi vào hoặc đi ra khỏi khoang tàu trong 1 đơn vị thời gian**, phụ thuộc vào:
+
+-   **Tần suất bình quân đầu người** (nguy cơ); và
+
+-   **SỐ người** chịu ảnh hưởng của tần suất này (ví dụ số người phơi nhiễm với nguy cơ)
+
+Tần suất của dân số = Tần suất bình quân đầu người x Số người chịu ảnh hưởng
+
+Tần suất hồi phục sau khi nhiễm bệnh
+
+-   Kí hiệu **tần suất hồi phục bình quân đầu người** là $\sigma$
+
+-   **SỐ người** bị nhiễm bệnh là $I$
+
+Thì tần suất hồi phục **của dân số** là $\sigma I$
+
+Phân biệt biến trạng thái và tham số của mô hình
+
+| Biến trạng thái (ví dụ $I$)                | Tham số (ví dụ $\sigma$)        |
+|--------------------------------|----------------------------------------|
+| Thay đổi sau mỗi vòng lặp khi chạy mô hình | Quy định trước khi chạy mô hình |
+| Không thể điều khiển trực tiếp             | Thay đổi khi chúng ta muốn      |
+| Đầu ra của mô hình                         | Đầu vào của mô hình             |
+
+Khi phân tích mô hình, chúng ta thay đổi các tham số và xem điều này ảnh hưởng như thế nào đến các biến trạng thái - ví dụ biểu đồ thay đổi như thế nào
+
+Tần suất chết của nhóm Cảm nhiễm, Hồi phục:
+
+-   Cho tần suất chết nền **bình quân đầu người** là $\mu$
+
+-   Số người cảm nhiễm là S, số người hồi phục là R
+
+-   Tần suất chết của nhóm cảm nhiễm là $\mu S$, của nhóm hồi phục là $\mu R$
+
+Tần suất chết của nhóm Nhiễm bệnh:
+
+-   Nhóm nhiễm bệnh vừa có tần suất chết nền ($\mu$) vừa có thể chết do bệnh với tần suất $\alpha$, vậy tần suất chết **bình quân đầu người** là $\mu + \alpha$
+
+-   Tần suất chết của nhóm nhiễm bệnh là $(\mu + \alpha) I$
+
+Tỉ suất sinh
+
+-   Cho tỉ suất sinh **bình quân đầu người** là $b$
+
+-   Giả định rằng tất cả mọi người trong mọi khoang tàu đều có cùng tỉ suất sinh, số người sinh là $S + I + R$, có thể viết gọn bằng cách kí hiệu tổng dân số $N = S + I + R$
+
+-   Tỉ suất sinh toàn dân số là $bN$
+
+Khi thực hành, chúng ta thường cho tỉ suất sinh bình quân đầu người bằng với tỉ suất tử bình quân đầu người để giữ dân số không đổi trong trường hợp không có bệnh
+
+-   Tuy nhiên, không nhất thiết phải luôn làm như vậy nếu chúng ta không muốn
+
+Tần suất nhiễm bệnh
+
+-   Tần suất nhiễm bệnh **bình quân đầu người** của nhóm cảm nhiễm (**lực lây nhiễm**) **KHÔNG** giữ cố định (không phải hằng số) mà phụ thuộc vào:
+
+    -   Số người nhiễm bệnh trong thời điểm cụ thể, và
+
+    -   Tần suất tiếp xúc giữa người cảm nhiễm với người nhiễm bệnh, và
+
+    -   Xác suất lây truyền
+
+-   Vì vậy, tần suất nhiễm bệnh **của dân số** phụ thuộc vào số người nhiễm bệnh lẫn số người cảm nhiễm trong 1 thời điểm -\> phi tuyến tính
+
+-   1 người cảm nhiễm có
+
+    -   Tần suất tiếp xúc với 1 người bất kì trong dân số: $c$
+
+    -   Tần suất tiếp xúc với 1 người nhiễm bệnh: $cI/N$, với
+
+        -   $I$ là số người nhiễm bệnh
+        
+        - $N$ là tổng dân số
+        
+        - Vậy $I/N$ là tỉ lệ người nhiễm bệnh trong dân số
+
+    -   Tần suất bị lây truyền bệnh do tiếp xúc với người nhiễm bệnh: $pcI/N$, với
+    
+      - $p$ là xác suất lây truyền bệnh khi 1 người cảm nhiễm tiếp xúc với 1 người nhiễm bệnh
+    
+- Số người cảm nhiễm là $S$:
+
+  - Tần suất truyền bệnh của dân số cảm nhiễm là $pcSI/N$
+  
+  - Thường kí hiệu $\beta = pc$
+  
+Lưu ý: S, I, N là các biến trạng thái sẽ thay đổi theo mỗi vòng chạy mô hình, còn p, c là tham số được quy định từ trước
+
+
+
 ## Tác dụng quần thể trong dịch tễ học bệnh truyền nhiễm
 
 ## Hệ số lây nhiễm (R)
