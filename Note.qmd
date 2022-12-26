@@ -1,6 +1,6 @@
 ---
 title: "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm"
-author: "Phùng Khánh Lâm"
+author: "Phùng Khánh Lâm, Ong Phúc Thịnh"
 date: "`r Sys.Date()`"
 language: vn.yml
 format: 
@@ -58,9 +58,7 @@ Khoá học "Introduction to mathematical models of the Epidemiology & Control o
 
 -   Singapore, 13-16/10/2022
 
--   MRC Centre for Global Infectious Disease Analysis (Imperial College London) & Lee
-
-    Kong Chian School of Medicine (Nanyang Technical University)
+-   MRC Centre for Global Infectious Disease Analysis (Imperial College London) & Lee Kong Chian School of Medicine (Nanyang Technical University)
 
 -   GS Azra Ghani và cộng sự
 
@@ -130,7 +128,7 @@ Mô hình là sự đơn giản hoá một hệ thống phức tạp, để phù
 
     -   Mô hình là công cụ cho sự suy nghĩ
 
-"Mọi mô hình đều sai, nhưng vài cái cũng có ích" -\> câu này cũng áp dụng cho các mô hình thống kê
+*"Mọi mô hình đều sai, nhưng vài cái cũng có ích"* -\> câu này cũng áp dụng cho các mô hình thống kê
 
 "Mô tả một hiện tượng thực tế phức tạp, khó hiểu thành một mô hình phức tạp, khó hiểu là chẳng có gì tiến triển" J. Maynard Smith
 
@@ -244,7 +242,7 @@ Ví dụ:
 
 -   Mô hình càng giống thật thì càng phức tạp, khó hiểu, trừ khi các nguyên tắc cơ bản của quá trình đã được hiểu rõ
 
-#### Sự luân chuyển giữa các khoang tàu
+#### Sự di chuyển giữa các khoang tàu
 
 Mỗi giá trị tần suất là **số người đi vào hoặc đi ra khỏi khoang tàu trong 1 đơn vị thời gian**, phụ thuộc vào:
 
@@ -317,26 +315,49 @@ Tần suất nhiễm bệnh
     -   Tần suất tiếp xúc với 1 người nhiễm bệnh: $cI/N$, với
 
         -   $I$ là số người nhiễm bệnh
-        
-        - $N$ là tổng dân số
-        
-        - Vậy $I/N$ là tỉ lệ người nhiễm bệnh trong dân số
+
+        -   $N$ là tổng dân số
+
+        -   Vậy $I/N$ là tỉ lệ người nhiễm bệnh trong dân số
 
     -   Tần suất bị lây truyền bệnh do tiếp xúc với người nhiễm bệnh: $pcI/N$, với
-    
-      - $p$ là xác suất lây truyền bệnh khi 1 người cảm nhiễm tiếp xúc với 1 người nhiễm bệnh
-    
-- Số người cảm nhiễm là $S$:
 
-  - Tần suất truyền bệnh của dân số cảm nhiễm là $pcSI/N$
-  
-  - Thường kí hiệu $\beta = pc$
-  
+    -   $p$ là xác suất lây truyền bệnh khi 1 người cảm nhiễm tiếp xúc với 1 người nhiễm bệnh
+
+-   Số người cảm nhiễm là $S$:
+
+    -   Tần suất truyền bệnh của dân số cảm nhiễm là $pcSI/N$
+
+    -   Thường kí hiệu $\beta = pc$
+
 Lưu ý: S, I, N là các biến trạng thái sẽ thay đổi theo mỗi vòng chạy mô hình, còn p, c là tham số được quy định từ trước
 
+## Miễn dịch cộng đồng
 
+-   Miễn dịch cộng đồng liên quan gì đến mô hình toán học?
+-   Tiêm vaccine ảnh hưởng đến miễn dịch cộng đồng như thế nào?
+-   Vaccine không hoàn hảo thay đổi mọi thứ như thế nào?
+-   Làm thế nào để đo lường mức độ bảo vệ do tiêm chủng?
 
-## Tác dụng quần thể trong dịch tễ học bệnh truyền nhiễm
+### Miễn dịch cộng đồng tự nhiên
+
+Theo thời gian, ngày lúc càng có nhiều người bị nhiễm và hồi phục. Nếu hành vi tiếp xúc giữa các cá nhân trong dân số không thay đổi, thì hệ số lây nhiễm hiệu quả $R$ ở thời điểm t là $R_{t} = R_{0}\frac{S(t)}{N}$
+
+### Một đợt bùng phát dịch có thể lớn đến mức nào?
+
+| Virus      | $R_{0}$ | F   |
+|------------|---------|-----|
+| Sởi        | 18      | 99% |
+| SARS-CoV-2 | 2       | 80% |
+| Ebola      | 1.5     | 58% |
+
+Quy mô tấn công cuối cùng (final attack size) của 1 đợt bùng phát là nghiệm của phương trình sau:
+
+$$F = 1 - exp(-R_{0}F)$$
+
+Vậy nếu có thể ước lượng được $R_{0}$ thì có thể tính được độ lớn của đợt bùng phát này.
+
+### Vaccine và miễn dịch cộng đồng
 
 ## Hệ số lây nhiễm (R)
 
@@ -350,66 +371,184 @@ Lưu ý: S, I, N là các biến trạng thái sẽ thay đổi theo mỗi vòng
 
 ### Ứng dụng trên Excel
 
-### 
+## Bài tập 1
 
-::: panel-tabset
-### Lý thuyết
+Trong bài tập này chúng ta sẽ dùng sơ đồ dòng chảy để mô tả diễn tiến tự nhiên của một bệnh truyền nhiễm (trong trường hợp này là bệnh lao) và viết các phương trình vi phân.
 
-```{r}
-shiny::textAreaInput(
-  value = "",
-  inputId = "note",
-  label = "Ghi chú",
-  rows = 5
-)
+Để đơn giản, chúng ta sẽ không xem xét mô hình *điều trị* mà chỉ xem xét diễn tiến tự nhiên của bệnh khi không điều trị. Chúng ta sẽ bắt đầu bằng cách viết một mô hình đơn giản, sau đó tìm cách làm cho mô hình thực tế hơn (và phức tạp hơn!).
+
+Nên sử dụng bút chì khi làm bài tập để dễ dàng thay đổi khi cần.
+
+### Mô hình 1
+
+Các đặc điểm quan trọng của bệnh lao phổi mà chúng ta muốn thể hiện trong mô hình này là:
+
+1.  Khi một người bị nhiễm bệnh, ban đầu họ sẽ trải qua giai đoạn nhiễm trùng **tiềm ẩn** (nghĩa là họ không có triệu chứng) trước khi tiến triển thành **bệnh**.
+
+2.  Những người mắc bệnh có thể 'hồi phục' (tức là hết bệnh) nhưng vi khuẩn vẫn tồn tại trong cơ thể, một thời gian sau họ có thể **tái phát** thành một đợt bệnh khác.
+
+3.  Sự nhiễm trùng là **suốt đời**. (Một số ý kiến cho rằng có một số trường hợp hoàn toàn 'khỏi' nhiễm trùng mà không cần điều trị, nhưng trong bài tập này chúng tôi giả định rằng điều này không xảy ra.)
+
+4.  Chỉ những người bị bệnh (có triệu chứng) mới có khả năng **lây nhiễm**.
+
+**Bước 1.** Vẽ sơ đồ dòng chảy để thể hiện các đặc điểm này của bệnh lao, cố gắng sử dụng càng ít khoang tàu càng tốt. Viết chú thích bằng từ ngữ lên các mũi tên.
+
+```{mermaid}
+flowchart LR
+  S[Cảm nhiễm] -- Bị nhiễm --> L[Tiềm ẩn]
+  L -- Tiến triển --> D[Bệnh]
+  D -- Hồi phục --> L
 ```
 
-### Ví dụ
+**Bước 2.** Viết các phương trình vi phân mô tả sự vận động của mô hình này (mô tả bằng chữ)
 
-### Bài tập
+::: {.border}
+$\frac{dS}{dt} =$ Sinh - Chết (của nhóm Cảm nhiễm) - Bị nhiễm
 
-**Bài tập 1:**
+$\frac{dL}{dt} =$ Bị nhiễm - Chết (của nhóm Tiềm ẩn) - Tiến triển thành Bệnh + Hồi phục
 
-```{r, echo = FALSE}
-opts <- c("A",
-          "B",
-          "C",
-          answer = "D")
-```
-
-`r longmcq(opts)`
-
-`r hide("Xem giải thích")`
-
-Giải thích
-
-`r unhide()`
+$\frac{dR}{dt} =$ Tiến triển thành Bệnh - Hồi phục - Chết (của nhóm Bệnh)
 :::
 
-## Quản lý dữ liệu nghiên cứu
+**Bước 3.** Chuyển chú thích bằng từ ngữ trên các mũi tên thành các biểu thức toán học bằng cách kí hiệu các tham số bằng chữ cái Hy Lạp và mô tả mối liên hệ giữa chúng bằng các phép tính
 
-::: panel-tabset
-### Lý thuyết
+**Bước 4.** Viết lại phương trình vi phân bằng biểu thức toán học
 
-```{r}
-shiny::textAreaInput(
-  inputId = "note",
-  label = "Ghi chú",
-  rows = 5
-)
+::: {.border}
+$\frac{dS}{dt} =$ Sinh - Chết (của nhóm Cảm nhiễm) - Bị nhiễm
+
+$$\frac{dS}{dt} = bN - \mu S - \beta \frac{D}{N}S$$
+
+$\frac{dL}{dt} =$ Bị nhiễm - Chết (của nhóm Tiềm ẩn) - Tiến triển thành Bệnh + Hồi phục
+
+$$\frac{dL}{dt} = \beta \frac{D}{N}S - \mu L - \gamma L + \sigma D$$
+
+$\frac{dR}{dt} =$ Tiến triển thành Bệnh - Chết (của nhóm Bệnh) - Hồi phục
+
+$$\frac{dR}{dt} = \gamma L - (\mu + \alpha)D - \sigma D$$
+:::
+
+### Mô hình 2
+
+Một đặc điểm quan trọng của bệnh lao là sự thay đổi tốc độ tiến triển từ nhiễm trùng tiềm ẩn sang bệnh: một số người thuộc loại 'tiến' triển nhanh' (phát bệnh chỉ trong vòng vài năm từ lúc nhiễm) hoặc 'tiến triển chậm' (mất nhiều thời gian hơn để phát bệnh và thậm chí có thể chết mà chưa từng biểu hiện bệnh).
+
+Để mô tả sự đa dạng trong kiểu hình bệnh này trong mô hình, thay vì chỉ có 1 'khoang tàu' chứa những người nhiễm trùng tiềm ẩn duy nhất, chúng ta có thể chia thành 2 khoang 'song song': một khoang là người tiến triển nhanh ($L_{F}$) và một khoang là người tiến triển chậm ($L_{S}$). Chúng ta có thể sửa **Mô hình 1** thành **Mô hình 2** bằng cách thêm một 'ngã ba' ở mũi tên từ khoang *Cảm nhiễm* đi tới các khoang *Nhiễm trùng tiềm ẩn*. Cả hai khoang *Nhiễm trùng tiềm ẩn* đều đi tới khoang *Bệnh*.
+
+**Bước 1.** Vẽ sơ đồ dòng chảy để thể hiện Mô hình 2, giả định rằng tất cả những người 'khỏi bệnh' đều quay lại khoang *Tiềm ẩn tiến triển chậm*
+
+Mô hình 1
+
+```{mermaid}
+flowchart LR
+  S[Cảm nhiễm] -- Bị nhiễm --> L[Tiềm ẩn]
+  L -- Tiến triển --> D[Bệnh]
+  D -- Hồi phục --> L
 ```
 
-### Ví dụ
+Mô hình 2
 
-### Bài tập
-
-```{r}
-shiny::textAreaInput(
-  inputId = "note",
-  label = "Ghi chú",
-  rows = 5
-)
+```{mermaid}
+flowchart LR
+  S[Cảm nhiễm] -- Bị nhiễm --> LS[Tiềm ẩn chậm]
+  S -- Bị nhiễm --> LF[Tiềm ẩn nhanh]
+  LF -- Tiến triển --> D[Bệnh]
+  LS -- Tiến triển --> D
+  D -- Hồi phục --> LS
 ```
+
+**Bước 2.** Mô hình 2 cần thêm 1 số tham số, hãy ghi ra và mô tả các tham số này
+
+::: {.border}
+
+Chúng ta cần
+
+(i) hai tham số tốc độ tiến triển ($\gamma_{F}$, $\gamma_{S}$) (0,88 p.a., 0,0001 p.a.) và 
+
+(ii) một tham số ($f$) thể hiện tỉ lệ các ca bị lây nhiễm sẽ tiến triển nhanh (0,14).
+
+:::
+
+**HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG BƯỚC NÀY**
+
+**Bước 3.** Viết phương trình vi phân bằng biểu thức toán học cho Mô hình 2
+
+::: {.border}
+
+$$\frac{dS}{dt} = bN - \mu S - \beta \frac{D}{N}S$$
+(giống Mô hình 1)
+
+$$\frac{dL_{F}}{dt} = f \beta \frac{D}{N}S - \mu L_{F} - \gamma_{F}L_{F}$$
+
+$$\frac{dL_{S}}{dt} = (1 - f) \beta \frac{D}{N}S - \mu L_{S} - \gamma_{F}L_{S} + \sigma D$$
+
+$$\frac{dD}{dt} = \gamma_{F}L_{F} + \gamma_{S}L_{S} - (\mu + \alpha)D - \sigma D$$
+
+:::
+
+**HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG BƯỚC NÀY**
+
+### Mô hình 3
+
+Một đặc điểm quan trọng khác của bệnh lao là **tái nhiễm ngoại sinh**, nghĩa là người đang nhiễm lao tiềm ẩn lại tiếp tục bị lây nhiễm vi khuẩn lao 'bổ sung' từ bệnh nhân lao khác, khiến họ tiến triển bệnh nhanh hơn. Hiện tượng này thường được mô hình hóa bằng cách di chuyển những người từ khoang Tiềm ẩn tiến triển chậm sang khoang Tiềm ẩn tiến triển nhanh. Mô hình này giả định rằng thời gian tiềm ẩn của những người tiến triển nhanh rất ngắn, đến mức họ không có khả năng bị tái nhiễm ngoại sinh trước khi tiến triển thành bệnh.
+
+**Bước 1.** Tạo ra Mô hình 3 bằng cách thêm quá trình tái nhiễm ngoại sinh vào sơ đồ dòng chảy của Mô hình 2.
+
+```{mermaid}
+flowchart LR
+  S[Cảm nhiễm] -- Bị nhiễm --> LS[Tiềm ẩn chậm]
+  S -- Bị nhiễm --> LF[Tiềm ẩn nhanh]
+  LF -- Tiến triển --> D[Bệnh]
+  LS -- Tiến triển --> D
+  LS --> LF
+  D -- Hồi phục --> LS
+```
+
+**Bước 2.** Mô hình 3 cần thêm 1 số tham số, hãy ghi ra và mô tả các tham số này.
+
+::: {.border}
+
+Tốc độ tái nhiễm ngoại sinh là $r \beta \frac{D}{N}$, với $r$ là mức độ cảm nhiễm tương đối của nhóm *Tiềm ẩn tiến triển chậm* so với nhóm *Cảm nhiễm*
+
+* r > 1: Nhóm *Tiềm ẩn tiến triển chậm* dễ bị nhiễm hơn nhóm *Cảm nhiễm*
+
+* r = 1: Nhóm *Tiềm ẩn tiến triển chậm* và nhóm *Cảm nhiễm* có mức độ cảm nhiễm như nhau
+
+* r < 1: Nhóm *Tiềm ẩn tiến triển chậm* khó bị nhiễm hơn nhóm *Cảm nhiễm*
+
+:::
+
+**Bước 3.** Viết phương trình vi phân bằng biểu thức toán học cho Mô hình 3.
+
+::: {.border}
+
+$$\frac{dS}{dt} = bN - \mu S - \beta \frac{D}{N}S$$
+(giống Mô hình 1 & 2)
+
+$$\frac{dL_{F}}{dt} = f \beta \frac{D}{N}S - \mu L_{F} - \gamma_{F}L_{F} + r \beta \frac{D}{N}L_{S}$$
+
+$$\frac{dL_{S}}{dt} = (1 - f) \beta \frac{D}{N}S - \mu L_{S} - \gamma_{F}L_{S} + \sigma D - r \beta \frac{D}{N}L_{S}$$
+
+$$\frac{dD}{dt} = \gamma_{F}L_{F} + \gamma_{S}L_{S} - (\mu + \alpha)D - \sigma D$$
+(giống Mô hình 2)
+
+:::
+
+## Bài tập 2
+
+### Ước lượng hệ số lây nhiễm bằng phương pháp tăng trưởng theo cấp số nhân (hay tăng trưởng lũy thừa, exponential growth)
+
+Chúng ta sẽ tìm hiểu cách ước lượng hệ số lây nhiễm cơ bản ($R_{0}$) bằng Excel, sử dụng dữ liệu chuỗi thời gian của các ca SARS-CoV-2 được báo cáo tại London vào tháng 2 và tháng 3 năm 2020. Dữ liệu chuỗi thời gian là tập tin 'Estimating_R0_part1.xls'.
+
+**Ước lượng tốc độ phát triển dịch bệnh của một ổ dịch**
+
+Bảng tính 'SARS-CoV-2 London (data)' chứa số ca nhiễm SARS-CoV-2 tích lũy hàng tuần được báo cáo ở London trong giai đoạn đầu của đại dịch COVID-19.
+
+**Bước 1.** Tính số mới mắc, sau đó vẽ đường cong dịch theo thang đo tự nhiên và logarit. Sự gia tăng tuyến tính của các ca theo thang logarit cho thấy số lượng ca nhiễm tăng theo cấp số nhân.
+
+Dịch bệnh phát triển theo cấp số nhân trong bao lâu?
+
+::: {.border}
+3 tuần
 :::
 
 ## Tóm tắt
