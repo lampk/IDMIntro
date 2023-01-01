@@ -263,7 +263,7 @@ Thì tần suất hồi phục **của dân số** là $\sigma I$
 Phân biệt biến trạng thái và tham số của mô hình
 
 | Biến trạng thái (ví dụ $I$)                | Tham số (ví dụ $\sigma$)        |
-|--------------------------------|----------------------------------------|
+|-----------------------------------------|-------------------------------|
 | Thay đổi sau mỗi vòng lặp khi chạy mô hình | Quy định trước khi chạy mô hình |
 | Không thể điều khiển trực tiếp             | Thay đổi khi chúng ta muốn      |
 | Đầu ra của mô hình                         | Đầu vào của mô hình             |
@@ -371,7 +371,7 @@ Vậy nếu có thể ước lượng được $R_{0}$ thì có thể tính đư
 
 ### Ứng dụng trên Excel
 
-## Bài tập 1
+## Bài thực hành 1
 
 Trong bài tập này chúng ta sẽ dùng sơ đồ dòng chảy để mô tả diễn tiến tự nhiên của một bệnh truyền nhiễm (trong trường hợp này là bệnh lao) và viết các phương trình vi phân.
 
@@ -391,7 +391,7 @@ Các đặc điểm quan trọng của bệnh lao phổi mà chúng ta muốn th
 
 4.  Chỉ những người bị bệnh (có triệu chứng) mới có khả năng **lây nhiễm**.
 
-**Bước 1.** Vẽ sơ đồ dòng chảy để thể hiện các đặc điểm này của bệnh lao, cố gắng sử dụng càng ít khoang tàu càng tốt. Viết chú thích bằng từ ngữ lên các mũi tên.
+**Bài tập 1.** Vẽ sơ đồ dòng chảy để thể hiện các đặc điểm này của bệnh lao, cố gắng sử dụng càng ít khoang tàu càng tốt. Viết chú thích bằng từ ngữ lên các mũi tên.
 
 ```{mermaid}
 flowchart LR
@@ -400,9 +400,9 @@ flowchart LR
   D -- Hồi phục --> L
 ```
 
-**Bước 2.** Viết các phương trình vi phân mô tả sự vận động của mô hình này (mô tả bằng chữ)
+**Bài tập 2.** Viết các phương trình vi phân mô tả sự vận động của mô hình này (mô tả bằng chữ)
 
-::: {.border}
+::: border
 $\frac{dS}{dt} =$ Sinh - Chết (của nhóm Cảm nhiễm) - Bị nhiễm
 
 $\frac{dL}{dt} =$ Bị nhiễm - Chết (của nhóm Tiềm ẩn) - Tiến triển thành Bệnh + Hồi phục
@@ -410,11 +410,11 @@ $\frac{dL}{dt} =$ Bị nhiễm - Chết (của nhóm Tiềm ẩn) - Tiến tri�
 $\frac{dR}{dt} =$ Tiến triển thành Bệnh - Hồi phục - Chết (của nhóm Bệnh)
 :::
 
-**Bước 3.** Chuyển chú thích bằng từ ngữ trên các mũi tên thành các biểu thức toán học bằng cách kí hiệu các tham số bằng chữ cái Hy Lạp và mô tả mối liên hệ giữa chúng bằng các phép tính
+**Bài tập 3.** Chuyển chú thích bằng từ ngữ trên các mũi tên thành các biểu thức toán học bằng cách kí hiệu các tham số bằng chữ cái Hy Lạp và mô tả mối liên hệ giữa chúng bằng các phép tính
 
-**Bước 4.** Viết lại phương trình vi phân bằng biểu thức toán học
+**Bài tập 4.** Viết lại phương trình vi phân bằng biểu thức toán học
 
-::: {.border}
+::: border
 $\frac{dS}{dt} =$ Sinh - Chết (của nhóm Cảm nhiễm) - Bị nhiễm
 
 $$\frac{dS}{dt} = bN - \mu S - \beta \frac{D}{N}S$$
@@ -434,7 +434,7 @@ Một đặc điểm quan trọng của bệnh lao là sự thay đổi tốc đ
 
 Để mô tả sự đa dạng trong kiểu hình bệnh này trong mô hình, thay vì chỉ có 1 'khoang tàu' chứa những người nhiễm trùng tiềm ẩn duy nhất, chúng ta có thể chia thành 2 khoang 'song song': một khoang là người tiến triển nhanh ($L_{F}$) và một khoang là người tiến triển chậm ($L_{S}$). Chúng ta có thể sửa **Mô hình 1** thành **Mô hình 2** bằng cách thêm một 'ngã ba' ở mũi tên từ khoang *Cảm nhiễm* đi tới các khoang *Nhiễm trùng tiềm ẩn*. Cả hai khoang *Nhiễm trùng tiềm ẩn* đều đi tới khoang *Bệnh*.
 
-**Bước 1.** Vẽ sơ đồ dòng chảy để thể hiện Mô hình 2, giả định rằng tất cả những người 'khỏi bệnh' đều quay lại khoang *Tiềm ẩn tiến triển chậm*
+**Bài tập 1.** Vẽ sơ đồ dòng chảy để thể hiện Mô hình 2, giả định rằng tất cả những người 'khỏi bệnh' đều quay lại khoang *Tiềm ẩn tiến triển chậm*
 
 Mô hình 1
 
@@ -456,42 +456,37 @@ flowchart LR
   D -- Hồi phục --> LS
 ```
 
-**Bước 2.** Mô hình 2 cần thêm 1 số tham số, hãy ghi ra và mô tả các tham số này
+**Bài tập 2.** Mô hình 2 cần thêm 1 số tham số, hãy ghi ra và mô tả các tham số này
 
-::: {.border}
-
+::: border
 Chúng ta cần
 
-(i) hai tham số tốc độ tiến triển ($\gamma_{F}$, $\gamma_{S}$) (0,88 p.a., 0,0001 p.a.) và 
+(i) hai tham số tốc độ tiến triển ($\gamma_{F}$, $\gamma_{S}$) (0,88 p.a., 0,0001 p.a.) và
 
 (ii) một tham số ($f$) thể hiện tỉ lệ các ca bị lây nhiễm sẽ tiến triển nhanh (0,14).
-
 :::
 
-**HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG BƯỚC NÀY**
+**HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
 
-**Bước 3.** Viết phương trình vi phân bằng biểu thức toán học cho Mô hình 2
+**Bài tập 3.** Viết phương trình vi phân bằng biểu thức toán học cho Mô hình 2
 
-::: {.border}
-
-$$\frac{dS}{dt} = bN - \mu S - \beta \frac{D}{N}S$$
-(giống Mô hình 1)
+::: border
+$$\frac{dS}{dt} = bN - \mu S - \beta \frac{D}{N}S$$ (giống Mô hình 1)
 
 $$\frac{dL_{F}}{dt} = f \beta \frac{D}{N}S - \mu L_{F} - \gamma_{F}L_{F}$$
 
 $$\frac{dL_{S}}{dt} = (1 - f) \beta \frac{D}{N}S - \mu L_{S} - \gamma_{F}L_{S} + \sigma D$$
 
 $$\frac{dD}{dt} = \gamma_{F}L_{F} + \gamma_{S}L_{S} - (\mu + \alpha)D - \sigma D$$
-
 :::
 
-**HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG BƯỚC NÀY**
+**HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
 
 ### Mô hình 3
 
 Một đặc điểm quan trọng khác của bệnh lao là **tái nhiễm ngoại sinh**, nghĩa là người đang nhiễm lao tiềm ẩn lại tiếp tục bị lây nhiễm vi khuẩn lao 'bổ sung' từ bệnh nhân lao khác, khiến họ tiến triển bệnh nhanh hơn. Hiện tượng này thường được mô hình hóa bằng cách di chuyển những người từ khoang Tiềm ẩn tiến triển chậm sang khoang Tiềm ẩn tiến triển nhanh. Mô hình này giả định rằng thời gian tiềm ẩn của những người tiến triển nhanh rất ngắn, đến mức họ không có khả năng bị tái nhiễm ngoại sinh trước khi tiến triển thành bệnh.
 
-**Bước 1.** Tạo ra Mô hình 3 bằng cách thêm quá trình tái nhiễm ngoại sinh vào sơ đồ dòng chảy của Mô hình 2.
+**Bài tập 1.** Tạo ra Mô hình 3 bằng cách thêm quá trình tái nhiễm ngoại sinh vào sơ đồ dòng chảy của Mô hình 2.
 
 ```{mermaid}
 flowchart LR
@@ -503,53 +498,205 @@ flowchart LR
   D -- Hồi phục --> LS
 ```
 
-**Bước 2.** Mô hình 3 cần thêm 1 số tham số, hãy ghi ra và mô tả các tham số này.
+**Bài tập 2.** Mô hình 3 cần thêm 1 số tham số, hãy ghi ra và mô tả các tham số này.
 
-::: {.border}
-
+::: border
 Tốc độ tái nhiễm ngoại sinh là $r \beta \frac{D}{N}$, với $r$ là mức độ cảm nhiễm tương đối của nhóm *Tiềm ẩn tiến triển chậm* so với nhóm *Cảm nhiễm*
 
-* r > 1: Nhóm *Tiềm ẩn tiến triển chậm* dễ bị nhiễm hơn nhóm *Cảm nhiễm*
+-   r \> 1: Nhóm *Tiềm ẩn tiến triển chậm* dễ bị nhiễm hơn nhóm *Cảm nhiễm*
 
-* r = 1: Nhóm *Tiềm ẩn tiến triển chậm* và nhóm *Cảm nhiễm* có mức độ cảm nhiễm như nhau
+-   r = 1: Nhóm *Tiềm ẩn tiến triển chậm* và nhóm *Cảm nhiễm* có mức độ cảm nhiễm như nhau
 
-* r < 1: Nhóm *Tiềm ẩn tiến triển chậm* khó bị nhiễm hơn nhóm *Cảm nhiễm*
-
+-   r \< 1: Nhóm *Tiềm ẩn tiến triển chậm* khó bị nhiễm hơn nhóm *Cảm nhiễm*
 :::
 
-**Bước 3.** Viết phương trình vi phân bằng biểu thức toán học cho Mô hình 3.
+**Bài tập 3.** Viết phương trình vi phân bằng biểu thức toán học cho Mô hình 3.
 
-::: {.border}
-
-$$\frac{dS}{dt} = bN - \mu S - \beta \frac{D}{N}S$$
-(giống Mô hình 1 & 2)
+::: border
+$$\frac{dS}{dt} = bN - \mu S - \beta \frac{D}{N}S$$ (giống Mô hình 1 & 2)
 
 $$\frac{dL_{F}}{dt} = f \beta \frac{D}{N}S - \mu L_{F} - \gamma_{F}L_{F} + r \beta \frac{D}{N}L_{S}$$
 
 $$\frac{dL_{S}}{dt} = (1 - f) \beta \frac{D}{N}S - \mu L_{S} - \gamma_{F}L_{S} + \sigma D - r \beta \frac{D}{N}L_{S}$$
 
-$$\frac{dD}{dt} = \gamma_{F}L_{F} + \gamma_{S}L_{S} - (\mu + \alpha)D - \sigma D$$
-(giống Mô hình 2)
-
+$$\frac{dD}{dt} = \gamma_{F}L_{F} + \gamma_{S}L_{S} - (\mu + \alpha)D - \sigma D$$ (giống Mô hình 2)
 :::
 
-## Bài tập 2
+## Bài thực hành 2
 
 ### Ước lượng hệ số lây nhiễm bằng phương pháp tăng trưởng theo cấp số nhân (hay tăng trưởng lũy thừa, exponential growth)
 
 Chúng ta sẽ tìm hiểu cách ước lượng hệ số lây nhiễm cơ bản ($R_{0}$) bằng Excel, sử dụng dữ liệu chuỗi thời gian của các ca SARS-CoV-2 được báo cáo tại London vào tháng 2 và tháng 3 năm 2020. Dữ liệu chuỗi thời gian là tập tin 'Estimating_R0_part1.xls'.
 
-**Ước lượng tốc độ phát triển dịch bệnh của một ổ dịch**
+#### Ước lượng tốc độ phát triển dịch bệnh của một ổ dịch
 
 Bảng tính 'SARS-CoV-2 London (data)' chứa số ca nhiễm SARS-CoV-2 tích lũy hàng tuần được báo cáo ở London trong giai đoạn đầu của đại dịch COVID-19.
 
-**Bước 1.** Tính số mới mắc, sau đó vẽ đường cong dịch theo thang đo tự nhiên và logarit. Sự gia tăng tuyến tính của các ca theo thang logarit cho thấy số lượng ca nhiễm tăng theo cấp số nhân.
+**Bài tập 1.** Tính số mới mắc, sau đó vẽ đường cong dịch theo thang đo tự nhiên và logarit. Sự gia tăng tuyến tính của các ca theo thang logarit cho thấy số lượng ca nhiễm tăng theo cấp số nhân.
 
 Dịch bệnh phát triển theo cấp số nhân trong bao lâu?
 
-::: {.border}
-3 tuần
 :::
+
+3 tuần
+
+:::
+
+Ước tính tốc độ tăng trưởng (r) của dịch trong giai đoạn tăng trưởng theo cấp số nhân này và thời gian số ca tăng gấp đôi, sử dụng công thức số ca nhiễm tại hai thời điểm $t_1$ và $t_2$
+
+$$r = \frac{1}{t_2 - t_1} ln(\frac{I(t_2)}{I(t_1)})$$
+
+Dữ liệu báo cáo này là số ca cập nhật hàng tuần, vì vậy bạn sẽ cần chia các tần suất cho 7 để có được giá trị theo đơn vị ngày. Có thể tính bằng Excel.
+
+:::
+
+$r_{tuần} = \frac{1}{tuần_2 - tuần_1}ln(\frac{I(tuần_2)}{I(tuần_1)}) =$ (mỗi tuần)
+
+$r_{ngày} = \frac{1}{7} r_{tuần} =$ (mỗi ngày)
+
+Thời gian số ca tăng gấp đôi = \$\frac{ln(2)}{r} = \$ (ngày)
+
+:::
+
+**Bài tập 2.** Thông thường trong phân tích dịch, chúng ta làm việc với dữ liệu danh sách dòng (linelist data) với mỗi hàng trong bộ dữ liệu tương ứng với một ca bệnh được báo cáo. Sheet 'Danh sách ca bệnh SARS-CoV-2 ở London' là một ví dụ về dữ liệu danh sách ca bệnh (mô phỏng). Chúng ta sẽ tính toán số mới mắc (incidence), là số ca bệnh mới được báo cáo hàng ngày từ danh sách ca. Chúng ta cần đếm xem có bao nhiêu ca được báo cáo mỗi ngày. Điều này có thể được thực hiện bằng cách sử dụng PivotTable trong tab Insert.
+
+Bấm vào PivotTable trong tab Insert. Một cửa sổ sẽ xuất hiện yêu cầu bạn chọn dữ liệu mà muốn phân tích. Chọn cột B (ngày_bắt_đầu). Chúng ta sẽ đặt kết quả tính được ngay trong sheet này (Existing Worksheet). Bấm OK.
+
+Bạn sẽ thấy một Bảng xuất hiện ở bên phải màn hình. Chúng ta cần chọn tính số lần mỗi ngày xuất hiện trong danh sách dòng. Nhấp vào "onset_date" ở bảng trên cùng. (Bạn có thể thấy biến "Months" xuất hiện, hãy bỏ qua nó)
+
+Sau đó, kéo "ngày_bắt đầu" vào phần Values ở dưới cùng bên phải của bảng
+
+Tỷ lệ mắc hàng ngày sẽ xuất hiện trong bảng tính
+
+Sao chép số mới mắc hàng ngày vào tab Task 2 và ước tính tốc độ tăng theo cấp số nhân bằng cách sử dụng cùng một cửa sổ thời gian với dữ liệu hàng tuần. Nếu muốn thử dùng một phương pháp khác, bạn có thể ước tính tốc độ tăng trưởng bằng cách sử dụng hồi quy tuyến tính thay vì sử dụng công thức được đưa ra trong biểu thức 1.
+
+Trong Excel, bạn có thể chạy hồi quy tuyến tính bằng hàm LINEST(). LINEST() xuất ra độ dốc (slope) và giao điểm với trục tung (intercept), do đó nó cần hai ô để xuất kết quả. Chọn hai ô (ví dụ: H3 và I3) và chèn công thức hồi quy tuyến tính, chỉ định giá trị y làm đối số (argument) thứ nhất và giá trị x làm đối số thứ hai.
+
+Kiểm tra hiệu suất của mô hình trên dữ liệu chuỗi thời gian mở rộng.
+
+Tỷ lệ tăng trưởng tính được có giống nhau khi bạn sử dụng dữ liệu theo tuần so với dự liệu theo ngày không? Dịch bệnh có ngừng phát triển theo cấp số nhân vào một thời điểm nào đó không? Tại sao?
+
+:::
+
+Có, các giá trị có kết quả tương tự khi sử dụng dữ liệu hàng ngày (tốc độ tăng trưởng theo ngày = 0,309).
+
+Dịch bệnh ngừng phát triển theo cấp số nhân từ khoảng ngày 22. Sự phát triển theo cấp số nhân chậm lại do tác động của các biện pháp can thiệp không dùng thuốc (non-pharmaceutical interventions).
+
+:::
+
+#### Mối quan hệ giữa tốc độ tăng trưởng dịch r, hệ số lây nhiễm cơ bản $R_0$ và thời gian thế hệ $T_g$
+
+Thời gian thế hệ $T_g$ là khoảng thời gian từ lúc 1 người bị nhiễm đến khi người này lây nhiễm cho người tiếp theo. Nếu ta có tốc độ tăng trưởng dịch r ***và thời gian thế hệ*** $T_g$, có thể ước lượng $R_0$ từ phương trình sau:
+
+$$R_0 = \frac{1}{\int_0^\infty exp(-rt)g(t)dt}$$
+
+với $g(t)$ là phân phối thời gian thế hệ (xác suất thời gian thế hệ tại thời điểm t)
+
+Có thể viết phương trình $R_0$ cho 3 mô hình đơn giản sau:
+
+Thế hệ rời rạc (discrete generation): $R = exp(rT_g)$
+
+SIR: $R = 1 + rD$
+
+SEIR: $R = (1 + rD)(1 + rL)$
+
+với $D$ là thời gian lây nhiễm trung bình (từ lúc có khả năng lây cho đến khi hồi phục) và $L$ là thời gian tiềm ẩn trung bình (từ lúc bị nhiễm đến khi có khả năng lây)
+
+#### Thời gian thế hệ của SARS-CoV-2 và cúm mùa
+
+Biểu đồ sau thể hiện phân bố thời gian thế hệ của SARS-CoV-2 (nguồn: Cereda và cộng sự, arxiv, 2020) và cúm mùa (nguồn: Ferguson và cộng sự, Nature, 2005). Thời gian thế hệ trung bình của SARS-CoV-2 là 6,6 ngày và của bệnh cúm là 2,6 ngày.
+
+Bạn có nghĩ rằng sự khác biệt giữa sự phân bố của SARS-CoV-2 và bệnh cúm là vấn đề cần kiểm soát không? Tại sao?
+
+Ví dụ, bạn có thể nghĩ về vấn đề cấp thuốc kháng virus trong đại dịch. Nếu thuốc được giao 3 ngày sau ngày nhiễm bệnh của ca đầu tiên trong một hộ gia đình thì ảnh hưởng như thế nào đến sự lây truyền dịch?
+
+:::
+
+Sự khác biệt của phân phối thời gian thế hệ giữa các tác nhân khác nhau là quan trọng.
+
+Đối với bệnh nhân cúm mùa, hầu hết nguy cơ lây nhiễm xảy ra trong 3 ngày đầu. Vì vậy nếu cấp thuốc kháng virus sau 3 ngày này thì việc dùng thuốc hầu như không còn ý nghĩa trong việc ngăn chặn tiến trình lây nhiễm của bệnh nhân cho người khác.
+
+Trong trường hợp một ca nhiễm trùng có thời gian thế hệ kiểu SARS-CoV-2, nếu dùng 1 loại thuốc kháng virus hiệu quả 3 ngày sau khi bị lây nhiễm sẽ có tác động đến tiến trình lây truyền dịch, vì khả năng lây nhiễm trong 3 ngày đầu là thấp và hầu hết lây nhiễm xảy ra sau 3 ngày.
+
+:::
+
+Bạn sẽ xem xét tổng cộng 6 mô hình, 3 mô hình bệnh cúm mùa có thời gian thế hệ là 2,6 ngày (như Ferguson và cộng sự) và 3 mô hình SARS-CoV-2 có thời gian thế hệ là 6,6 ngày (như Cereda và cộng sự).
+
+|                | SARS-CoV-2                   | Cúm mùa                        |
+|----------------|------------------------------|--------------------------------|
+| Thế hệ rời rạc | $T_g$ = 6,6 ngày             | $T_g$ = 2,6 ngày               |
+| SIR            | $D$ = 6,6 ngày               | $D$ = 2,6 ngày                 |
+| SEIR           | $L$ = 5 ngày; $D$ = 1,6 ngày | $L$ = 1 ngày; $T_g$ = 1,6 ngày |
+
+**Bài tập 3.** Đối với mỗi mô hình, hãy sử dụng các "Phương trình R cho 3 mô hình đơn giản" để ước tính $R_0$ ở London, năm 2020. Giả sử rằng tốc độ tăng trưởng r là như nhau đối với cả SARS-CoV-2 và bệnh cúm mùa, đồng thời sử dụng giá trị được ước tính trong Bài tập 1.
+
+|                | SARS-CoV-2 | Cúm mùa    |
+|----------------|------------|------------|
+| Thế hệ rời rạc | $R$ = 8.07 | $R$ = 2.28 |
+| SIR            | $R$ = 3.10 | $R$ = 1.82 |
+| SEIR           | $R$ = 3.82 | $R$ = 1.98 |
+
+Các ước tính của R có bị ảnh hưởng bởi các giả định về $T_g$ không? Sự khác biệt có liên quan về mặt dịch tễ học?
+
+:::
+
+Có, ước tính $R_0$ bị ảnh hưởng bởi phân phối thời gian thế hệ giả định.
+
+Ước tính $R_0$ phụ thuộc vào giá trị trung bình của $T_g$: $T_g$ trung bình lớn hơn dẫn đến ước tính $R_0$ lớn hơn.
+
+Ước tính của $R_0$ cũng bị ảnh hưởng bởi phương sai và hình dạng của phân phối thời gian thế hệ. Với 3 mô hình có cùng $T_g$ trung bình (= 2,6 ngày) nhưng phân phối $T_g$ khác nhau thì ước lượng $R_0$ là khác nhau.
+
+Sự khác biệt có liên quan đến dịch tễ học: Đối với các bệnh nhiễm như SARS-CoV-2, độ bao phủ vaccine, miễn dịch cộng đồng và tác động của các biện pháp can thiệp phải cao tới khoảng 70% để kiểm soát được dịch.
+
+Đối với bệnh cúm, miễn dịch cộng đồng đạt được khi khoảng 50% dân số đề kháng (thông qua lây nhiễm tự nhiên hoặc tiêm phòng)
+
+Các mô hình đại dịch thường cân nhắc phân tích độ nhạy trên các phân phối thời gian thế hệ giả định để đánh giá tác động của các chiến lược phòng dịch giả lập đối với từng loại phân phối thời gian thế hệ (cũng như $R_0$ ước lượng được). Một số chiến lược can thiệp có thể mang lại kết quả tốt cho $R_0$ = 1.8 nhưng không phải cho $R_0$ = 2,3.
+
+:::
+
+Ước lượng $R_0$ còn nhạy với yếu tố gì? Bạn có nghĩ các ước tính sẽ bị sai lệch nếu báo cáo không đủ số ca thực tế không? Nếu tỷ lệ báo cáo không đổi theo thời gian thì sao? Nếu nó thay đổi theo thời gian thì sao?
+
+:::
+
+Các ước lượng nhạy cảm với khoảng thời gian chúng ta chọn để mô tả mức tăng trưởng theo cấp số nhân.
+
+Các ước lượng sẽ không bị ảnh hưởng bởi việc báo cáo thiếu số ca thực tế **nếu tỷ lệ báo cáo không đổi theo thời gian**. Tuy nhiên, chúng sẽ bị ảnh hưởng nếu báo cáo thay đổi theo thời gian.
+
+Sự hiện diện của các ca nhiễm không triệu chứng, là một dạng báo cáo thiếu, không làm sai lệch ước tính $R_0$ nếu tỷ lệ nhiễm không triệu chứng không đổi theo thời gian.
+
+Những thay đổi về năng lực xét nghiệm theo thời gian, dẫn đến thay đổi định nghĩa về dân số đủ điều kiện để xét nghiệm và báo cáo, dẫn đến sai lệch ước tính $R_0$.
+
+:::
+
+Các bài tập tùy chọn
+
+**Bài tập tùy chọn 4.** Nếu còn thời gian, hãy tìm hiểu $R_0$ thay đổi như thế nào theo giả định thời gian thế hệ trung bình bằng cách sử dụng các mô hình SIR và SEIR.
+
+Các ước tính $R_0$ có thay đổi theo giả địnhthời gian thế hệ trung bình không? Như thế nào?
+
+:::
+
+Thời gian thế hệ trung bình dài hơn thì R0 cao hơn (cả với SIR và SEIR).
+
+:::
+
+**Bài tập tùy chọn 5.** Nếu còn thời gian, hãy xem trang tính 'under-reporting effects'. Tìm hiểu cách các chuỗi thời gian khác nhau được tạo, sau đó sử dụng chúng làm dữ liệu để ước tính $R_0$.
+
+Các ước tính $R_0$ có bị ảnh hưởng khi tỉ lệ báo cáo thiếu không đổi không? Còn khi tỉ lệ này thay đổi theo thời gian? So sánh kết quả của bạn với các câu trả lời được cung cấp trong Bài tập 3.
+
+:::
+
+Không, các ước tính không bị ảnh hưởng khi tỉ lệ báo cáo thiếu không đổi bất kể tỉ lệ này là bao nhiêu.
+
+Tuy nhiên, tỉ lệ báo cáo thiếu thay đổi theo thời gian sẽ ảnh hưởng đến các ước tính.
+
+:::
+
+### Sử dụng các phương pháp tái tạo cây để ước tính hệ số lây nhiễm
+
+Việc khớp một mô hình truyền nhiễm với dữ liệu đòi hỏi phải đưa ra một loạt các giả định, chẳng hạn như về quy mô dân số hoặc tỷ lệ cảm nhiễm ban đầu trong dân số. Thay vì đưa ra các giả định như vậy, chúng ta sẽ sử dụng các phương pháp tái cấu trúc cây được mô tả trong bài giảng để ước tính hệ số lây nhiễm tức thời $R^i(t)$ trong trường học.
+
+Với phương pháp này, chúng ta chỉ cần đường cong dịch và phân phối thời gian thế hệ. Trong phần này, chúng ta sẽ dùng từ "khoảng thời gian nối tiếp" (serial interval) đồng nghĩa với thời gian thế hệ. Chúng ta sẽ sử dụng cùng một bộ dữ liệu như trong phần 1.
 
 ## Tóm tắt
 
