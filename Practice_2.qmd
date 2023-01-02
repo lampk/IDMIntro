@@ -127,7 +127,7 @@ Trong trường hợp một ca nhiễm trùng có thời gian thế hệ kiểu 
 Bạn sẽ xem xét tổng cộng 6 mô hình, 3 mô hình bệnh cúm mùa có thời gian thế hệ là 2,6 ngày (như Ferguson và cộng sự) và 3 mô hình SARS-CoV-2 có thời gian thế hệ là 6,6 ngày (như Cereda và cộng sự).
 
 |                | SARS-CoV-2                   | Cúm mùa                        |
-|-----------------|---------------------------|----------------------------|
+|------------------|---------------------------|----------------------------|
 | Thế hệ rời rạc | $T_g$ = 6,6 ngày             | $T_g$ = 2,6 ngày               |
 | SIR            | $D$ = 6,6 ngày               | $D$ = 2,6 ngày                 |
 | SEIR           | $L$ = 5 ngày; $D$ = 1,6 ngày | $L$ = 1 ngày; $T_g$ = 1,6 ngày |
@@ -231,7 +231,7 @@ $$T_g = L + D$$
 
 ### Tải dữ liệu và mô hình
 
-Vào trang web odin (https://shiny.dide.ic.ac.uk/infectiousdiseasemodelssingapore/) và nhấp vào liên kết "Influenza data" sẽ tải xuống "influenza_data.csv". Lưu tập tin này ở một nơi thuận tiện. Sau đó nhấp vào liên kết "Pennsylvania, basic" và "Pennsylvania, with school closures" để tải xuống file "solution1.R" và "solution2.R" và lưu các liên kết này vào cùng thư mục với "influenza_data.csv".
+Vào [trang thực hành](https://shiny.dide.ic.ac.uk/infectiousdiseasemodels-singapore/materials.html) và nhấp vào liên kết "Influenza data" sẽ tải xuống "influenza_data.csv". Lưu tập tin này ở một nơi thuận tiện. Sau đó nhấp vào liên kết "Pennsylvania, basic" và "Pennsylvania, with school closures" để tải xuống file "solution1.R" và "solution2.R" và lưu các liên kết này vào cùng thư mục với "influenza_data.csv".
 
 Chạy mô hình và liên kết với dữ liệu
 
@@ -375,8 +375,8 @@ Từ ngày 13-19
 Ước tính R trung bình tăng lên vào cuối vụ dịch, bởi vì có ít trường hợp mắc bệnh muộn. Với phân phối thời gian nối tiếp đã chọn, rất khó có khả năng có 4 ngày không có ca mới mắc rồi lại xuất hiện 2 ca, trừ khi R rất cao. Lý giải có thể là những trường hợp đó bị lây nhiễm bên ngoài trường chứ không phải trong trường.
 :::
 
-
 <!-- Print button -->
 
 <br/>
+
 <p><input type="button" value="In trang này" onClick="window.print()"></p>
