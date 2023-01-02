@@ -8,6 +8,8 @@ website:
     left:
       - href: index.qmd
         text: Giới thiệu
+      - href: Note.qmd
+        text: Bài học
 
 format:
   html:
