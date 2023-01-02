@@ -6,10 +6,14 @@ website:
   title: "Workshop về IDM"
   navbar:
     left:
-      - href: index.qmd
-        text: Giới thiệu
-      - href: Note.qmd
-        text: Bài học
+      - text: "Giới thiệu"
+        file: index.qmd
+      - text: "Lý thuyết"
+        file: Note.qmd
+      - text: "Bài thực hành 1"
+        file: Practice_1.qmd
+      - text: "Bài thực hành 2"
+        file: Practice_2.qmd
 
 format:
   html:
