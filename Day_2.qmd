@@ -1,0 +1,251 @@
+---
+title: "R0, Rt"
+author: "Phùng Khánh Lâm, Ong Phúc Thịnh"
+date: "`r Sys.Date()`"
+language: vn.yml
+format: 
+  html:
+    css: [css/style.css, css/webex.css]
+    toc: true
+    toc-float: true
+    toc-depth: 2
+    number-sections: true
+    number-depth: 3
+    include-after-body: js/webex.js
+    self-contained: true
+bibliography: references.bib
+csl: the-new-england-journal-of-medicine.csl
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(shiny)
+library(tidyverse)
+library(webexercises)
+library(gt)
+library(glue)
+
+knitr::opts_chunk$set(
+  echo = FALSE,
+  results = "hold",
+  out.width = '100%',
+  fig.width = 8,
+  fig.height = 5,
+  fig.align = 'center',
+  fig.cap = TRUE
+)
+```
+
+## Hệ số lây nhiễm cơ bản $R_0$ (basic reproduction number)
+
+![R0](figures/R0.png)
+
+Trung bình số ca nhiễm thứ phát bị lây nhiễm từ 1 ca nguồn trong 1 dân số rất lớn và toàn bộ đều là người cảm nhiễm
+
+## Hệ số lây nhiễm hiệu quả R(t) (effective reproduction number)
+
+![Rt](figures/Rt.png)
+
+Trung bình số ca nhiễm thứ phát bị lây nhiễm từ 1 ca nguồn tại thời điểm t (giải thích cho trường hợp dân số hữu hạn, hoặc đã có 1 số cá thể nhất định có miễn dịch trong dân số)
+
+$$R(t) = s(t)R_0$$
+
+**Chú ý:** $R_0$ là 1 trường hợp của R(t) khi t = 0, toàn bộ dân số là cảm nhiễm
+
+-   R(t) sẽ giảm khi số người cảm nhiễm giảm
+
+-   R(t) thay đổi nếu khả năng lây truyền thay đổi
+
+-\> Dịch bệnh sẽ tăng (R(t)\>1) hay giảm (R(t)\<1) và giảm mạnh như thế nào?
+
+-\> Các biện pháp kiểm soát có hiệu quả không?
+
+## Các phương pháp ước lượng $R_0$ và R(t)
+
+### Tốc độ tăng trưởng dịch (epidemic growth rate)
+
+Dịch bệnh sẽ tăng theo cấp số nhân miễn là tỉ lệ cảm nhiễm trong dân số đủ lớn (có thể kiểm tra bằng cách biểu diễn số liệu trên thang log)
+
+![R0 exponential growth](figures/R0_expGrowth.png)
+
+Nếu biết thời gian thế hệ (generation time: thời gian từ khi ca nguồn bị nhiễm đến khi ca thứ phát bị nhiễm) thì có thể ước lượng được $R_0$
+
+### Khớp mô hình với dữ liệu
+
+Ví dụ: Có số ca mới mắc theo ngày như sau
+
+![](figures/R0_fitModel_1.png)
+
+Chúng ta có thể khớp mô hình SIR đơn giản sau với dữ liệu
+
+```{mermaid}
+flowchart LR
+  S["S(t)"] --βI/N--> I["I(t)"]
+  I --σ--> R["R(t)"]
+```
+
+![](figures/R0_fitModel_2.png)
+
+![](figures/R0_fitModel_3.png)
+
+[Riley et al. Science 2003](https://www.science.org/doi/10.1126/science.1086478)
+
+### Truy vết
+
+![](figures/contactTracing.png)
+
+### Tái cấu trúc vụ dịch
+
+Suy luận ai lây cho ai dựa trên:
+
+-   Đường cong dịch
+-   Giả định về phân phối thời gian thế hệ
+
+Ví dụ tối giản: Có 2 ca nhiễm trong 1 vụ dịch
+
+![](figures/epiReconstruct.png)
+
+-   Bệnh nhân 1 bị nhiễm vào ngày 1
+-   Bệnh nhân 2 bị nhiễm vào ngày 3
+
+Hỏi ai lây cho ai?
+
+Ví dụ thực hành: 1 vụ dịch kết thúc với 4 ca nhiễm
+
+| Bệnh nhân | Nhiễm ngày |
+|-----------|------------|
+| 1         | 0          |
+| 2         | 2          |
+| 3         | 2          |
+| 4         | 4          |
+
+Với phân phối thời gian thế hệ sau (giả định hoặc lấy từ nghiên cứu truy vết trước)
+
+![](figures/genTime.png)
+
+Ai đã lây nhiễm cho bệnh nhân 2?
+
+![](figures/wiw_1.png)
+
+BN2 có xác suất 50% bị lây từ BN1, 0% từ BN3 và 0% từ BN4
+
+Hiệu chỉnh xác suất này theo công thức (để tổng lại là 100%)
+
+$$P(i \rightarrow j) = \frac{w(t_j - t_i)}{\sum_{k \ne j} w(t_j - t_k)}$$
+
+![](figures/wiw_2.png)
+
+Làm tương tự cho bệnh nhân 3, bệnh nhân 4
+
+![](figures/wiw_3.png)
+
+Ước lượng R của bệnh nhân i = tổng các xác suất
+
+![](figures/wiw_4.png)
+
+Xếp các giá trị R này theo ngày nhiễm của các bệnh nhân, ta có R(0), R(2) và R(4)
+
+![](figures/wiw_5.png)
+
+Cho phép ước lượng R(t)
+
+Phương pháp được giới thiệu bởi Ferguson et al. (Nature 2001) và Wallinga & Teunis (AJE 2004)
+
+Vấn đề:
+
+-   Chỉ có thể thực hiện hồi cứu (phương pháp mở rộng ước lượng theo thời gian thực giới thiệu bởi Cauchemez et al. EID 2006)
+-   Không ước lượng được R(t) cho những ngày không có ca nhiễm
+-   Phương pháp để đánh giá sự bất định rất phức tạp
+-   Ước lượng R(t) thể hiện khả năng lây nhiễm từ thời điểm t về sau -\> không phải khả năng lây nhiễm tại thời điểm t
+
+### Hệ số lây nhiễm tức thời $R^i(t)$
+
+Là trung bình số ca nhiễm thứ phát bị lây nhiễm từ mỗi ca đang nhiễm tại thời điểm t, không phải thời điểm t trở về sau
+
+$R^i(t)$ giả định rằng khả năng lây nhiễm giữ nguyên trong tương lai (dự đoán bao nhiêu ca nhiễm thứ phát bị lây nhiễm từ mỗi ca nguồn nếu khả năng lây nhiễm giữ nguyên ở thời điểm t)
+
+$R^i(t)$ / R(t) = tuổi kỳ vọng / tuổi thực
+
+Để ước lượng $R^i(t)$:
+
+-   Đếm số ca mới tại thời điểm t
+-   Tính tổng số có thể lây nhiễm ở thời điểm t
+-   Chia tỉ số 2 giá trị này
+
+Dùng lại ví dụ trước:
+
+| Bệnh nhân | Nhiễm ngày |
+|-----------|------------|
+| 1         | 0          |
+| 2         | 2          |
+| 3         | 2          |
+| 4         | 4          |
+
+![](figures/genTime.png)
+
+![](figures/instantR_1.png)
+
+![](figures/instantR_2.png)
+
+![](figures/instantR_3.png)
+
+![](figures/instantR_4.png)
+
+Ta có ước lượng hệ số lây nhiễm tức thời của từng ngày:
+
+![](figures/instantR_5.png)
+
+$R^i(t)$ = khả năng lây nhiễm (transmissibility) ở thời điểm t
+
+Phương pháp này được giới thiệu lần đầu bởi Fraser et al. (PLoS One 2007), được sửa đổi bởi Cori et al. (AJE 2013) và Thompson et al. (Epidemics 2019)
+
+Đã được áp dụng phân tích theo thời gian thực trong nhiều vụ dịch
+
+![](figures/instantR_refs.png)
+
+Phương pháp đánh giá độ bất định rất đơn giản.
+
+Thực hiện trong
+
+-   [Excel](http://tools.epidemiology.net/EpiEstim.xls)
+-   [R](http://cran.r-project.org/web/packages/EpiEstim/index.html)
+-   [Một ứng dụng tương tác](https://shiny.dide.imperial.ac.uk/epiestim/)
+
+Ước lượng $R^i$ vào những ngày không có ca mắc = 0
+
+Khả năng tính đến sự không chắc chắn trong phân phối thời gian thế hệ và các ca nhập khẩu (imported cases).
+
+## Điểm mạnh và điểm yếu của các phương pháp
+
+| Phương pháp                                                                   | Ước lượng | Cần có                                                                                          | Điểm mạnh                                                                                                                                                                                                                                                     | Điểm yếu                                                                                                                                                                                                                                                                                                                        |
+|---------------|---------------|---------------|---------------|---------------|
+| Tốc độ tăng trưởng                                                            | $R_0$     | Đường cong dịch giai đoạn sớm; phân phối thời gian thế hệ                                       | Không cần giả định về cơ chế lây truyền; Có thể ước lượng sớm trong vụ dịch; Dễ dùng (có thể dùng Excel); Có thể ước lượng cho các vụ dịch lớn; Chính xác với dữ liệu báo cáo thiếu                                                                           | Giả định tiếp xúc đồng nhất (homogenous mixing); Đôi khi khó có thể giới hạn giai đoạn tăng theo cấp số nhân của vụ dịch (ví dụ khi dữ liệu không thu thập theo ngày mà theo tuần, tháng)                                                                                                                                       |
+| Khớp mô hình                                                                  | $R_0$     | Đường cong dịch; Số người trong dân số; Tỉ lệ người cảm nhiễm và miễn dịch ban đầu trong dân số | Dễ dùng (sử dụng R); Có thể ước lượng cho các vụ dịch lớn                                                                                                                                                                                                     | Không thể thực hiện theo thời gian thực; Giả định quan trọng về cơ chế lây nhiễm; Giá định sự lây nhiễm là hằng định (constant transmissibility) (trừ khi được quy định khác đi trong mô hình); Giả định tiếp xúc đồng nhất (trừ khi được quy định khác đi trong mô hình); Tỉ lệ báo cáo thiếu phải được quy định trong mô hình |
+| Truy vết                                                                      | R(t)      | Dữ liệu chi tiết sự tiếp xúc của từng ca nhiễm                                                  | Đo lường thực tế R(t) chứ không phải ước lượng (tiêu chuẩn vàng); Không có bất cứ giả định gì về cơ chế lây nhiễm                                                                                                                                             | Đắt; Tốn thời gian; Không thể thực hiện cho vụ dịch lớn; Không thể thực hiện theo thời gian thực                                                                                                                                                                                                                                |
+| Suy luận ai lây cho ai (who infected whom)                                    | R(t)      | Đường cong dịch; Phân phối thời gian thế hệ                                                     | Đỡ tốn tiền, tốn thời gian hơn truy vết; Có thể ước lượng cho các vụ dịch lớn; Chính xác với dữ liệu báo cáo thiếu                                                                                                                                            | Không thể thực hiện theo thời gian thực; Giả định tiếp xúc đồng nhất; Giả định phân phối thời gian thế hệ đặc biệt (unique generation time distribution)                                                                                                                                                                        |
+| Tỉ số giữa số người mới bị nhiễm / khả năng lây nhiễm (available infectivity) | $R^i(t)$  | Đường cong dịch; Phân phối thời gian thế hệ                                                     | Không cần giả định về cơ chế lây truyền; Có thể thực hiện theo thời gian thực; Có thể làm bằng Excel hoặc R; Có thể ước lượng cho các vụ dịch lớn; Có khả năng giải thích cho sự bất định của phân phối thời gian thế hệ; Chính xác với dữ liệu báo cáo thiếu | Giả định tiếp xúc đồng nhất; Không thể hiện được điều gì đã thực sự xảy ra hoặc dự báo tương lai                                                                                                                                                                                                                                |
+
+## Tổng kết
+
+-   $R_0$: Hệ số lây nhiễm cơ bản = Trung bình số ca nhiễm thứ phát bị lây nhiễm từ 1 ca nguồn trong 1 dân số rất lớn và toàn bộ đều là người cảm nhiễm
+
+    -   Có thể ước tính từ tốc độ tăng trưởng dịch + phân phối thời gian thế hệ + tỷ lệ cảm nhiễm ban đầu
+
+    -   Bằng cách khớp mô hình với đường cong dịch
+
+-   R(t): Hệ số lây nhiễm hiệu quả = Trung bình số ca nhiễm thứ phát bị lây nhiễm từ 1 ca nguồn tại thời điểm t
+
+-   $R^i(t)$: Hệ số lây nhiễm tức thời = Số ca thứ phát trên mỗi ca đang nhiễm tại thời điểm t
+
+    -   Có thể ước tính từ đường cong dịch và phân bố thời gian thế hệ bằng cách suy ra cây lây truyền
+
+-   Thời gian nhiễm thường không thể quan sát được, chúng ta thường dựa vào ngày khởi phát triệu chứng.
+
+-   Sử dụng khoảng thời gian nối tiếp (thời gian từ ngày khởi phát triệu chứng ở người đang nhiễm tới ngày khởi phát triệu chứng của người bị lây nhiễm) hơn là thời gian thế hệ
+
+-   Ở đây chúng ta tập trung vào các phương pháp chỉ sử dụng dữ liệu dịch tễ học
+
+-   Ngoài ra còn có các phương pháp khác, ví dụ: sử dụng dữ liệu di truyền
+
+    -   Stadler et al. MBE, 2011
+    -   Volz và Siveroni, PLoS Comp Biol 2018
