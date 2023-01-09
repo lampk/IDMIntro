@@ -54,7 +54,7 @@ Lưu ý !!!
 
 ## Vì sao có workshop này?
 
-- Khoá học "Introduction to mathematical models of the Epidemiology & Control of Infectious Diseases"
+-   Khoá học "Introduction to mathematical models of the Epidemiology & Control of Infectious Diseases"
 
 -   Singapore, 13-16/10/2022
 
@@ -193,19 +193,23 @@ Cần phải ngăn chặn $R_0$ - 1 ca nhiễm mới trong số $R_0$ ca để p
 
 $$p_c = \frac{R_0 - 1}{R_0} = 1 - \frac{1}{R_0}$$
 
-- Để kiểm soát dịch bệnh, chính sách cần giảm lây truyền sao cho R0 < 1
+-   Để kiểm soát dịch bệnh, chính sách cần giảm lây truyền sao cho R0 \< 1
 
-- Cần loại bỏ một tỉ lệ tương ứng với $\frac{R_0-1}{R_0}$ của đường truyền:
+-   Cần loại bỏ một tỉ lệ tương ứng với $\frac{R_0-1}{R_0}$ của đường truyền:
 
-* 50% khi $R_0$ = 2,
-* 75% khi $R_0$ = 4,
-* 90% khi $R_0$ = 10.
+-   50% khi $R_0$ = 2,
 
-- Điều này có thể đạt được bằng cách:
+-   75% khi $R_0$ = 4,
 
-* Giảm tiếp xúc (cách ly, giãn cách xã hội).
-* Giảm tỉ lệ cảm nhiễm (tiêm phòng, thuốc dự phòng).
-* Giảm khả năng lây nhiễm (ví dụ: điều trị).
+-   90% khi $R_0$ = 10.
+
+-   Điều này có thể đạt được bằng cách:
+
+-   Giảm tiếp xúc (cách ly, giãn cách xã hội).
+
+-   Giảm tỉ lệ cảm nhiễm (tiêm phòng, thuốc dự phòng).
+
+-   Giảm khả năng lây nhiễm (ví dụ: điều trị).
 
 ### Hệ số lây nhiễm cơ bản
 
@@ -213,9 +217,9 @@ $$p_c = \frac{R_0 - 1}{R_0} = 1 - \frac{1}{R_0}$$
 
 $$R_0 = \beta cD$$
 
-* $c$: tần suất tiếp xúc trung bình
-* $\beta$: xác suất lây nhiễm
-* $D$: thời gian trung bình của giai đoạn lây nhiễm
+-   $c$: tần suất tiếp xúc trung bình
+-   $\beta$: xác suất lây nhiễm
+-   $D$: thời gian trung bình của giai đoạn lây nhiễm
 
 **Can thiệp có thể tác động như thế nào**
 
@@ -223,74 +227,75 @@ Can thiệp có thể làm giảm **Hệ số lây nhiễm hiệu quả**
 
 $$R = sR_0 = \beta cDs$$
 
-* $c$: thay đổi kiểu mẫu tiếp xúc (contact pattern)
-* $\beta$: 
-  * Rào chắn (barrier method): đeo khẩu trang, kiểm soát vector
-  * Giảm khả năng lây nhiễm: điều trị, tiêm vaccine
-* $D$: Giảm thời gian của giai đoạn lây nhiễm: điều trị, cách ly, phong tỏa
-* $s$: làm cạn kiệt số người cảm nhiễm
+-   $c$: thay đổi kiểu mẫu tiếp xúc (contact pattern)
+-   $\beta$:
+    -   Rào chắn (barrier method): đeo khẩu trang, kiểm soát vector
+    -   Giảm khả năng lây nhiễm: điều trị, tiêm vaccine
+-   $D$: Giảm thời gian của giai đoạn lây nhiễm: điều trị, cách ly, phong tỏa
+-   $s$: làm cạn kiệt số người cảm nhiễm
+
 
 ### Dữ liệu dùng để ước lượng $R_0$
 
-- Không phải là một hằng số sinh học cơ bản!
+-   Không phải là một hằng số sinh học cơ bản!
 
-- Được xác định bởi:
+-   Được xác định bởi:
 
-  * Mầm bệnh sinh học (cơ chế bệnh sinh, vòng đời, tính biến đổi).
-  * Yếu tố vật chủ (di truyền, dinh dưỡng, tuổi, bệnh đồng mắc).
-  * Cấu trúc dân số (nhân khẩu học, kiểu mẫu tiếp xúc).
+    -   Mầm bệnh sinh học (cơ chế bệnh sinh, vòng đời, tính biến đổi).
+    -   Yếu tố vật chủ (di truyền, dinh dưỡng, tuổi, bệnh đồng mắc).
+    -   Cấu trúc dân số (nhân khẩu học, kiểu mẫu tiếp xúc).
 
-- Sự hiểu biết về những điều này cho phép ước tính $R_0$ là điều mà dịch tễ học bệnh truyền nhiễm định lượng hướng tới.
+-   Sự hiểu biết về những điều này cho phép ước tính $R_0$ là điều mà dịch tễ học bệnh truyền nhiễm định lượng hướng tới.
 
-- Cần hiểu biết về cơ chế (không chỉ khớp đường cong) để dự đoán tác động của các biện pháp kiểm soát dịch.
+-   Cần hiểu biết về cơ chế (không chỉ khớp đường cong) để dự đoán tác động của các biện pháp kiểm soát dịch.
 
-- Cần DỮ LIỆU.
+-   Cần DỮ LIỆU.
 
 #### Dữ liệu kiểu mẫu tiếp xúc (contact patterns)
 
-- Xác định các tiếp xúc 'có liên quan' thường là một thách thức
+-   Xác định các tiếp xúc 'có liên quan' thường là một thách thức
 
-- Rõ ràng nhất cho các bệnh lây truyền qua đường tình dục
+-   Rõ ràng nhất cho các bệnh lây truyền qua đường tình dục
 
-- Các hình thức thay thế được sử dụng cho các bệnh về đường hô hấp – khảo sát, dữ liệu du lịch, dữ liệu điện thoại di động…
+-   Các hình thức thay thế được sử dụng cho các bệnh về đường hô hấp -- khảo sát, dữ liệu du lịch, dữ liệu điện thoại di động...
 
 #### Dữ liệu lây nhiễm
 
-- Hiếm khi quan sát được.
+-   Hiếm khi quan sát được.
 
-- Ít dữ liệu định lượng về cơ chế.
+-   Ít dữ liệu định lượng về cơ chế.
 
-- Một số ước tính về tỉ lệ lây truyền cho các nhóm nhỏ (ví dụ: hộ gia đình), được rút ra từ các nghiên cứu đoàn hệ
+-   Một số ước tính về tỉ lệ lây truyền cho các nhóm nhỏ (ví dụ: hộ gia đình), được rút ra từ các nghiên cứu đoàn hệ
 
-- Hoặc gần đây hơn từ các nghiên cứu thử thách
+-   Hoặc gần đây hơn từ các nghiên cứu thử thách
 
 #### Dữ liệu diễn tiến tự nhiên của bệnh
 
-Bệnh tiến triển dần dần – cần biết được thời gian ủ bệnh (không có triệu chứng), sự thay đổi khả năng lây nhiễm, tỷ lệ tử vong.
+Bệnh tiến triển dần dần -- cần biết được thời gian ủ bệnh (không có triệu chứng), sự thay đổi khả năng lây nhiễm, tỷ lệ tử vong.
 
 #### Dữ liệu can thiệp
 
-- Thử nghiệm (hiệu lực/hiệu quả).
+-   Thử nghiệm (hiệu lực/hiệu quả).
 
-- Các nghiên cứu quan sát.
+-   Các nghiên cứu quan sát.
 
-- Phép ngoại suy (gần như) luôn cần để ước tính hiệu ứng lên toàn dân số.
+-   Phép ngoại suy (gần như) luôn cần để ước tính hiệu ứng lên toàn dân số.
 
 ### Kiểm chứng mô hình (model validation)
 
-- Nói chung là khó – không bao giờ có hai dịch bệnh giống nhau.
+-   Nói chung là khó -- không bao giờ có hai dịch bệnh giống nhau.
 
-- Các tham số chính nên được ước tính từ dữ liệu (cũng khó – số liệu thống kê cũng quan trọng như xây dựng mô hình).
+-   Các tham số chính nên được ước tính từ dữ liệu (cũng khó -- số liệu thống kê cũng quan trọng như xây dựng mô hình).
 
-- Các mô hình nên tái tạo lại được các dịch bệnh trong quá khứ (phù hợp với dữ liệu).
+-   Các mô hình nên tái tạo lại được các dịch bệnh trong quá khứ (phù hợp với dữ liệu).
 
-- Nhưng hiếm khi có được bộ dữ liệu 'training' và 'validation'.
+-   Nhưng hiếm khi có được bộ dữ liệu 'training' và 'validation'.
 
-- Phân tích độ nhạy (sensitivity analysis) là quan trọng
+-   Phân tích độ nhạy (sensitivity analysis) là quan trọng
 
 ### Chúng ta dùng mô hình để làm gì
 
-- Tổng hợp kiến thức
+-   Tổng hợp kiến thức
 
 ```{mermaid}
 flowchart LR
@@ -306,7 +311,7 @@ flowchart LR
   M --> C1["Tối ưu hóa chính sách"]
 ```
 
-- Đơn giản hóa thực tế
+-   Đơn giản hóa thực tế
 
 Tin tốt!: các mô hình có thể đơn giản hơn thực tế (rất nhiều lần) mà vẫn hữu ích
 
@@ -314,16 +319,15 @@ Ví dụ: sởi
 
 ### Các câu hỏi có thể giải quyết bằng mô hình
 
-- Tại sao chúng ta có thể loại trừ bệnh đậu mùa? Chúng ta cần làm thêm gì và bao lâu nữa để loại trừ bệnh bại liệt?
+-   Tại sao chúng ta có thể loại trừ bệnh đậu mùa? Chúng ta cần làm thêm gì và bao lâu nữa để loại trừ bệnh bại liệt?
 
-- Vì sao dịch sởi lặp lại mỗi 2 năm, norovirus có dịch hàng năm và *S.aureus* lưu hành ổn định?
+-   Vì sao dịch sởi lặp lại mỗi 2 năm, norovirus có dịch hàng năm và *S.aureus* lưu hành ổn định?
 
-- Một loại vắc-xin hiệu quả 30% chống lại HIV hoặc sốt rét có thể đạt được tác động gì?
+-   Một loại vắc-xin hiệu quả 30% chống lại HIV hoặc sốt rét có thể đạt được tác động gì?
 
-- Chúng ta nên tiêm phòng cho ai để giảm thiểu tác động của dịch cúm mùa trong tương lai – trẻ em, người già hoặc cả hai?
+-   Chúng ta nên tiêm phòng cho ai để giảm thiểu tác động của dịch cúm mùa trong tương lai -- trẻ em, người già hoặc cả hai?
 
-- Chúng ta nên phân bổ nguồn lực như thế nào giữa các biện pháp can thiệp/khu vực địa lý/dân số để đạt được tác động tối đa đối với sức khỏe?
-
+-   Chúng ta nên phân bổ nguồn lực như thế nào giữa các biện pháp can thiệp/khu vực địa lý/dân số để đạt được tác động tối đa đối với sức khỏe?
 
 ## Giới thiệu về thiết kế mô hình bệnh truyền nhiễm
 
@@ -563,7 +567,6 @@ $$F = 1 - exp(-R_{0}F)$$
 Vậy nếu có thể ước lượng được $R_{0}$ thì có thể tính được độ lớn của đợt bùng phát này.
 
 ### Vaccine và miễn dịch cộng đồng
-
 
 ## Tóm tắt
 
