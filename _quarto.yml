@@ -8,17 +8,19 @@ website:
     left:
       - text: "Giới thiệu"
         file: index.qmd
-      - text: "Lý thuyết"
+      - text: "Lý thuyết 1"
         file: Note.qmd
-      - text: "Bài thực hành 1"
+      - text: "Lý thuyết 2"
+        file: Day_2.qmd
+      - text: "Thực hành 1"
         file: Practice_1.qmd
-      - text: "Bài thực hành 2"
+      - text: "Thực hành 2"
         file: Practice_2.qmd
 
 format:
   html:
     theme: simplex
-    css: styles.css
+    css: css/style.css
     toc: true
 
 editor: visual
