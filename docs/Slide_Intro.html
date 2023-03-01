@@ -9,7 +9,8 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.1.251">
 
-  <meta name="author" content="ABC">
+  <meta name="author" content="Phùng Khánh Lâm, Ong Phúc Thịnh">
+  <meta name="dcterms.date" content="2023-01-03">
   <title>Workshop về IDM - Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -328,30 +329,262 @@
 
 <section id="title-slide" data-background-color="#002147" data-color="#ffffff" data-link-color="#ffffff" data-text-align="left" data-visibility="uncounted" class="center">
   <h1 class="title">Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm</h1>
-  <p class="subtitle">ABC</p>
-  <p class="author">ABC</p>
-  <p class="institute">ABC</p>
-  <p class="date">17/11/2022</p>
+  <p class="author">Phùng Khánh Lâm, Ong Phúc Thịnh</p>
+  <p class="institute">Khoa YTCC - ĐHYD TPHCM, OUCRU</p>
+  <p class="date">01/03/2023</p>
 </section>
 
-<section id="savitz-da-wellenius-ga.-2022-mar-1kwac037." class="slide level2">
-<h2>Savitz DA, Wellenius GA. 2022 Mar 1;kwac037.</h2>
-</section>
-<section id="vấn-đề-của-nghiên-cứu-cắt-ngang" class="slide level2">
-<h2>Vấn đề của nghiên cứu cắt ngang</h2>
+<section id="nội-dung" class="slide level2">
+<h2>Nội dung</h2>
 <ul>
-<li><p>Contemporaneous Exposure May Not Be Etiologically Relevant</p></li>
-<li><p>Disease Prevalence May Be a Poor Proxy for Disease Incidence</p></li>
-<li><p>The Association between Exposure and Disease May Be Susceptible to Reverse Causality</p></li>
+<li><p>Dịch tễ học bệnh truyền nhiễm</p></li>
+<li><p>Hệ số lây nhiễm</p></li>
+<li><p>Mô hình toán học bệnh truyền nhiễm</p></li>
 </ul>
 </section>
-<section id="đã" class="slide level2">
-<h2>Đã</h2>
+<section>
+<section id="dịch-tễ-học-bệnh-truyền-nhiễm" class="title-slide slide level1 center" data-background="#002147">
+<h1>Dịch tễ học bệnh truyền nhiễm</h1>
+
+</section>
+<section id="diễn-tiến-bệnh-truyền-nhiễm" class="slide level2">
+<h2>Diễn tiến bệnh truyền nhiễm</h2>
+
+<img data-src="figures/LSTN_DCL_03.png" class="r-stretch"></section>
+<section id="các-giai-đoạn-của-một-vụ-dịch" class="slide level2">
+<h2>Các giai đoạn của một vụ dịch</h2>
+
+<img data-src="figures/epidemic_phases.png" class="r-stretch"></section>
+<section id="khả-năng-lây-truyền-transmissibility-của-dịch" class="slide level2">
+<h2>Khả năng lây truyền (transmissibility) của dịch</h2>
+<ul>
+<li><p>Hệ số lây nhiễm (reproductive number, <span class="math inline">\(R\)</span>)</p></li>
+<li><p>Tốc độ tăng trưởng của dịch (epidemic growth rate, <span class="math inline">\(r\)</span>)</p></li>
+</ul>
+</section>
+<section id="hệ-số-lây-nhiễm-r" class="slide level2">
+<h2>Hệ số lây nhiễm <span class="math inline">\(R\)</span></h2>
+<p>Số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó.</p>
+</section>
+<section id="tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate" class="slide level2">
+<h2>Tốc độ tăng trưởng của dịch (epidemic growth rate)</h2>
+<p>Thể hiện số ca nhiễm tăng lên trong một đơn vị thời gian.</p>
+<p>Phụ thuộc vào hai thông số:</p>
+<ul>
+<li><p>hệ số lây nhiễm (reproductive number)</p></li>
+<li><p>khoảng thời gian giữa hai thế hệ lây nhiễm (generation time).</p></li>
+</ul>
+</section>
+<section id="tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-1" class="slide level2">
+<h2>Tốc độ tăng trưởng của dịch (epidemic growth rate)</h2>
+<p><span class="math inline">\(r\)</span> có thể được ước tính theo công thức</p>
+<p><span class="math display">\[
+r = \dfrac{R-1}{Tg}
+\]</span></p>
+<p>Với <span class="math inline">\(R\)</span> là hệ số lây nhiễm và <span class="math inline">\(T_g\)</span> là khoảng thời gian trung bình giữa hai thế hệ lây nhiễm.</p>
+</section>
+<section id="tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-2" class="slide level2">
+<h2>Tốc độ tăng trưởng của dịch (epidemic growth rate)</h2>
+<p>Ở giai đoạn đầu dịch, số ca mới mắc sẽ tăng theo cấp số nhân và tỉ lệ theo:</p>
+<p><span class="math display">\[exp[\frac{(R_0 - 1)}{T_g}t]\]</span></p>
+<p>Với <span class="math inline">\(R_0\)</span> là hệ số lây nhiễm cơ bản.</p>
+</section>
+<section id="thời-gian-thế-hệ-t_g" class="slide level2">
+<h2>Thời gian thế hệ <span class="math inline">\(T_g\)</span></h2>
+<p>Thời gian trung bình từ lúc 1 ca bị lây nhiễm đến khi ca tiếp theo bị lây nhiễm từ ca này (khái niệm này định nghĩa theo khả năng lây nhiễm).</p>
+</section>
+<section id="thời-gian-thế-hệ-t_g-1" class="slide level2">
+<h2>Thời gian thế hệ <span class="math inline">\(T_g\)</span></h2>
+
+<img data-src="figures/LSTN_DCL_03.png" class="r-stretch"></section>
+<section id="tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-3" class="slide level2">
+<h2>Tốc độ tăng trưởng của dịch (epidemic growth rate)</h2>
+
+<img data-src="figures/growthrate.png" class="r-stretch"></section></section>
+<section>
+<section id="hệ-số-lây-nhiễm" class="title-slide slide level1 center" data-background="#002147">
+<h1>Hệ số lây nhiễm</h1>
+
+</section>
+<section id="hệ-số-lây-nhiễm-1" class="slide level2">
+<h2>Hệ số lây nhiễm</h2>
+<p>Số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó.</p>
+<p>Cần phân biệt giữa hệ số lây nhiễm cơ bản (<span class="math inline">\(R_0\)</span>) và hệ số lây nhiễm hiệu quả (<span class="math inline">\(R_t\)</span>).</p>
+</section>
+<section id="hệ-số-lây-nhiễm-2" class="slide level2">
+<h2>Hệ số lây nhiễm</h2>
+
+<img data-src="figures/R.png" class="r-stretch"></section>
+<section id="hệ-số-lây-nhiễm-cơ-bản-r_0" class="slide level2">
+<h2>Hệ số lây nhiễm cơ bản (<span class="math inline">\(R_0\)</span>)</h2>
+<p>Số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó, trong dân số hoàn toàn cảm nhiễm với bệnh (tại thời điểm dịch mới xuất hiện).</p>
+</section>
+<section id="hệ-số-lây-nhiễm-cơ-bản-r_0-1" class="slide level2">
+<h2>Hệ số lây nhiễm cơ bản (<span class="math inline">\(R_0\)</span>)</h2>
+<p><span class="math inline">\(R_0\)</span> giúp xác định khả năng lây lan của bệnh trong cộng đồng. Ví dụ về 1 bệnh nhiễm trùng không tạo miễn dịch suốt đời</p>
+<ul>
+<li><p>Khi <span class="math inline">\(R_0\)</span> &lt; 1 bệnh không lây lan</p></li>
+<li><p>Khi <span class="math inline">\(R_0\)</span> gần bằng 1, số ca tăng dần</p></li>
+<li><p>Khi <span class="math inline">\(R_0\)</span> lớn, bệnh lây lan và trở thành bệnh lưu hành</p></li>
+</ul>
+</section>
+<section id="hệ-số-lây-nhiễm-cơ-bản-r_0-2" class="slide level2">
+<h2>Hệ số lây nhiễm cơ bản (<span class="math inline">\(R_0\)</span>)</h2>
+<p><span class="math inline">\(R_0\)</span> giúp xác định tốc độ lây truyền của bệnh trong cộng đồng, thông qua ước tính tốc độ tăng trưởng của dịch. <span class="math inline">\(R_0\)</span> càng cao thì dịch có tốc độ tăng trưởng càng nhanh.</p>
+</section>
+<section id="hệ-số-lây-nhiễm-cơ-bản-r_0-3" class="slide level2">
+<h2>Hệ số lây nhiễm cơ bản (<span class="math inline">\(R_0\)</span>)</h2>
+<p><span class="math inline">\(R_0\)</span> giúp ước tính được quy mô vụ dịch khi kết thúc (<span class="math inline">\(F\)</span>)</p>
+<p><span class="math display">\[
+F = 1 - exp\{-R_0 \times F\}
+\]</span></p>
+<p><span class="math inline">\(R_0\)</span> giúp ước tính được % số ca bệnh tại đỉnh dịch (<span class="math inline">\(H\)</span>)</p>
+<p><span class="math display">\[H = 1 - \frac{1}{R_0}\]</span></p>
+<p>Ngưỡng cân bằng của vụ dịch ~ mức độ can thiệp cần thiết để kiểm soát vụ dịch.</p>
+</section>
+<section id="hệ-số-lây-nhiễm-hiệu-quả-r_t" class="slide level2">
+<h2>Hệ số lây nhiễm hiệu quả (<span class="math inline">\(R_t\)</span>)</h2>
+<p>Số ca nhiễm trung bình từ một ca nhiễm trong quá trình diễn tiến của vụ dịch.</p>
+<p>Can thiệp có thể làm thay đổi <span class="math inline">\(R_t\)</span>, do đó chỉ số này được dùng để theo dõi và đánh giá hiệu quả của can thiệp.</p>
+</section>
+<section id="cách-ước-lượng-hệ-số-lây-nhiễm" class="slide level2">
+<h2>Cách ước lượng hệ số lây nhiễm</h2>
+<p>Cần lưu ý rằng, hệ số lây nhiễm không phải là một hằng số sinh học cơ bản!</p>
+<p>Về lý thuyết, hệ số lây nhiễm có thể được tính bằng công thức:</p>
+<p><span class="math display">\[
+R = D \times O \times T \times S
+\]</span></p>
+<p>Trong đó:</p>
+<p><span class="math inline">\(D\)</span> (Duration) là độ dài của thời kỳ lây nhiễm.</p>
+<p><span class="math inline">\(O\)</span> (Opportunity) là cơ hội lây nhiễm, thể hiện bằng số lượng tiếp xúc trong một đơn vị thời gian.</p>
+<p><span class="math inline">\(T\)</span> (Transmission probability) là xác suất lây nhiễm thành công trong một lần tiếp xúc.</p>
+<p><span class="math inline">\(S\)</span> (Duration) là kích thước của dân số cảm nhiễm, thể hiện bằng % dân số có thể mắc bệnh.</p>
+</section>
+<section id="cách-ước-lượng-hệ-số-lây-nhiễm-1" class="slide level2">
+<h2>Cách ước lượng hệ số lây nhiễm</h2>
+<p>Cần sử dụng nhiều loại dữ liệu khác nhau:</p>
+<ul>
+<li><p>Dữ liệu về sự lây truyền bệnh (transmission): thường không quan sát được, thường dựa vào nghiên cứu đoàn hệ trong hộ gia đình.</p></li>
+<li><p>Dữ liệu về kiểu tiếp xúc (contact patterns): thường khó xác định được loại hình tiếp xúc liên quan, dễ dàng nhất là đối với bệnh lây truyền qua quan hệ tình dục, thường thu thập dựa vào điều tra/dữ liệu di chuyển/dữ liệu thu thập qua app điện thoại.</p></li>
+<li><p>Dữ liệu về lịch sử tự nhiên của bệnh.</p></li>
+<li><p>Dữ liệu về can thiệp: từ nghiên cứu can thiệp hoặc quan sát.</p></li>
+</ul>
+</section></section>
+<section>
+<section id="mô-hình-toán-học-bệnh-truyền-nhiễm" class="title-slide slide level1 center" data-background="#002147">
+<h1>Mô hình toán học bệnh truyền nhiễm</h1>
+
+</section>
+<section id="mô-hình-toán-học-bệnh-truyền-nhiễm-1" class="slide level2">
+<h2>Mô hình toán học bệnh truyền nhiễm</h2>
+<p>Mô hình là sự đơn giản hoá một hệ thống phức tạp</p>
+<div class="fragment">
+<p>Tất cả mọi người đều dùng mô hình 1 cách vô thức.</p>
+</div>
+<div class="fragment">
+<p>Mô hình toán học cho phép thực hiện được các phân tích chính xác, chặt chẽ và dự báo định lượng.</p>
+</div>
+</section>
+<section id="mô-hình-toán-học-bệnh-truyền-nhiễm-2" class="slide level2">
+<h2>Mô hình toán học bệnh truyền nhiễm</h2>
+<p>Đối với dịch tễ học bệnh truyền nhiễm, mô hình toán học có thể dùng cho 2 nhóm mục tiêu chính:</p>
+<ul>
+<li><p>Hiểu biết thêm về vai trò và mối quan hệ của các yếu tố khác nhau ảnh hưởng đến sự xuất hiện và diễn tiến của dịch bệnh.</p></li>
+<li><p>Dự đoán diễn tiến của dịch bệnh.</p></li>
+</ul>
+</section>
+<section id="các-bước-xây-dựng-mô-hình" class="slide level2">
+<h2>Các bước xây dựng mô hình</h2>
+<ol type="1">
+<li><p>Thiết kế mô hình</p></li>
+<li><p>Ước lượng tham số</p></li>
+<li><p>Chạy mô hình</p></li>
+<li><p>Diễn giải kết quả</p></li>
+</ol>
+</section>
+<section id="mô-hình-khoang" class="slide level2">
+<h2>Mô hình khoang</h2>
+<div class="fragment">
+<p>Chia dân số thành nhiều khoang (phân nhóm)</p>
+</div>
+<div class="fragment">
+<p>mỗi khoang có:</p>
+<ul>
+<li><p>1 biến trạng thái, thể hiện số người đang ở trong khoang này, và</p></li>
+<li><p>1 phương trình vi phân, thể hiện tần suất thay đổi của biến trạng thái</p></li>
+</ul>
+</div>
+</section>
+<section id="mô-hình-sir" class="slide level2">
+<h2>Mô hình SIR</h2>
+
+<img data-src="figures/SIR_01.png" class="r-stretch"></section>
+<section id="mô-hình-sir-1" class="slide level2">
+<h2>Mô hình SIR</h2>
+
+<img data-src="figures/SIR_02.png" class="r-stretch"></section>
+<section id="mô-hình-sir-2" class="slide level2">
+<h2>Mô hình SIR</h2>
+
+<img data-src="figures/SIR_03.png" class="r-stretch"></section>
+<section id="mô-hình-sir-3" class="slide level2">
+<h2>Mô hình SIR</h2>
+
+<img data-src="figures/SIR_04.png" class="r-stretch"></section>
+<section id="mô-hình-sir-4" class="slide level2">
+<h2>Mô hình SIR</h2>
+
+<img data-src="figures/SIR_05.png" class="r-stretch"></section>
+<section id="mô-hình-sir-5" class="slide level2">
+<h2>Mô hình SIR</h2>
+
+<img data-src="figures/SIR_06.png" class="r-stretch"></section>
+<section id="mô-hình-sir-6" class="slide level2">
+<h2>Mô hình SIR</h2>
+
+<img data-src="figures/SIR_07.png" class="r-stretch"></section>
+<section id="mô-hình-sir-7" class="slide level2">
+<h2>Mô hình SIR</h2>
+
+<img data-src="figures/SIR_08.png" class="r-stretch"></section>
+<section id="mô-hình-sir-8" class="slide level2">
+<h2>Mô hình SIR</h2>
+
+<img data-src="figures/SIR_09.png" class="r-stretch"></section>
+<section id="mô-hình-sir-9" class="slide level2">
+<h2>Mô hình SIR</h2>
+
+<img data-src="figures/SIR_10.png" class="r-stretch"></section></section>
+<section>
+<section id="kết-luận" class="title-slide slide level1 center" data-background="#002147">
+<h1>Kết luận</h1>
+
+</section>
+<section id="kết-luận-1" class="slide level2">
+<h2>Kết luận</h2>
+<p>Dịch tễ học bệnh truyền nhiễm</p>
+<ul>
+<li>Khả năng lây nhiễm của bệnh</li>
+</ul>
+<div class="fragment">
+<p>Hệ số lây nhiễm</p>
+</div>
+<div class="fragment">
+<p>Mô hình toán học bệnh truyền nhiễm</p>
+<ul>
+<li>Mô hình khoang</li>
+<li>Thiết kế, ước tính tham số (giả định)</li>
+</ul>
+</div>
+</section>
+<section id="nội-dung-khoá-học" class="slide level2">
+<h2>Nội dung khoá học</h2>
+<p>https://lampk.github.io/IDMIntro</p>
 
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

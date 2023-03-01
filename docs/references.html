@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Workshop về IDM - Tài liệu tham khảo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Workshop về IDM</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Giới thiệu</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Note.html">Lý thuyết 1</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Day_2.html">Lý thuyết 2</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Practice_1.html">Thực hành 1</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Practice_2.html">Thực hành 2</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#infectious-disease-modeling" id="toc-infectious-disease-modeling" class="nav-link active" data-scroll-target="#infectious-disease-modeling">Infectious disease modeling</a>
+  <ul class="collapse">
+  <li><a href="#books" id="toc-books" class="nav-link" data-scroll-target="#books">Books</a></li>
+  <li><a href="#papers" id="toc-papers" class="nav-link" data-scroll-target="#papers">Papers</a></li>
+  <li><a href="#courses" id="toc-courses" class="nav-link" data-scroll-target="#courses">Courses</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  </ul></li>
+  <li><a href="#infectious-disease-data-analysis" id="toc-infectious-disease-data-analysis" class="nav-link" data-scroll-target="#infectious-disease-data-analysis">Infectious disease data analysis</a>
+  <ul class="collapse">
+  <li><a href="#books-1" id="toc-books-1" class="nav-link" data-scroll-target="#books-1">Books</a></li>
+  <li><a href="#papers-1" id="toc-papers-1" class="nav-link" data-scroll-target="#papers-1">Papers</a></li>
+  </ul></li>
+  <li><a href="#epidemic-models" id="toc-epidemic-models" class="nav-link" data-scroll-target="#epidemic-models">Epidemic models</a>
+  <ul class="collapse">
+  <li><a href="#books-2" id="toc-books-2" class="nav-link" data-scroll-target="#books-2">Books</a></li>
+  <li><a href="#papers-2" id="toc-papers-2" class="nav-link" data-scroll-target="#papers-2">Papers</a></li>
+  </ul></li>
+  <li><a href="#statistical-models" id="toc-statistical-models" class="nav-link" data-scroll-target="#statistical-models">Statistical models</a>
+  <ul class="collapse">
+  <li><a href="#books-3" id="toc-books-3" class="nav-link" data-scroll-target="#books-3">Books</a></li>
+  <li><a href="#papers-3" id="toc-papers-3" class="nav-link" data-scroll-target="#papers-3">Papers</a></li>
+  </ul></li>
+  <li><a href="#systemic-biology" id="toc-systemic-biology" class="nav-link" data-scroll-target="#systemic-biology">Systemic Biology</a>
+  <ul class="collapse">
+  <li><a href="#books-4" id="toc-books-4" class="nav-link" data-scroll-target="#books-4">Books</a></li>
+  </ul></li>
+  <li><a href="#infectious-disease-epidemiology" id="toc-infectious-disease-epidemiology" class="nav-link" data-scroll-target="#infectious-disease-epidemiology">Infectious disease epidemiology</a>
+  <ul class="collapse">
+  <li><a href="#books-5" id="toc-books-5" class="nav-link" data-scroll-target="#books-5">Books</a></li>
+  <li><a href="#papers-4" id="toc-papers-4" class="nav-link" data-scroll-target="#papers-4">Papers</a></li>
+  </ul></li>
+  <li><a href="#infectious-disease-surveillance" id="toc-infectious-disease-surveillance" class="nav-link" data-scroll-target="#infectious-disease-surveillance">Infectious disease surveillance</a>
+  <ul class="collapse">
+  <li><a href="#books-6" id="toc-books-6" class="nav-link" data-scroll-target="#books-6">Books</a></li>
+  </ul></li>
+  <li><a href="#infectious-disease-control" id="toc-infectious-disease-control" class="nav-link" data-scroll-target="#infectious-disease-control">Infectious disease control</a>
+  <ul class="collapse">
+  <li><a href="#books-7" id="toc-books-7" class="nav-link" data-scroll-target="#books-7">Books</a></li>
+  <li><a href="#papers-5" id="toc-papers-5" class="nav-link" data-scroll-target="#papers-5">Papers</a></li>
+  </ul></li>
+  <li><a href="#mathematical-models" id="toc-mathematical-models" class="nav-link" data-scroll-target="#mathematical-models">Mathematical models</a></li>
+  <li><a href="#spatial-epidemiology" id="toc-spatial-epidemiology" class="nav-link" data-scroll-target="#spatial-epidemiology">Spatial epidemiology</a>
+  <ul class="collapse">
+  <li><a href="#books-8" id="toc-books-8" class="nav-link" data-scroll-target="#books-8">Books</a></li>
+  <li><a href="#papers-6" id="toc-papers-6" class="nav-link" data-scroll-target="#papers-6">Papers</a></li>
+  <li><a href="#courses-1" id="toc-courses-1" class="nav-link" data-scroll-target="#courses-1">Courses</a></li>
+  </ul></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Tài liệu tham khảo</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="infectious-disease-modeling" class="level2">
+<h2 class="anchored" data-anchor-id="infectious-disease-modeling">Infectious disease modeling</h2>
+<section id="books" class="level3">
+<h3 class="anchored" data-anchor-id="books">Books</h3>
+<ul>
+<li><p>Diekmann O, Heesterbeek H, Britton T. <em>Mathematical Tools for Understanding Infectious Diseases Dynamics</em>. Princeton University Press; 2013.</p></li>
+<li><p>Foppa IM. <em>A Historical Introduction to Mathematical Modeling of Infectious Diseases: Seminal Papers in Epidemiology</em>. Elsevier/Academic Press; 2017.</p></li>
+<li><p>Arifin SMN, Madey GR, Collins FH. <em>Spatial Agent-Based Simulation Modeling in Public Health: Design, Implementation, and Applications for Malaria Epidemiology</em>. John Wiley &amp; Sons Inc; 2016.</p></li>
+<li><p>Keeling MJ, Rohani P. <em>Modeling Infectious Diseases in Humans and Animals</em>. Princeton University Press; 2008.</p></li>
+<li><p>Namatame A, Chen SH. <em>Agent-Based Modeling and Network Dynamics</em>. First edition. Oxford University Press; 2016.</p></li>
+<li><p>Hens N, ed.&nbsp;<em>Modeling Infectious Disease Parameters Based on Serological and Social Contact Data: A Modern Statistical Perspective</em>. Springer; 2012.</p></li>
+<li><p>Becker NG. <em>Modeling to Inform Infectious Disease Control</em>. CRC Press, Taylor &amp; Francis Group; 2015.</p></li>
+<li><p>Vynnycky E, White RG. <em>An Introduction to Infectious Disease Modelling</em>. Oxford University Press; 2010.</p></li>
+<li><p>Diekmann O, Heesterbeek HJ. <em>Mathematical Epidemiology of Infectious Diseases: Model Buildign, Analysis and Interpretation</em>. Wiley; 2000.</p></li>
+<li><p>Michael Höhle. Infectious Disease Modelling. In: <em>Handbook of Spatial Epidemiology</em>. Chapman &amp; Hall/CRC handbooks of modern statistical methods. CRC Press/Taylor &amp; Francis; 2016.</p></li>
+</ul>
+</section>
+<section id="papers" class="level3">
+<h3 class="anchored" data-anchor-id="papers">Papers</h3>
+<ul>
+<li><p>Held L, Meyer S, Bracher J. Probabilistic forecasting in infectious disease epidemiology: the 13th Armitage lecture. <em>Statistics in Medicine</em>. 2017;36(22):3443-3460. doi:<a href="https://doi.org/10.1002/sim.7363">10.1002/sim.7363</a></p></li>
+<li><p>Held L, Höhle M, Hofmann M. A statistical framework for the analysis of multivariate infectious disease surveillance counts. <em>Statistical Modelling</em>. 2005;5(3):187-199. doi:<a href="https://doi.org/10.1191/1471082X05st098oa">10.1191/1471082X05st098oa</a></p></li>
+<li><p>Held L, Paul M. Statistical modeling of infectious disease surveillance data. In: <em>Infectious Disease Surveillance</em>. John Wiley &amp; Sons, Ltd; 2013:535-544. doi:<a href="https://doi.org/10.1002/9781118543504.ch43">10.1002/9781118543504.ch43</a></p></li>
+<li><p>Held L, Hofmann M, Höhle M, Schmid V. A two-component model for counts of infectious diseases. <em>Biostatistics</em>. 2006;7(3):422-437. doi:<a href="https://doi.org/10.1093/biostatistics/kxj016">10.1093/biostatistics/kxj016</a></p></li>
+<li><p>Paul M, Held L, Toschke AM. Multivariate modelling of infectious disease surveillance data. <em>Statistics in Medicine</em>. 2008;27(29):6250-6267. doi:<a href="https://doi.org/10.1002/sim.3440">10.1002/sim.3440</a></p></li>
+<li><p>Paul M, Held L. Predictive assessment of a non-linear random effects model for multivariate time series of infectious disease counts. <em>Statistics in Medicine</em>. 2011;30(10):1118-1136. doi:<a href="https://doi.org/10.1002/sim.4177">10.1002/sim.4177</a></p></li>
+<li><p>Held L, Paul M. Modeling seasonality in space-time infectious disease surveillance data. <em>Biometrical</em> Harvard TH Chan School<em>Journal</em>. 2012;54(6):824-843. doi:<a href="https://doi.org/10.1002/bimj.201200037">10.1002/bimj.201200037</a></p></li>
+<li><p>Jewell NP. Statistical Models for COVID-19 Incidence, Cumulative Prevalence, and R t. <em>Journal of the American Statistical Association</em>. 2021;116(536):1578-1582. doi:<a href="https://doi.org/10.1080/01621459.2021.1983436">10.1080/01621459.2021.1983436</a></p></li>
+<li><p>Quick C, Dey R, Lin X. Regression Models for Understanding COVID-19 Epidemic Dynamics With Incomplete Data. <em>Journal of the American Statistical Association</em>. 2021;116(536):1561-1577. doi:<a href="https://doi.org/10.1080/01621459.2021.2001339">10.1080/01621459.2021.2001339</a></p></li>
+<li><p>Datta J, Mukherjee B. Discussion on “Regression Models for Understanding COVID-19 Epidemic Dynamics With Incomplete Data.” <em>Journal of the American Statistical Association</em>. 2021;116(536):1583-1586. doi:<a href="https://doi.org/10.1080/01621459.2021.1982721">10.1080/01621459.2021.1982721</a></p></li>
+<li><p>Dean N, Yang Y. Discussion of “Regression Models for Understanding COVID-19 Epidemic Dynamics With Incomplete Data.” <em>Journal of the American Statistical Association</em>. 2021;116(536):1587-1590. doi:<a href="https://doi.org/10.1080/01621459.2021.1982722">10.1080/01621459.2021.1982722</a></p></li>
+<li><p>Quick C, Dey R, Lin X. Rejoinder: Regression Models for Understanding COVID-19 Epidemic Dynamics With Incomplete Data. <em>Journal of the American Statistical Association</em>. 2021;116(536):1591-1594. doi:<a href="https://doi.org/10.1080/01621459.2021.2001340">10.1080/01621459.2021.2001340</a></p></li>
+</ul>
+</section>
+<section id="courses" class="level3">
+<h3 class="anchored" data-anchor-id="courses">Courses</h3>
+<ul>
+<li><p>2009, <strong>Analytic Methods in Infectious Diseases</strong>. 1st Summer Institute in Statistics and Modeling in Infectious Diseases. <a href="mailto:halloran@fhcrc.org">M. Elizabeth Halloran</a> and <a href="mailto:longini@scharp.org">Ira M. Longini, Jr</a></p></li>
+<li><p>2014, <strong>Modeling infectious diseases data using transmission and statistical models</strong>. Master in Statistics, Hasselt University, Belgium, April-July 2014. Prof.&nbsp;Dr.&nbsp;Ziv Shkedy.</p></li>
+<li><p>2019, <strong>Introduction to Infectious Disease Modeling.</strong> Harvard TH Chan School of Public Health. https://ccdd.hsph.harvard.edu/introduction-to-infectious-disease-modeling/</p></li>
+<li><p>2019, <strong>Disease Modeling Workshop</strong>. https://choisy.github.io/DMo2019/index.html</p></li>
+<li><p>2021, <strong>Network Modeling for Epidemics.</strong> https://statnet.org/nme/index.html</p></li>
+<li><p>2022, <strong>Mathematical Modelling for Vaccine-preventable Diseases</strong>. The Møller Institute, Cambridge, September 4th -11th 2022.</p></li>
+<li><p>2022, <strong>Introduction to mathematical models of the Epidemiology &amp; Control of Infectious Diseases</strong>. MRC Centre for Global Infectious Disease Analysis, Imperial College London and Lee Kong Chian School of Medicine, Nanyang Technical University. 13th – 16th October 2022.</p></li>
+</ul>
+</section>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+</section>
+</section>
+<section id="infectious-disease-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="infectious-disease-data-analysis">Infectious disease data analysis</h2>
+<section id="books-1" class="level3">
+<h3 class="anchored" data-anchor-id="books-1">Books</h3>
+<ul>
+<li>Held L, Hens N, O’Neill PD, Wallinga J, eds.&nbsp;<em>Handbook of Infectious Disease Data Analysis</em>. 1st edition. Chapman and Hall/CRC; 2019.</li>
+</ul>
+</section>
+<section id="papers-1" class="level3">
+<h3 class="anchored" data-anchor-id="papers-1">Papers</h3>
+</section>
+</section>
+<section id="epidemic-models" class="level2">
+<h2 class="anchored" data-anchor-id="epidemic-models">Epidemic models</h2>
+<section id="books-2" class="level3">
+<h3 class="anchored" data-anchor-id="books-2">Books</h3>
+<ul>
+<li><p>Andersson H, Britton T. <em>Stochastic Epidemic Models and Their Statistical Analysis</em>. Springer; 2000.</p></li>
+<li><p>Britton T, Pardoux E, Ball F, et al., eds.&nbsp;<em>Stochastic Epidemic Models with Inference</em>. Springer; 2019. doi:<a href="https://doi.org/10.1007/978-3-030-30900-8">10.1007/978-3-030-30900-8</a></p></li>
+<li><p>Daley DJ, Gani JM. <em>Epidemic Modelling: An Introduction</em>. Cambridge University Press; 2005.</p></li>
+<li><p>Kiss IZ, Miller JC, Simon PL. <em>Mathematics of Epidemics on Networks: From Exact to Approximate Models</em>. 1st ed.&nbsp;2017. Springer International Publishing : Imprint: Springer; 2017. doi:<a href="https://doi.org/10.1007/978-3-319-50806-1">10.1007/978-3-319-50806-1</a></p></li>
+<li><p>Bjørnstad ON. <em>Epidemics: Models and Data Using R</em>. 1st ed.&nbsp;2018. Springer International Publishing : Imprint: Springer; 2018. doi:<a href="https://doi.org/10.1007/978-3-319-97487-3">10.1007/978-3-319-97487-3</a></p></li>
+</ul>
+</section>
+<section id="papers-2" class="level3">
+<h3 class="anchored" data-anchor-id="papers-2">Papers</h3>
+<ul>
+<li><p>Bjørnstad ON, Shea K, Krzywinski M, Altman N. Modeling infectious epidemics. <em>Nat Methods</em>. 2020;17(5):455-456. doi:<a href="https://doi.org/10.1038/s41592-020-0822-z">10.1038/s41592-020-0822-z</a></p></li>
+<li><p>Moser CB, White LF. Estimating age-specific reproductive numbers—A comparison of methods. <em>Stat Methods Med Res</em>. 2018;27(7):2050-2059. doi:<a href="https://doi.org/10.1177/0962280216673676">10.1177/0962280216673676</a></p></li>
+<li><p>Keeling MJ, Grenfell BT. Individual-based perspectives on R(0). <em>J Theor Biol</em>. 2000;203(1):51-61. doi:<a href="https://doi.org/10.1006/jtbi.1999.1064">10.1006/jtbi.1999.1064</a></p></li>
+<li><p>Grassly NC, Fraser C. Mathematical models of infectious disease transmission. <em>Nat Rev Microbiol</em>. 2008;6(6):477-487. doi:<a href="https://doi.org/10.1038/nrmicro1845">10.1038/nrmicro1845</a></p></li>
+<li><p>Liu QH, Ajelli M, Aleta A, Merler S, Moreno Y, Vespignani A. Measurability of the epidemic reproduction number in data-driven contact networks. <em>PNAS</em>. 2018;115(50):12680-12685. doi:<a href="https://doi.org/10.1073/pnas.1811115115">10.1073/pnas.1811115115</a></p></li>
+<li><p>Polonsky JA, Baidjoe A, Kamvar ZN, et al.&nbsp;Outbreak analytics: a developing data science for informing the response to emerging pathogens. <em>Philosophical Transactions of the Royal Society B: Biological Sciences</em>. 2019;374(1776):20180276. doi:<a href="https://doi.org/10.1098/rstb.2018.0276">10.1098/rstb.2018.0276</a></p></li>
+<li><p>Gostic KM, McGough L, Baskerville EB, et al.&nbsp;Practical considerations for measuring the effective reproductive number, Rt. <em>PLOS Computational Biology</em>. 2020;16(12):e1008409. doi:<a href="https://doi.org/10.1371/journal.pcbi.1008409">10.1371/journal.pcbi.1008409</a></p></li>
+<li><p>Mossong J, Hens N, Jit M, et al.&nbsp;Social Contacts and Mixing Patterns Relevant to the Spread of Infectious Diseases. <em>PLOS Medicine</em>. 2008;5(3):e74. doi:<a href="https://doi.org/10.1371/journal.pmed.0050074">10.1371/journal.pmed.0050074</a></p></li>
+<li><p>White LF, Moser CB, Thompson RN, Pagano M. Statistical Estimation of the Reproductive Number From Case Notification Data. <em>American Journal of Epidemiology</em>. 2021;190(4):611-620. doi:<a href="https://doi.org/10.1093/aje/kwaa211">10.1093/aje/kwaa211</a></p></li>
+<li><p>May RM, Nowak MA. Superinfection, Metapopulation Dynamics, and the Evolution of Diversity. <em>Journal of Theoretical Biology</em>. 1994;170(1):95-114. doi:<a href="https://doi.org/10.1006/jtbi.1994.1171">10.1006/jtbi.1994.1171</a></p></li>
+<li><p>Lloyd-Smith JO, Schreiber SJ, Kopp PE, Getz WM. Superspreading and the effect of individual variation on disease emergence. <em>Nature</em>. 2005;438(7066):355-359. doi:<a href="https://doi.org/10.1038/nature04153">10.1038/nature04153</a></p></li>
+<li><p>Breban R, Vardavas R, Blower S. Theory versus Data: How to Calculate R0? <em>PLOS ONE</em>. 2007;2(3):e282. doi:<a href="https://doi.org/10.1371/journal.pone.0000282">10.1371/journal.pone.0000282</a></p></li>
+<li><p>Venkatramanan S, Lewis B, Chen J, Higdon D, Vullikanti A, Marathe M. Using data-driven agent-based models for forecasting emerging infectious diseases. <em>Epidemics</em>. 2018;22:43-49. doi:<a href="https://doi.org/10.1016/j.epidem.2017.02.010">10.1016/j.epidem.2017.02.010</a></p></li>
+<li><p>Overton CE, Stage HB, Ahmad S, et al.&nbsp;Using statistics and mathematical modelling to understand infectious disease outbreaks: COVID-19 as an example. <em>Infectious Disease Modelling</em>. 2020;5:409-441. doi:<a href="https://doi.org/10.1016/j.idm.2020.06.008">10.1016/j.idm.2020.06.008</a></p></li>
+</ul>
+</section>
+</section>
+<section id="statistical-models" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-models">Statistical models</h2>
+<section id="books-3" class="level3">
+<h3 class="anchored" data-anchor-id="books-3">Books</h3>
+<ul>
+<li><p>Davison AC. <em>Statistical Models</em>. Cambridge University Press; 2003.</p></li>
+<li><p>Diggle P, Chetwynd A. <em>Statistics and Scientific Method: An Introduction for Students and Researchers</em>. 1st ed.&nbsp;Oxford University Press; 2011.</p></li>
+</ul>
+</section>
+<section id="papers-3" class="level3">
+<h3 class="anchored" data-anchor-id="papers-3">Papers</h3>
+</section>
+</section>
+<section id="systemic-biology" class="level2">
+<h2 class="anchored" data-anchor-id="systemic-biology">Systemic Biology</h2>
+<section id="books-4" class="level3">
+<h3 class="anchored" data-anchor-id="books-4">Books</h3>
+<ul>
+<li><p>Phillip Compeau. <em>Biological Modeling: A Short Tour</em>. Philomath Press, LLC; 2022. <a href="https://biologicalmodeling.org/" class="uri">https://biologicalmodeling.org/</a></p></li>
+<li><p>Ovaskainen O, Knegt HJ de, Delgado M del M. <em>Quantitative Ecology and Evolutionary Biology: Integrating Models with Data</em>. Oxford University Press; 2016.</p></li>
+</ul>
+</section>
+</section>
+<section id="infectious-disease-epidemiology" class="level2">
+<h2 class="anchored" data-anchor-id="infectious-disease-epidemiology">Infectious disease epidemiology</h2>
+<section id="books-5" class="level3">
+<h3 class="anchored" data-anchor-id="books-5">Books</h3>
+<ul>
+<li><p>Giesecke J. <em>Modern Infectious Disease Epidemiology</em>. Third edition. CRC Press; 2017.</p></li>
+<li><p>Nelson KE, Williams CM, eds.&nbsp;<em>Infectious Disease Epidemiology: Theory and Practice</em>. 3rd ed.&nbsp;Jones &amp; Bartlett Learning; 2014.</p></li>
+<li><p>Krämer A, Kretzschmar M, Krickeberg K, eds.&nbsp;<em>Modern Infectious Disease Epidemiology: Concepts, Methods, Mathematical Models, and Public Health</em>. Springer; 2010.</p></li>
+<li><p>Grenfell BT, Dobson AP, eds.&nbsp;<em>Ecology of Infectious Diseases in Natural Populations</em>. Cambridge University Press; 1995.</p></li>
+<li><p>Abubakar I, Cohen T, Stagg HR, Rodrigues LC, eds.&nbsp;<em>Oxford Specialist Handbook of Infectious Disease Epidemiology</em>. First edition. Oxford University Press; 2016.</p></li>
+</ul>
+</section>
+<section id="papers-4" class="level3">
+<h3 class="anchored" data-anchor-id="papers-4">Papers</h3>
+</section>
+</section>
+<section id="infectious-disease-surveillance" class="level2">
+<h2 class="anchored" data-anchor-id="infectious-disease-surveillance">Infectious disease surveillance</h2>
+<section id="books-6" class="level3">
+<h3 class="anchored" data-anchor-id="books-6">Books</h3>
+<ul>
+<li><p>M’ikanatha NM, ed.&nbsp;<em>Infectious Disease Surveillance</em>. 2nd ed.&nbsp;Wiley-Blackwell; 2013.</p></li>
+<li><p>M’ikanatha NM, Iskander JK, eds.&nbsp;<em>Concepts and Methods in Infectious Disease Surveillance</em>. John Wiley and Sons, Inc; 2015.</p></li>
+<li><p>Blazes DL, Lewis S, eds.&nbsp;<em>Disease Surveillance: Technological Contributions to Global Health Security</em>. CRC Press, an imprint of the Taylor &amp; Francis Group; 2016.</p></li>
+<li><p>Brookmeyer R, Stroup DF, eds.&nbsp;<em>Monitoring the Health of Populations: Statistical Principles and Methods for Public Health Surveillance</em>. Oxford University Press; 2004.</p></li>
+<li><p>Lee LM, ed.&nbsp;<em>Principles &amp; Practice of Public Health Surveillance: Edited by] Lisa M. Lee ... [et Al.</em> 3rd ed.&nbsp;Oxford University Press; 2010.</p></li>
+</ul>
+</section>
+</section>
+<section id="infectious-disease-control" class="level2">
+<h2 class="anchored" data-anchor-id="infectious-disease-control">Infectious disease control</h2>
+<section id="books-7" class="level3">
+<h3 class="anchored" data-anchor-id="books-7">Books</h3>
+<ul>
+<li><p>Cliff AD, Smallman-Raynor M. <em>Oxford Textbook of Infectious Disease Control: A Geographical Analysis from Medieval Quarantine to Global Eradication</em>. First edition. Oxford University Press; 2013.</p></li>
+<li><p>Organisation mondiale de la santé. <em>Managing Epidemics: Key Facts about Major Deadly Diseases.</em>; 2018.</p></li>
+</ul>
+</section>
+<section id="papers-5" class="level3">
+<h3 class="anchored" data-anchor-id="papers-5">Papers</h3>
+</section>
+</section>
+<section id="mathematical-models" class="level2">
+<h2 class="anchored" data-anchor-id="mathematical-models">Mathematical models</h2>
+<ul>
+<li><p>Brauer F, Castillo-Chavez C, Feng Z. <em>Mathematical Models in Epidemiology</em>. Springer; 2019. doi:<a href="https://doi.org/10.1007/978-1-4939-9828-9">10.1007/978-1-4939-9828-9</a></p></li>
+<li><p>Bacaër N, Bacaër N. <em>A Short History of Mathematical Population Dynamics</em>. Springer Verlag London Ltd; 2011.</p></li>
+<li><p>Otto SP, Day T. <em>A Biologist’s Guide to Mathematical Modeling in Ecology and Evolution</em>. Princeton University Press; 2007.</p></li>
+</ul>
+</section>
+<section id="spatial-epidemiology" class="level2">
+<h2 class="anchored" data-anchor-id="spatial-epidemiology">Spatial epidemiology</h2>
+<section id="books-8" class="level3">
+<h3 class="anchored" data-anchor-id="books-8">Books</h3>
+<ul>
+<li><p>Lawson AB, Banerjee S, Haining RP, Ugarte MD, eds.&nbsp;<em>Handbook of Spatial Epidemiology</em>. 1st edition. Chapman and Hall/CRC; 2016.</p></li>
+<li><p>Gelfand AE, Diggle P, Guttorp P, Fuentes M, eds.&nbsp;<em>Handbook of Spatial Statistics</em>. 1st edition. CRC Press; 2010.</p></li>
+<li><p>Diggle P. <em>Model-Based Geostatistics for Global Public Health: Methods and Applications</em>. Taylor &amp; Francis; 2019.</p></li>
+<li><p>Elliott P, ed.&nbsp;<em>Spatial Epidemiology: Methods and Applications</em>. Reprint. Oxford Univ. Press; 2006.</p></li>
+<li><p>Diggle PJ, Ribeiro PJ. <em>Model-Based Geostatistics</em>. Springer London NetLibrary, Inc.&nbsp;[distributor]</p></li>
+<li><p>Diggle P. <em>Statistical Analysis of Spatial and Spatio-Temporal Point Patterns</em>. Third edition. CRC Press, Taylor &amp; Francis Group; 2014.</p></li>
+<li><p>Banerjee S, Carlin BP, Gelfand AE. <em>Hierarchical Modeling and Analysis for Spatial Data</em>. Second edition. CRC Press, Taylor &amp; Francis Group; 2015.</p></li>
+<li><p>Bivand R, Pebesma EJ, Gómez-Rubio V. <em>Applied Spatial Data Analysis with R</em>. Springer; 2008.</p></li>
+<li><p>Waller LA, Carlin BP. Disease mapping. In: <em>Chapman &amp; Hall/CRC Handbooks of Modern Statistical Methods</em>. Vol 2010. NIH Public Access; 2010:217. Accessed January 24, 2023. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4180601/" class="uri">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4180601/</a></p></li>
+</ul>
+</section>
+<section id="papers-6" class="level3">
+<h3 class="anchored" data-anchor-id="papers-6">Papers</h3>
+<ul>
+<li><p>Bhatia S, Lassmann B, Cohn E, et al.&nbsp;Using digital surveillance tools for near real-time mapping of the risk of infectious disease spread. <em>npj Digit Med</em>. 2021;4(1):1-10. doi:<a href="https://doi.org/10.1038/s41746-021-00442-3">10.1038/s41746-021-00442-3</a></p></li>
+<li><p>Brown PE. Model-Based Geostatistics the Easy Way. <em>Journal of Statistical Software</em>. 2015;63:1-24. doi:<a href="https://doi.org/10.18637/jss.v063.i12">10.18637/jss.v063.i12</a></p></li>
+<li><p>Meyer S, Held L, Höhle M. Spatio-Temporal Analysis of Epidemic Phenomena Using the R Package surveillance. <em>Journal of Statistical Software</em>. 2017;77:1-55. doi:<a href="https://doi.org/10.18637/jss.v077.i11">10.18637/jss.v077.i11</a></p></li>
+<li><p>Meyer S, Held L. Power-law models for infectious disease spread. <em>The Annals of Applied Statistics</em>. 2014;8(3):1612-1639. doi:<a href="https://doi.org/10.1214/14-AOAS743">10.1214/14-AOAS743</a></p></li>
+<li><p>Meyer S, Held L. Incorporating social contact data in spatio-temporal models for infectious disease spread. <em>Biostatistics</em>. 2017;18(2):338-351. doi:<a href="https://doi.org/10.1093/biostatistics/kxw051">10.1093/biostatistics/kxw051</a></p></li>
+<li><p>Saran S, Singh P, Kumar V, Chauhan P. Review of Geospatial Technology for Infectious Disease Surveillance: Use Case on COVID-19. <em>J Indian Soc Remote Sens</em>. 2020;48(8):1121-1138. doi:<a href="https://doi.org/10.1007/s12524-020-01140-5">10.1007/s12524-020-01140-5</a></p></li>
+<li><p>Pigott DM, Howes RE, Wiebe A, et al.&nbsp;Prioritising Infectious Disease Mapping. <em>PLOS Neglected Tropical Diseases</em>. 2015;9(6):e0003756. doi:<a href="https://doi.org/10.1371/journal.pntd.0003756">10.1371/journal.pntd.0003756</a></p></li>
+<li><p>Hay SI, Battle KE, Pigott DM, et al.&nbsp;Global mapping of infectious disease. <em>Philosophical Transactions of the Royal Society B: Biological Sciences</em>. 2013;368(1614):20120250. doi:<a href="https://doi.org/10.1098/rstb.2012.0250">10.1098/rstb.2012.0250</a></p></li>
+<li><p>Best N, Richardson S, Thomson A. A comparison of Bayesian spatial models for disease mapping. <em>Stat Methods Med Res</em>. 2005;14(1):35-59. doi:<a href="https://doi.org/10.1191/0962280205sm388oa">10.1191/0962280205sm388oa</a></p></li>
+<li><p>Giorgi E, Diggle PJ, Snow RW, Noor AM. Geostatistical Methods for Disease Mapping and Visualisation Using Data from Spatio-temporally Referenced Prevalence Surveys. <em>International Statistical Review</em>. 2018;86(3):571-597. doi:<a href="https://doi.org/10.1111/insr.12268">10.1111/insr.12268</a></p></li>
+<li><p>Lopez-Quılez A, Munoz F. Review of spatio-temporal models for disease mapping.</p></li>
+<li><p>Coly S, Charras-Garrido M, Abrial D, Yao-Lafourcade AF. Spatiotemporal Disease Mapping Applied to Infectious Diseases. <em>Procedia Environmental Sciences</em>. 2015;26:32-37. doi:<a href="https://doi.org/10.1016/j.proenv.2015.05.019">10.1016/j.proenv.2015.05.019</a></p></li>
+<li><p>Berke O. Exploratory disease mapping: kriging the spatial risk function from regional count data. <em>International Journal of Health Geographics</em>. 2004;3(1):18. doi:<a href="https://doi.org/10.1186/1476-072X-3-18">10.1186/1476-072X-3-18</a></p></li>
+<li><p>Tatem AJ, Adamo S, Bharti N, et al.&nbsp;Mapping populations at risk: improving spatial demographic data for infectious disease modeling and metric derivation. <em>Population Health Metrics</em>. 2012;10(1):8. doi:<a href="https://doi.org/10.1186/1478-7954-10-8">10.1186/1478-7954-10-8</a></p></li>
+</ul>
+</section>
+<section id="courses-1" class="level3">
+<h3 class="anchored" data-anchor-id="courses-1">Courses</h3>
+<ul>
+<li>2021, <strong>Introduction to Model-based Geostatistics for Global Public Health</strong>. The Tropical Disease Epidemiology group at the Centre for Health Informatics Computing and Statistics in Lancaster University, on 20-22 April 2021.</li>
+</ul>
+</section>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1"></h2>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
