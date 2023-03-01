@@ -38,7 +38,7 @@ knitr::opts_chunk$set(
 
 ## Ước lượng hệ số lây nhiễm bằng phương pháp tăng trưởng theo cấp số nhân (hay tăng trưởng lũy thừa, exponential growth)
 
-Chúng ta sẽ tìm hiểu cách ước lượng hệ số lây nhiễm cơ bản ($R_{0}$) bằng Excel, sử dụng dữ liệu chuỗi thời gian của các ca SARS-CoV-2 được báo cáo tại London vào tháng 2 và tháng 3 năm 2020. Dữ liệu chuỗi thời gian là tập tin 'Estimating_R0_part1.xls'.
+Chúng ta sẽ tìm hiểu cách ước lượng hệ số lây nhiễm cơ bản ($R_{0}$) bằng Excel, sử dụng dữ liệu chuỗi thời gian của các ca SARS-CoV-2 được báo cáo tại London vào tháng 2 và tháng 3 năm 2020. Dữ liệu chuỗi thời gian là tập tin [Estimating_R0_part1.xlsx](Estimating_R0_part_1.xlsx).
 
 ### Ước lượng tốc độ phát triển dịch bệnh của một ổ dịch
 
@@ -137,7 +137,7 @@ Trong trường hợp một ca nhiễm trùng có thời gian thế hệ kiểu 
 Bạn sẽ xem xét tổng cộng 6 mô hình, 3 mô hình bệnh cúm mùa có thời gian thế hệ là 2,6 ngày (như Ferguson và cộng sự) và 3 mô hình SARS-CoV-2 có thời gian thế hệ là 6,6 ngày (như Cereda và cộng sự).
 
 |                | SARS-CoV-2                   | Cúm mùa                        |
-|-----------------|---------------------------|----------------------------|
+|------------------|---------------------------|----------------------------|
 | Thế hệ rời rạc | $T_g$ = 6,6 ngày             | $T_g$ = 2,6 ngày               |
 | SIR            | $D$ = 6,6 ngày               | $D$ = 2,6 ngày                 |
 | SEIR           | $L$ = 5 ngày; $D$ = 1,6 ngày | $L$ = 1 ngày; $T_g$ = 1,6 ngày |
