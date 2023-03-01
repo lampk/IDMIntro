@@ -1,20 +1,9 @@
 ---
 title: "Bài thực hành 1"
-author: "Phùng Khánh Lâm, Ong Phúc Thịnh"
-date: "`r Sys.Date()`"
-language: vn.yml
-format: 
-  html:
-    css: [css/style.css, css/webex.css]
-    toc: true
-    toc-float: true
-    toc-depth: 2
+format:
+  pdf:
     number-sections: true
-    number-depth: 3
-    include-after-body: js/webex.js
-    self-contained: true
-bibliography: references.bib
-csl: the-new-england-journal-of-medicine.csl
+    colorlinks: true
 ---
 
 ```{r setup, include=FALSE}
@@ -54,30 +43,13 @@ Các đặc điểm quan trọng của bệnh lao phổi mà chúng ta muốn th
 
 4.  Chỉ những người bị bệnh (có triệu chứng) mới có khả năng **lây nhiễm**.
 
-::: panel-tabset
 **Bài tập 1.** Vẽ sơ đồ dòng chảy để thể hiện các đặc điểm này của bệnh lao, cố gắng sử dụng càng ít khoang càng tốt. Viết chú thích bằng từ ngữ lên các mũi tên.
 
 **HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
 
-```{mermaid}
-flowchart LR
-  S[Cảm nhiễm] -- Bị nhiễm --> L[Tiềm ẩn]
-  L -- Tiến triển --> D[Bệnh]
-  D -- Hồi phục --> L
-```
-:::
-
 **Bài tập 2.** Viết các phương trình vi phân mô tả sự vận động của mô hình này (mô tả bằng chữ)
 
 **HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
-
-::: border
-$\frac{dS}{dt} =$ Sinh - Chết (của nhóm Cảm nhiễm) - Bị nhiễm
-
-$\frac{dL}{dt} =$ Bị nhiễm - Chết (của nhóm Tiềm ẩn) - Tiến triển thành Bệnh + Hồi phục
-
-$\frac{dR}{dt} =$ Tiến triển thành Bệnh - Hồi phục - Chết (của nhóm Bệnh)
-:::
 
 **Bài tập 3.** Chuyển chú thích bằng từ ngữ trên các mũi tên thành các biểu thức toán học bằng cách kí hiệu các tham số bằng chữ cái Hy Lạp và mô tả mối liên hệ giữa chúng bằng các phép tính
 
@@ -85,73 +57,21 @@ $\frac{dR}{dt} =$ Tiến triển thành Bệnh - Hồi phục - Chết (của nh
 
 **HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
 
-::: border
-$\frac{dS}{dt} =$ Sinh - Chết (của nhóm Cảm nhiễm) - Bị nhiễm
-
-$$\frac{dS}{dt} = bN - \mu S - \beta \frac{D}{N}S$$
-
-$\frac{dL}{dt} =$ Bị nhiễm - Chết (của nhóm Tiềm ẩn) - Tiến triển thành Bệnh + Hồi phục
-
-$$\frac{dL}{dt} = \beta \frac{D}{N}S - \mu L - \gamma L + \sigma D$$
-
-$\frac{dR}{dt} =$ Tiến triển thành Bệnh - Chết (của nhóm Bệnh) - Hồi phục
-
-$$\frac{dR}{dt} = \gamma L - (\mu + \alpha)D - \sigma D$$
-:::
-
 ## Mô hình 2
 
-Một đặc điểm quan trọng của bệnh lao là sự thay đổi tốc độ tiến triển từ nhiễm trùng tiềm ẩn sang bệnh: một số người thuộc loại 'tiến' triển nhanh' (phát bệnh chỉ trong vòng vài năm từ lúc nhiễm) hoặc 'tiến triển chậm' (mất nhiều thời gian hơn để phát bệnh và thậm chí có thể chết mà chưa từng biểu hiện bệnh).
+Một đặc điểm quan trọng của bệnh lao là sự thay đổi tốc độ tiến triển từ nhiễm trùng tiềm ẩn sang bệnh: một số người thuộc loại 'tiến triển nhanh' (phát bệnh chỉ trong vòng vài năm từ lúc nhiễm) hoặc 'tiến triển chậm' (mất nhiều thời gian hơn để phát bệnh và thậm chí có thể chết mà chưa từng biểu hiện bệnh).
 
 Để mô tả sự đa dạng trong kiểu hình bệnh này trong mô hình, thay vì chỉ có 1 'khoang tàu' chứa những người nhiễm trùng tiềm ẩn duy nhất, chúng ta có thể chia thành 2 khoang 'song song': một khoang là người tiến triển nhanh ($L_{F}$) và một khoang là người tiến triển chậm ($L_{S}$). Chúng ta có thể sửa **Mô hình 1** thành **Mô hình 2** bằng cách thêm một 'ngã ba' ở mũi tên từ khoang *Cảm nhiễm* đi tới các khoang *Nhiễm trùng tiềm ẩn*. Cả hai khoang *Nhiễm trùng tiềm ẩn* đều đi tới khoang *Bệnh*.
 
 **Bài tập 1.** Vẽ sơ đồ dòng chảy để thể hiện Mô hình 2, giả định rằng tất cả những người 'khỏi bệnh' đều quay lại khoang *Tiềm ẩn tiến triển chậm*
 
-Mô hình 1
-
-```{mermaid}
-flowchart LR
-  S[Cảm nhiễm] -- Bị nhiễm --> L[Tiềm ẩn]
-  L -- Tiến triển --> D[Bệnh]
-  D -- Hồi phục --> L
-```
-
-Mô hình 2
-
-```{mermaid}
-flowchart LR
-  S[Cảm nhiễm] -- Bị nhiễm --> LS[Tiềm ẩn chậm]
-  S -- Bị nhiễm --> LF[Tiềm ẩn nhanh]
-  LF -- Tiến triển --> D[Bệnh]
-  LS -- Tiến triển --> D
-  D -- Hồi phục --> LS
-```
-
 **Bài tập 2.** Mô hình 2 cần thêm 1 số tham số, hãy ghi ra và mô tả các tham số này
 
 **HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
 
-::: border
-Chúng ta cần
-
-(i) hai tham số tốc độ tiến triển ($\gamma_{F}$, $\gamma_{S}$) (0,88 p.a., 0,0001 p.a.) và
-
-(ii) một tham số ($f$) thể hiện tỉ lệ các ca bị lây nhiễm sẽ tiến triển nhanh (0,14).
-:::
-
 **Bài tập 3.** Viết phương trình vi phân bằng biểu thức toán học cho Mô hình 2
 
 **HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
-
-::: border
-$$\frac{dS}{dt} = bN - \mu S - \beta \frac{D}{N}S$$ (giống Mô hình 1)
-
-$$\frac{dL_{F}}{dt} = f \beta \frac{D}{N}S - \mu L_{F} - \gamma_{F}L_{F}$$
-
-$$\frac{dL_{S}}{dt} = (1 - f) \beta \frac{D}{N}S - \mu L_{S} - \gamma_{F}L_{S} + \sigma D$$
-
-$$\frac{dD}{dt} = \gamma_{F}L_{F} + \gamma_{S}L_{S} - (\mu + \alpha)D - \sigma D$$
-:::
 
 ## Mô hình 3
 
@@ -159,42 +79,6 @@ Một đặc điểm quan trọng khác của bệnh lao là **tái nhiễm ngo�
 
 **Bài tập 1.** Tạo ra Mô hình 3 bằng cách thêm quá trình tái nhiễm ngoại sinh vào sơ đồ dòng chảy của Mô hình 2.
 
-```{mermaid}
-flowchart LR
-  S[Cảm nhiễm] -- Bị nhiễm --> LS[Tiềm ẩn chậm]
-  S -- Bị nhiễm --> LF[Tiềm ẩn nhanh]
-  LF -- Tiến triển --> D[Bệnh]
-  LS -- Tiến triển --> D
-  LS --> LF
-  D -- Hồi phục --> LS
-```
-
 **Bài tập 2.** Mô hình 3 cần thêm 1 số tham số, hãy ghi ra và mô tả các tham số này.
 
-::: border
-Tốc độ tái nhiễm ngoại sinh là $r \beta \frac{D}{N}$, với $r$ là mức độ cảm nhiễm tương đối của nhóm *Tiềm ẩn tiến triển chậm* so với nhóm *Cảm nhiễm*
-
--   r \> 1: Nhóm *Tiềm ẩn tiến triển chậm* dễ bị nhiễm hơn nhóm *Cảm nhiễm*
-
--   r = 1: Nhóm *Tiềm ẩn tiến triển chậm* và nhóm *Cảm nhiễm* có mức độ cảm nhiễm như nhau
-
--   r \< 1: Nhóm *Tiềm ẩn tiến triển chậm* khó bị nhiễm hơn nhóm *Cảm nhiễm*
-:::
-
 **Bài tập 3.** Viết phương trình vi phân bằng biểu thức toán học cho Mô hình 3.
-
-::: border
-$$\frac{dS}{dt} = bN - \mu S - \beta \frac{D}{N}S$$ (giống Mô hình 1 & 2)
-
-$$\frac{dL_{F}}{dt} = f \beta \frac{D}{N}S - \mu L_{F} - \gamma_{F}L_{F} + r \beta \frac{D}{N}L_{S}$$
-
-$$\frac{dL_{S}}{dt} = (1 - f) \beta \frac{D}{N}S - \mu L_{S} - \gamma_{F}L_{S} + \sigma D - r \beta \frac{D}{N}L_{S}$$
-
-$$\frac{dD}{dt} = \gamma_{F}L_{F} + \gamma_{S}L_{S} - (\mu + \alpha)D - \sigma D$$ (giống Mô hình 2)
-:::
-
-<!-- Print button -->
-
-<br/>
-
-<p><input type="button" value="In trang này" onClick="window.print()"></p>
