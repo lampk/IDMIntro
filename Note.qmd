@@ -8,13 +8,17 @@ format:
     css: [css/style.css, css/webex.css]
     toc: true
     toc-float: true
-    toc-depth: 2
+    toc-depth: 3
+    toc-location: left
     number-sections: true
     number-depth: 3
+    reference-location: margin
+    citation-location: margin
+    fig-cap-location: margin
     include-after-body: js/webex.js
     self-contained: true
 bibliography: references.bib
-csl: the-new-england-journal-of-medicine.csl
+#csl: the-new-england-journal-of-medicine.csl
 ---
 
 ```{r setup, include=FALSE}
@@ -42,59 +46,43 @@ knitr::opts_chunk$set(
 Lưu ý !!!
 :::
 
-## Nội dung
+## Dịch tễ học bệnh truyền nhiễm
 
--   Infectious diseases and mathematical models.
+Bệnh truyền nhiễm gây ra do sự lây truyền các tác nhân gây bệnh trong dân số cảm nhiễm, và đặc trưng bởi khả năng lây lan từ người này sang người khác, qua dây chuyền lây.
 
--   Introduction to designing infectious disease models.
+Diễn tiến theo thời gian của bệnh truyền nhiễm trong một cá thể có thể được mô tả theo diễn tiến lâm sàng hoặc theo khả năng lây nhiễm. Về diễn tiến lâm sàng, bệnh bao gồm các giai đoạn: cảm nhiễm, bệnh bán lâm sàng (sau khi nhiễm bệnh và trước khi có biểu hiện lâm sàng), bệnh lâm sàng, hồi phục/tàn tật/tử vong. Theo khả năng lây nhiễm, bệnh bao gồm giai đoạn tiềm ẩn và giai đoạn lây nhiễm. @fig-dcl tóm tắt bệnh sử tự nhiên và dây chuyền lây của bệnh truyền nhiễm.
 
--   The herd effect in infectious disease epidemiology
+![Lịch sử tự nhiên và dây chuyền lây của bệnh truyền nhiễm](figures/LSTN_DCL_03.png){#fig-dcl fig-align="center"}
 
--   Ý nghĩa, ứng dụng và cách tính Ro, Rt. Dự đoán khi nào là đỉnh dịch, dịch sẽ kéo dài bao lâu, số người cảm nhiễm/tử vong. Sử dụng vẽ bằng excel.
+Mặc dù bệnh truyền nhiễm có thể do nhiều loại tác nhân gây bệnh khác nhau gây ra (virus, vi khuẩn, ký sinh trùng) và có nhiều cơ chế lây truyền khác nhau (khí dung/giọt bắn, phân miệng, quan hệ tình dục, vật trung gian, ...), tuy nhiên kết quả cuối cùng đều giống nhau khi xét ở góc độ cộng đồng
 
-## Vì sao có workshop này?
+-   từ một (một số) người nhiễm ban đầu,
 
--   Khoá học "Introduction to mathematical models of the Epidemiology & Control of Infectious Diseases"
+-   bệnh được lây truyền tiếp tục cho những người khác,
 
--   Singapore, 13-16/10/2022
+-   tạo ra một chuỗi phản ứng dây chuyền, từ đó tạo thành một vụ dịch
 
--   MRC Centre for Global Infectious Disease Analysis (Imperial College London) & Lee Kong Chian School of Medicine (Nanyang Technical University)
+Thông thường, một vụ dịch bệnh truyền nhiễm sẽ trải qua 4 giai đoạn [@organisationmondialedelasanteManagingEpidemicsKey2018]: khởi phát, lây truyền tại chỗ, lan rộng, và suy giảm. @fig-epidemic_phases minh hoạ 4 giai đoạn này cùng các nhóm biện pháp đáp ứng tương ứng.
 
--   GS Azra Ghani và cộng sự
+![Các giai đoạn của một vụ dịch và biện pháp đáp ứng](figures/epidemic_phases.png){#fig-epidemic_phases}
 
-## Bệnh truyền nhiễm và mô hình toán học
+Dưới góc độ của người phải đưa ra các quyết định nhằm đáp ứng với vụ dịch, những câu hỏi sau cần phải được trả lời [@coriKeyDataOutbreak2017b]
 
-### Bệnh truyền nhiễm
+1.  Liệu vụ dịch có bùng phát hay không?
 
-Bệnh truyền nhiễm gây ra do sự lây truyền các tác nhân gây bệnh trong dân số cảm nhiễm. Các tác nhân gây bệnh truyền nhiễm rất đa dạng (virus, vi khuẩn, ký sinh trùng), và có nhiều cơ chế lây truyền khác nhau:
+2.  Vụ dịch sẽ có tác động như thế nào đến y tế công cộng? (mức độ nghiêm trọng của vụ dịch)
 
--   Khí dung (aerosol)/giọt bắn (droplet) \[sởi, quai bị, cúm, ho gà, ...\]
+3.  Liệu có thể kiểm soát được vụ dịch hay không?
 
--   Phân-miệng (faecal-oral)/môi trường \[enterovirus, rotavirus, thương hàn, tả, ...\]
+4.  Biện pháp nào là phù hợp để kiểm soát vụ dịch?
 
--   Quan hệ tình dục \[HIV, lậu, giang mai, chlamydia, ...\]
+5.  Liệu biện pháp can thiệp đang được sử dụng có hiệu quả không và chúng ta có thể cải thiện biện pháp này như thế nào?
 
--   Vật trung gian (vectors/intermediate hosts) \[dengue, sốt rét, onchocerciasis, schistosomiasis, ...\]
+Để trả lời những câu hỏi này, chúng ta cần ước tính được khả năng lây truyền (transmissibility) của dịch. Khả năng lây truyền của dịch có thể được ước tính thông qua hai chỉ số dịch tễ học [@andersonReproductionNumberGrowth2020]
 
-Tuy nhiên, kết quả cuối cùng rất giống nhau:
+-   Hệ số lây nhiễm (reproductive number, $R$): số lượng ca nhiễm thứ phát từ một ca nhiễm nguyên phát ban đầu.
 
--   Từ một/một vài người nhiễm ban đầu
-
--   Người/những người này sẽ lây nhiễm cho những người khác
-
--   Tạo thành chuỗi lây nhiễm, gia tăng số lượng người nhiễm bệnh, tạo ra một vụ dịch (epidemic)
-
-Khi một vụ dịch xảy ra, chúng ta sẽ muốn biết
-
--   Liệu vụ dịch này có bùng phát thêm nữa hay không?
-
--   Vụ dịch này sẽ bùng phát nhanh như thế nào?
-
-Để trả lời được câu hỏi này, chúng ta cần phải biết
-
--   Số lượng ca nhiễm thứ phát từ một ca nhiễm nguyên phát ban đầu
-
--   Tốc độ xuất hiện các ca nhiễm thứ phát
+-   Tốc độ tăng trưởng của dịch (epidemic growth rate, $r$): số ca nhiễm tăng lên trong một đơn vị thời gian. Tốc độ tăng trưởng này phụ thuộc vào hai thông số: hệ số lây nhiễm và khoảng thời gian giữa hai thế hệ lây nhiễm.
 
 ### Hệ số lây nhiễm $R$
 
@@ -102,200 +90,147 @@ Hệ số lây nhiễm (Reproductive number, $R$) là số ca nhiễm trung bìn
 
 Hệ số lây nhiễm cơ bản (Reproductive number, $R_0$) là số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó, **trong dân số hoàn toàn cảm nhiễm với bệnh** (tại thời điểm dịch mới xuất hiện).
 
-$R_0$ quan trọng vì:
+### Tốc độ tăng trưởng của dịch (epidemic growth rate, $r$)
 
--   $R_0$ giúp xác định:
+Thể hiện số ca nhiễm tăng lên trong một đơn vị thời gian.
 
-    -   Tốc độ lây truyền của bệnh trong cộng đồng
+Tốc độ tăng trưởng này phụ thuộc vào hai thông số: hệ số lây nhiễm (reproductive number) và khoảng thời gian giữa hai thế hệ lây nhiễm (generation time).
 
-    -   Ngưỡng cân bằng của vụ dịch
+$r$ có thể được ước tính theo công thức
 
-    -   "the age at which hosts acquire infection"
+$$
+r = \dfrac{R-1}{Tg}
+$$
 
-    -   Mức độ can thiệp cần thiết để kiểm soát vụ dịch
+Với $R$ là hệ số lây nhiễm và $T_g$ là khoảng thời gian trung bình giữa hai thế hệ lây nhiễm.
 
--   Chúng ta có thể dùng $R_0$ để
-
-    -   Đánh giá liệu vụ dịch có đang được kiểm soát hay không
-
-    -   Hiểu về mức độ can thiệp cần thiết để kiểm soát hoàn toàn vụ dịch
-
-### Diễn tiến theo thời gian của bệnh truyền nhiễm trong 1 cá thể
-
-Theo khả năng lây nhiễm:
-
--   Thời kì tiềm ẩn: bắt đầu từ khi bị nhiễm đến trước khi có thể lây nhiễm cho người khác
--   Thời kì lây nhiễm: bắt đầu từ khi có thể lây nhiễm được cho người khác đến khi hết khả năng lây nhiễm
-
-Theo lâm sàng:
-
--   Thời kì ủ bệnh: bắt đầu từ khi bị nhiễm đến trước khi có triệu chứng
--   Giai đoạn bệnh lâm sàng: từ khi có triệu chứng đến khi hết triệu chứng, có thể chia thành:
-    -   Không triệu chứng
-    -   Triệu chứng nhẹ
-    -   Cần đi khám
-    -   Điều trị
-    -   Hồi phục hoặc tử vong
-
-### Thời gian thế hệ $T_g$
-
-Là thời gian trung bình từ lúc 1 ca bị lây nhiễm đến khi ca tiếp theo bị lây nhiễm từ ca này (khái niệm này định nghĩa theo **khả năng lây nhiễm**)
-
-Phân biệt với **khoảng thời gian nối tiếp** - thời gian từ khi 1 ca có triệu chứng lâm sàng đến khi ca tiếp theo bị lây nhiễm từ ca này xuất hiện các triệu chứng (khái niệm này định nghĩa theo **lâm sàng**)
-
-### Giai đoạn đầu dịch
-
-Phụ thuộc cả $R_0$ và $T_g$
-
-Trong giai đoạn đầu tăng trưởng dịch, số ca mới mắc sẽ tăng theo cấp số nhân và tỉ lệ tương xứng (proportional) với:
+Ở giai đoạn đầu dịch, số ca mới mắc sẽ tăng theo cấp số nhân và tỉ lệ theo:
 
 $$exp[\frac{(R_0 - 1)}{T_g}t]$$
 
-**Khi nào dịch ngừng tăng theo cấp số nhân?**
+Với $R_0$ là hệ số lây nhiễm cơ bản.
 
--   Theo thời gian dịch sẽ lui khi hết người để lây nhiễm.
+Giai đoạn gia tăng theo cấp số nhân sẽ ngừng lại khi lượng người để lây nhiễm giảm đi theo thời gian.
 
--   Tốc độ tăng trưởng giảm khi một tỉ lệ đáng kể những người tiếp xúc với mỗi ca bệnh đều đã bị nhiễm bệnh (đề kháng được bệnh).
+### Thời gian thế hệ $T_g$
 
--   Khi đó số ca bị nhiễm thứ cấp trên mỗi ca bệnh giảm xuống dưới $R_0$
+Là thời gian trung bình từ lúc 1 ca bị lây nhiễm đến khi ca tiếp theo bị lây nhiễm từ ca này (khái niệm này định nghĩa theo **khả năng lây nhiễm**).
 
--   Hệ số lây nhiễm hiệu quả (effective reproduction number) R
+Phân biệt với **khoảng thời gian nối tiếp** (serial interval) - thời gian từ khi 1 ca có triệu chứng lâm sàng đến khi ca tiếp theo bị lây nhiễm từ ca này xuất hiện các triệu chứng (khái niệm này định nghĩa theo **lâm sàng**).
 
-$$R = sR_0$$
+Trong thực tế, chúng ta không quan sát được khoảng thời gian thế hệ mà chỉ quan sát được khoảng thời gian nối tiếp. Vì vậy, khoảng thời gian nối tiếp được dùng để ước lượng cho khoảng thời gian thế hệ.
 
-với s: tỉ lệ dân số cảm nhiễm
+## Hệ số lây nhiễm
 
--   Dịch sẽ lui khi
+Hệ số lây nhiễm (Reproductive number, $R$) là số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó.
 
-$$R < 1$$
+Cần phân biệt giữa hệ số lây nhiễm cơ bản ($R_0$) và hệ số lây nhiễm hiệu quả ($R_t$).
 
-$$sR_0 < 1$$
+![Hệ số lây nhiễm cơ bản và hệ số lây nhiễm hiệu quả](figures/R.png)
 
-$$s < \frac{1}{R_0}$$
+### Hệ số lây nhiễm cơ bản ($R_0$)
 
--   Thường được gọi là "sự cạn kiệt số người cảm nhiễm"
+Hệ số lây nhiễm cơ bản (Reproductive number, $R_0$) là số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó, **trong dân số hoàn toàn cảm nhiễm với bệnh** (tại thời điểm dịch mới xuất hiện).
 
-### R_0 và bệnh lưu hành (endemic disease)
+$R_0$ quan trọng vì:
 
-Ví dụ về 1 bệnh nhiễm trùng không tạo miễn dịch suốt đời
+-   $R_0$ giúp xác định khả năng lây lan của bệnh trong cộng đồng. Ví dụ về 1 bệnh nhiễm trùng không tạo miễn dịch suốt đời
 
--   Khi $R_0$ \< 1 bệnh không lây lan
--   Khi R0 gần bằng 1, số ca tăng dần
--   Khi R0 lớn, bệnh lây lan và trở thành bệnh lưu hành
+    -   Khi $R_0$ \< 1 bệnh không lây lan
+    -   Khi $R_0$ gần bằng 1, số ca tăng dần
+    -   Khi $R_0$ lớn, bệnh lây lan và trở thành bệnh lưu hành
 
-### Độ bao phủ vaccine cấp thiết (critical vaccination coverage)
+-   $R_0$ giúp xác định tốc độ lây truyền của bệnh trong cộng đồng, thông qua ước tính tốc độ tăng trưởng của dịch. $R_0$ càng cao thì dịch có tốc độ tăng trưởng càng nhanh.
 
-Xem xét một quần thể hoàn toàn nhạy cảm (ví dụ: khi bắt đầu dịch bệnh)
+-   $R_0$ giúp ước tính được quy mô vụ dịch khi kết thúc ($F$). Quy mô này là nghiệm của phương trình
 
-![Critical vaccine coverage](figures/L1_cvc.png)
+$$
+F = 1 - exp\{-R_0 \times F\}
+$$
 
-Cần phải ngăn chặn $R_0$ - 1 ca nhiễm mới trong số $R_0$ ca để phòng ngừa lây nhiễm dịch
+-   $R_0$ giúp ước tính được % số ca bệnh tại đỉnh dịch ($H$). % số ca bệnh này được tính bằng công thức
 
-$$p_c = \frac{R_0 - 1}{R_0} = 1 - \frac{1}{R_0}$$
+$$H = 1 - \frac{1}{R_0}$$
 
--   Để kiểm soát dịch bệnh, chính sách cần giảm lây truyền sao cho R0 \< 1
+-   $H$ cũng chính là ngưỡng cân bằng của vụ dịch, và phản ánh mức độ can thiệp cần thiết để kiểm soát vụ dịch. Cần phải ngăn chặn $R_0$ - 1 ca nhiễm mới trong số $R_0$ ca để phòng ngừa lây nhiễm dịch
 
--   Cần loại bỏ một tỉ lệ tương ứng với $\frac{R_0-1}{R_0}$ của đường truyền:
+    $$p_c = \frac{R_0 - 1}{R_0} = 1 - \frac{1}{R_0}$$
 
--   50% khi $R_0$ = 2,
+    -   50% khi $R_0$ = 2,
 
--   75% khi $R_0$ = 4,
+    -   75% khi $R_0$ = 4,
 
--   90% khi $R_0$ = 10.
+    -   90% khi $R_0$ = 10.
 
--   Điều này có thể đạt được bằng cách:
+        Điều này có thể đạt được bằng cách:
 
--   Giảm tiếp xúc (cách ly, giãn cách xã hội).
+    -   Giảm tiếp xúc (cách ly, giãn cách xã hội).
 
--   Giảm tỉ lệ cảm nhiễm (tiêm phòng, thuốc dự phòng).
+    -   Giảm tỉ lệ cảm nhiễm (tiêm phòng, thuốc dự phòng).
 
--   Giảm khả năng lây nhiễm (ví dụ: điều trị).
+    -   Giảm khả năng lây nhiễm (ví dụ: điều trị).
 
-### Hệ số lây nhiễm cơ bản
+Như vậy, chúng ta có thể dùng $R_0$ để
 
-Ở dạng đơn giản nhất (đây không phải cách tốt nhất để ước lượng $R_0$
+-   Đánh giá liệu vụ dịch có đang được kiểm soát hay không.
 
-$$R_0 = \beta cD$$
+-   Hiểu về mức độ can thiệp cần thiết để kiểm soát hoàn toàn vụ dịch.
 
--   $c$: tần suất tiếp xúc trung bình
--   $\beta$: xác suất lây nhiễm
--   $D$: thời gian trung bình của giai đoạn lây nhiễm
+### Hệ số lây nhiễm hiệu quả ($R_t$)
 
-**Can thiệp có thể tác động như thế nào**
+Hệ số lây nhiễm hiệu quả $R_t$ là số ca nhiễm trung bình từ một ca nhiễm trong quá trình diễn tiến của vụ dịch.
 
-Can thiệp có thể làm giảm **Hệ số lây nhiễm hiệu quả**
+Can thiệp có thể làm thay đổi $R_t$, do đó chỉ số này được dùng để theo dõi và đánh giá hiệu quả của can thiệp.
 
-$$R = sR_0 = \beta cDs$$
+### Cách ước lượng hệ số lây nhiễm 
 
--   $c$: thay đổi kiểu mẫu tiếp xúc (contact pattern)
--   $\beta$:
-    -   Rào chắn (barrier method): đeo khẩu trang, kiểm soát vector
-    -   Giảm khả năng lây nhiễm: điều trị, tiêm vaccine
--   $D$: Giảm thời gian của giai đoạn lây nhiễm: điều trị, cách ly, phong tỏa
--   $s$: làm cạn kiệt số người cảm nhiễm
+Cần lưu ý rằng, hệ số lây nhiễm không phải là một hằng số sinh học cơ bản!
 
+Về lý thuyết, hệ số lây nhiễm có thể được tính bằng công thức:
 
-### Dữ liệu dùng để ước lượng $R_0$
+$$
+R = D \times O \times T \times S
+$$
 
--   Không phải là một hằng số sinh học cơ bản!
+Trong đó:
 
--   Được xác định bởi:
+-   $D$ (Duration) là độ dài của thời kỳ lây nhiễm.
 
-    -   Mầm bệnh sinh học (cơ chế bệnh sinh, vòng đời, tính biến đổi).
-    -   Yếu tố vật chủ (di truyền, dinh dưỡng, tuổi, bệnh đồng mắc).
-    -   Cấu trúc dân số (nhân khẩu học, kiểu mẫu tiếp xúc).
+-   $O$ (Opportunity) là cơ hội lây nhiễm, thể hiện bằng số lượng tiếp xúc trong một đơn vị thời gian.
 
--   Sự hiểu biết về những điều này cho phép ước tính $R_0$ là điều mà dịch tễ học bệnh truyền nhiễm định lượng hướng tới.
+-   $T$ (Transmission probability) là xác suất lây nhiễm thành công trong một lần tiếp xúc.
 
--   Cần hiểu biết về cơ chế (không chỉ khớp đường cong) để dự đoán tác động của các biện pháp kiểm soát dịch.
+-   $S$ (Duration) là kích thước của dân số cảm nhiễm, thể hiện bằng % dân số có thể mắc bệnh.
 
--   Cần DỮ LIỆU.
+Do đó, hệ số lây nhiễm phụ thuộc vào nhiều yếu tố khác nhau:
 
-#### Dữ liệu kiểu mẫu tiếp xúc (contact patterns)
+-   Mầm bệnh sinh học (cơ chế bệnh sinh, vòng đời, tính biến đổi).
+-   Yếu tố vật chủ (di truyền, dinh dưỡng, tuổi, bệnh đồng mắc).
+-   Cấu trúc dân số (nhân khẩu học, kiểu mẫu tiếp xúc).
 
--   Xác định các tiếp xúc 'có liên quan' thường là một thách thức
+Để ước tính được hệ số lây nhiễm một cách hiệu quả, chúng ta cần sử dụng nhiều loại dữ liệu khác nhau:
 
--   Rõ ràng nhất cho các bệnh lây truyền qua đường tình dục
+-   Dữ liệu về sự lây truyền bệnh (transmission): thường không quan sát được, thường dựa vào nghiên cứu đoàn hệ trong hộ gia đình.
 
--   Các hình thức thay thế được sử dụng cho các bệnh về đường hô hấp -- khảo sát, dữ liệu du lịch, dữ liệu điện thoại di động...
+-   Dữ liệu về kiểu tiếp xúc (contact patterns): thường khó xác định được loại hình tiếp xúc liên quan, dễ dàng nhất là đối với bệnh lây truyền qua quan hệ tình dục, thường thu thập dựa vào điều tra/dữ liệu di chuyển/dữ liệu thu thập qua app điện thoại.
 
-#### Dữ liệu lây nhiễm
+-   Dữ liệu về lịch sử tự nhiên của bệnh.
 
--   Hiếm khi quan sát được.
+-   Dữ liệu về can thiệp: từ nghiên cứu can thiệp hoặc quan sát.
 
--   Ít dữ liệu định lượng về cơ chế.
+## Mô hình toán học bệnh truyền nhiễm
 
--   Một số ước tính về tỉ lệ lây truyền cho các nhóm nhỏ (ví dụ: hộ gia đình), được rút ra từ các nghiên cứu đoàn hệ
+### Mô hình là gì?
 
--   Hoặc gần đây hơn từ các nghiên cứu thử thách
+Mô hình là sự đơn giản hoá một hệ thống phức tạp, để phù hợp cho việc phân tích. Tất cả mọi người đều dùng mô hình 1 cách vô thức: việc mô tả mô hình bằng toán học làm rõ hơn quá trình tư duy và giúp người khác có thể sử dụng và đánh giá được quá trình đó. Mô hình toán học cho phép thực hiện được các phân tích chính xác, chặt chẽ và dự báo định lượng.
 
-#### Dữ liệu diễn tiến tự nhiên của bệnh
+> *Mô hình là công cụ cho sự suy nghĩ*
+>
+> *Mọi mô hình đều sai, nhưng một số cũng có ích"*
 
-Bệnh tiến triển dần dần -- cần biết được thời gian ủ bệnh (không có triệu chứng), sự thay đổi khả năng lây nhiễm, tỷ lệ tử vong.
+Khi xây dựng mô hình, cần nắm bắt được những đặc tính cần quan tâm và kết hợp các thuộc tính thiết yếu.
 
-#### Dữ liệu can thiệp
-
--   Thử nghiệm (hiệu lực/hiệu quả).
-
--   Các nghiên cứu quan sát.
-
--   Phép ngoại suy (gần như) luôn cần để ước tính hiệu ứng lên toàn dân số.
-
-### Kiểm chứng mô hình (model validation)
-
--   Nói chung là khó -- không bao giờ có hai dịch bệnh giống nhau.
-
--   Các tham số chính nên được ước tính từ dữ liệu (cũng khó -- số liệu thống kê cũng quan trọng như xây dựng mô hình).
-
--   Các mô hình nên tái tạo lại được các dịch bệnh trong quá khứ (phù hợp với dữ liệu).
-
--   Nhưng hiếm khi có được bộ dữ liệu 'training' và 'validation'.
-
--   Phân tích độ nhạy (sensitivity analysis) là quan trọng
-
-### Chúng ta dùng mô hình để làm gì
-
--   Tổng hợp kiến thức
+### Chúng ta dùng mô hình để làm gì?
 
 ```{mermaid}
 flowchart LR
@@ -311,17 +246,19 @@ flowchart LR
   M --> C1["Tối ưu hóa chính sách"]
 ```
 
--   Đơn giản hóa thực tế
+Mô hình có thể được dùng để tổng hợp kiến thức và đơn giản hoá thực tế. Trong thực tế, các mô hình có thể đơn giản hơn thực tế (rất nhiều lần) mà vẫn hữu ích.
 
-Tin tốt!: các mô hình có thể đơn giản hơn thực tế (rất nhiều lần) mà vẫn hữu ích
+Đối với dịch tễ học bệnh truyền nhiễm, mô hình toán học có thể dùng cho 2 nhóm mục tiêu chính:
 
-Ví dụ: sởi
+-   Hiểu biết thêm về vai trò và mối quan hệ của các yếu tố khác nhau ảnh hưởng đến sự xuất hiện và diễn tiến của dịch bệnh.
 
-### Các câu hỏi có thể giải quyết bằng mô hình
+-   Dự đoán diễn tiến của dịch bệnh.
 
--   Tại sao chúng ta có thể loại trừ bệnh đậu mùa? Chúng ta cần làm thêm gì và bao lâu nữa để loại trừ bệnh bại liệt?
+Dưới đây là ví dụ về một số câu hỏi có thể giải quyết bằng mô hình:
 
--   Vì sao dịch sởi lặp lại mỗi 2 năm, norovirus có dịch hàng năm và *S.aureus* lưu hành ổn định?
+-   Vì sao chúng ta có thể loại trừ bệnh đậu mùa? Chúng ta cần làm thêm điều gì và trong bao lâu nữa để loại trừ bệnh bại liệt?
+
+-   Vì sao dịch sởi lặp lại mỗi 2 năm, trong khi norovirus có dịch hàng năm và *S.aureus* lưu hành ổn định?
 
 -   Một loại vắc-xin hiệu quả 30% chống lại HIV hoặc sốt rét có thể đạt được tác động gì?
 
@@ -329,85 +266,73 @@ Ví dụ: sởi
 
 -   Chúng ta nên phân bổ nguồn lực như thế nào giữa các biện pháp can thiệp/khu vực địa lý/dân số để đạt được tác động tối đa đối với sức khỏe?
 
-## Giới thiệu về thiết kế mô hình bệnh truyền nhiễm
-
-### Mô hình là gì?
-
-Mô hình là sự đơn giản hoá một hệ thống phức tạp, để phù hợp cho việc phân tích
-
-    -   Mô hình là công cụ cho sự suy nghĩ
-
-*"Mọi mô hình đều sai, nhưng vài cái cũng có ích"* -\> câu này cũng áp dụng cho các mô hình thống kê
-
-"Mô tả một hiện tượng thực tế phức tạp, khó hiểu thành một mô hình phức tạp, khó hiểu là chẳng có gì tiến triển" J. Maynard Smith
-
-Cần nắm bắt được những hành vi cốt lõi và kết hợp các thuộc tính thiết yếu
-
-Tất cả mọi người đều dùng mô hình 1 cách vô thức: việc mô tả mô hình bằng toán học làm rõ hơn quá trình tư duy và giúp người khác sử dụng / đánh giá được
-
-Mô hình toán học cho phép phân tích chính xác, chặt chẽ và dự báo định lượng
-
 ### Mô hình bệnh truyền nhiễm
 
-Quan tâm đến tác động của các quá trình ở cấp độ dân số xảy ra ở cấp độ cá nhân
+Là dạng mô hình quan tâm đến tác động ở cấp độ dân số của các quá trình xảy ra ở cấp độ cá nhân.
 
 Nguy cơ một người chưa nhiễm bệnh sẽ bị nhiễm bệnh (hay **"lực lây nhiễm"**) phụ thuộc vào:
 
--   Tỉ lệ người lây nhiễm trong dân số
+-   Tỉ lệ người nhiễm bệnh trong dân số
 
 -   Tần suất (rate) tiếp xúc giữa các cá thể trong dân số
 
 -   Khả năng lây truyền của những người đã nhiễm bệnh
 
-Vậy sự lây truyền bệnh trong dân số là một quá trình **động** mà nguy cơ nhiễm bệnh có thể thay đổi theo thời gian
+Vì vậy sự lây truyền bệnh trong dân số là một quá trình **động** mà nguy cơ nhiễm bệnh có thể thay đổi theo thời gian. Trong đó, số ca mới mắc và số ca hiện mắc phụ thuộc vào nhau theo mối quan hệ phi tuyến tính, với sự tương tác thuận và nghịch thay đổi theo thời gian.
 
-Số ca và tỉ lệ mắc phụ thuộc lẫn nhau
+### Những điểm cần cân nhắc khi xây dựng mô hình
 
-(ko hiểu câu: non-linear relationship with time-varying positive and negative feedback)
+Về bệnh:
 
-Cần dùng mô hình động để dự báo và phân tích các tình huống giả định
+-   Diễn tiến tự nhiên của bệnh (ví dụ: thời gian ủ bệnh, thời gian lây nhiễm, khả năng miễn dịch)
 
-### Những lưu ý khi xây dựng mô hình
+Về dân số:
 
--   Diễn tiến tự nhiên của bệnh
+-   Sự lây nhiễm (Trực tiếp hay gián tiếp? Điều gì ảnh hưởng tần suất tiếp xúc?)
 
--   Thời gian ủ bệnh, thời gian tiềm ẩn, khả năng đề kháng
+-   Đặc điểm dân số xã hội, cấu trúc dân số (Phân tầng theo tuổi, giới, vị trí địa lý)
 
--   Sự lây nhiễm
+Về can thiệp
 
--   Trực tiếp hay gián tiếp? Điều gì ảnh hưởng tần suất tiếp xúc?
+-   Can thiệp (Nhắm đến thành phần nào trong quá trình lây nhiễm bệnh?)
 
--   Đặc điểm dân số xã hội, cấu trúc dân số
+Không có mô hình nào được xem là "đúng nhất" cho một loại bệnh nhất định.
 
--   Phân tầng theo tuổi, giới, vị trí địa lý
+### Các bước xây dựng mô hình
 
--   Can thiệp
+1.  Thiết kế mô hình
 
--   Nhắm đến thành phần nào trong quá trình lây nhiễm bệnh?
+2.  Ước lượng tham số
 
--\> Không có mô hình nào là "đúng nhất"
+3.  Chạy mô hình
 
-### Xây dựng mô hình khoang tàu
+4.  Diễn giải kết quả
+
+### Mô hình khoang (compartment model)
 
 #### Mô hình diễn tiến tự nhiên của bệnh
 
-Chia dân số thành nhiều khoang tàu (phân nhóm)
+Chia dân số thành nhiều khoang (phân nhóm)
 
-Mỗi khoang tàu chứa những người ở các trạng thái khác nhau (ví dụ giai đoạn lây nhiễm)
+Mỗi khoang chứa những người ở các trạng thái khác nhau (ví dụ giai đoạn lây nhiễm)
 
-Người chưa bị nhiễm, người đang nhiễm, người hết khả năng lây nhiễm
+-   Người chưa bị nhiễm,
+
+-   Người đang nhiễm,
+
+-   Người hết khả năng lây nhiễm
 
 Trong mô hình, tất cả những người trong cùng 1 nhóm thì có các đặc tính giống nhau
 
 Được tính bằng cách lấy trung bình các đặc tính trong "thế giới thực"
 
-Mô hình khoang tàu trong bệnh truyền nhiễm được cấu tạo từ 2 thành phần cơ bản:
+Mô hình khoang trong bệnh truyền nhiễm được cấu tạo từ 2 thành phần cơ bản:
 
-1.  Khoang tàu: chứa những người ở các trạng thái khác nhau (ví dụ giai đoạn lây nhiễm)
+1.  Khoang: chứa những người ở các trạng thái khác nhau (ví dụ giai đoạn lây nhiễm)
 
 -   Các giá trị này được chứa trong biến trạng thái, thể hiện trạng thái của hệ thống
 
-2.  Tần suất thay đổi số người trong các khoang tàu: ví dụ tỉ suất sinh, số ca nhiễm, tỉ suất hồi phục
+2.  Tần suất thay đổi số người trong các khoang: ví dụ tỉ suất sinh, số ca nhiễm, tỉ suất hồi phục
 
 -   Các giá trị tần suất này thường phụ thuộc vào giá trị của các biến trạng thái, vì vậy khi biến trạng thái thay đổi thì tần suất cũng thay đổi
 
@@ -415,43 +340,13 @@ Mô hình khoang tàu trong bệnh truyền nhiễm được cấu tạo từ 2 
 
 Mối quan hệ giữa các giá trị của biến trạng thái và tần suất thay đổi được thể hiện bằng các hàm số (1 hàm số cho mỗi tần suất thay đổi)
 
-Mỗi khoang tàu có:
+Như vậy, mỗi khoang có:
 
--   1 biến trạng thái, thể hiện số người đang ở trong khoang tàu này, và
+-   1 biến trạng thái, thể hiện số người đang ở trong khoang này, và
 
 -   1 phương trình vi phân, thể hiện tần suất thay đổi của biến trạng thái, cấu tạo từ 1 hoặc nhiều hàm số
 
-Lưu đồ -\> phương trình
-
-Mỗi số hạng trong phương trình là 1 hàm số của một hoặc nhiều biến trạng thái (S, I, R), do đó giá trị của số hạng thay đổi khi biến trạng thái thay đổi
-
-S, R die at background rate... (ko hiểu)
-
-#### Diễn tiến tự nhiên phức tạp hơn
-
-Ví dụ:
-
--   Kháng thể từ mẹ truyền sang con ở trẻ sơ sinh
-
--   Thời gian ủ bệnh, thời gian tiềm ẩn
-
--   Người nhiễm bệnh không triệu chứng
-
--   Thời kì lây nhiễm có nhiều giai đoạn
-
--   Tình trạng sau khi kết thúc giai đoạn nhiễm bệnh: chết, đề kháng hay trở lại cảm nhiễm
-
--   Kháng thể: diệt khuẩn hoàn toàn, bền vững hay suy yếu dần, đặc trưng cho 1 chủng hay khái quát hóa?
-
--   Bệnh truyền qua vector
-
-#### Luôn bắt đầu bằng mô hình đơn giản nhất
-
--   Mục tiêu là hiểu được các nguyên tắc cơ bản của quá trình chứ không phải làm cho mô hình giống thật nhất có thể
-
--   Mô hình càng giống thật thì càng phức tạp, khó hiểu, trừ khi các nguyên tắc cơ bản của quá trình đã được hiểu rõ
-
-#### Sự di chuyển giữa các khoang tàu
+#### Sự di chuyển giữa các khoang
 
 Mỗi giá trị tần suất là **số người đi vào hoặc đi ra khỏi khoang tàu trong 1 đơn vị thời gian**, phụ thuộc vào:
 
@@ -477,7 +372,7 @@ Phân biệt biến trạng thái và tham số của mô hình
 | Không thể điều khiển trực tiếp             | Thay đổi khi chúng ta muốn      |
 | Đầu ra của mô hình                         | Đầu vào của mô hình             |
 
-Khi phân tích mô hình, chúng ta thay đổi các tham số và xem điều này ảnh hưởng như thế nào đến các biến trạng thái - ví dụ biểu đồ thay đổi như thế nào
+: Khi phân tích mô hình, chúng ta thay đổi các tham số và xem điều này ảnh hưởng như thế nào đến các biến trạng thái - ví dụ biểu đồ thay đổi như thế nào
 
 Tần suất chết của nhóm Cảm nhiễm, Hồi phục:
 
@@ -501,9 +396,7 @@ Tỉ suất sinh
 
 -   Tỉ suất sinh toàn dân số là $bN$
 
-Khi thực hành, chúng ta thường cho tỉ suất sinh bình quân đầu người bằng với tỉ suất tử bình quân đầu người để giữ dân số không đổi trong trường hợp không có bệnh
-
--   Tuy nhiên, không nhất thiết phải luôn làm như vậy nếu chúng ta không muốn
+Khi thực hành, chúng ta thường cho tỉ suất sinh bình quân đầu người bằng với tỉ suất tử bình quân đầu người để giữ dân số không đổi trong trường hợp không có bệnh. Tuy nhiên, không nhất thiết phải luôn làm như vậy nếu chúng ta không muốn
 
 Tần suất nhiễm bệnh
 
@@ -539,36 +432,17 @@ Tần suất nhiễm bệnh
 
     -   Thường kí hiệu $\beta = pc$
 
-Lưu ý: S, I, N là các biến trạng thái sẽ thay đổi theo mỗi vòng chạy mô hình, còn p, c là tham số được quy định từ trước
+Lưu ý: S, I, N là các biến trạng thái sẽ thay đổi theo mỗi vòng chạy mô hình, còn p, c là tham số được quy định từ trước.
 
-## Miễn dịch cộng đồng
+### Tương lai của mô hình toán học bệnh truyền nhiễm
 
--   Miễn dịch cộng đồng liên quan gì đến mô hình toán học?
--   Tiêm vaccine ảnh hưởng đến miễn dịch cộng đồng như thế nào?
--   Vaccine không hoàn hảo thay đổi mọi thứ như thế nào?
--   Làm thế nào để đo lường mức độ bảo vệ do tiêm chủng?
+Trước đây, mô hình toán học bệnh truyền nhiễm thường được ứng dụng nhiều cho các bệnh lưu hành (bệnh lý ở trẻ em, nhiễm ký sinh trùng). Hiện nay, một số hướng tiếp cận đang được quan tâm bao gồm:
 
-### Miễn dịch cộng đồng tự nhiên
+-   Mô hình động học cho các vụ dịch mới nổi.
 
-Theo thời gian, ngày lúc càng có nhiều người bị nhiễm và hồi phục. Nếu hành vi tiếp xúc giữa các cá nhân trong dân số không thay đổi, thì hệ số lây nhiễm hiệu quả $R$ ở thời điểm t là $R_{t} = R_{0}\frac{S(t)}{N}$
+-   Mô hình theo thời gian thực (real-time modeling).
 
-### Một đợt bùng phát dịch có thể lớn đến mức nào?
-
-| Virus      | $R_{0}$ | F   |
-|------------|---------|-----|
-| Sởi        | 18      | 99% |
-| SARS-CoV-2 | 2       | 80% |
-| Ebola      | 1.5     | 58% |
-
-Quy mô tấn công cuối cùng (final attack size) của 1 đợt bùng phát là nghiệm của phương trình sau:
-
-$$F = 1 - exp(-R_{0}F)$$
-
-Vậy nếu có thể ước lượng được $R_{0}$ thì có thể tính được độ lớn của đợt bùng phát này.
-
-### Vaccine và miễn dịch cộng đồng
-
-## Tóm tắt
+-   Động học theo không gian & thời gian (đối với các bệnh lưu hành).
 
 ## Tài liệu tham khảo
 
