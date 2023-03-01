@@ -158,7 +158,7 @@
     "href": "Practice_2.html",
     "title": "Bài thực hành 2",
     "section": "",
-    "text": "Chúng ta sẽ tìm hiểu cách ước lượng hệ số lây nhiễm cơ bản (\\(R_{0}\\)) bằng Excel, sử dụng dữ liệu chuỗi thời gian của các ca SARS-CoV-2 được báo cáo tại London vào tháng 2 và tháng 3 năm 2020. Dữ liệu chuỗi thời gian là tập tin ‘Estimating_R0_part1.xls’.\n\n\nBảng tính ‘SARS-CoV-2 London (data)’ chứa số ca nhiễm SARS-CoV-2 tích lũy hàng tuần được báo cáo ở London trong giai đoạn đầu của đại dịch COVID-19.\nBài tập 1. Tính số mới mắc, sau đó vẽ đường cong dịch theo thang đo tự nhiên và logarit. Sự gia tăng tuyến tính của các ca theo thang logarit cho thấy số lượng ca nhiễm tăng theo cấp số nhân.\nDịch bệnh phát triển theo cấp số nhân trong bao lâu?\n\n3 tuần\n\nƯớc tính tốc độ tăng trưởng (r) của dịch trong giai đoạn tăng trưởng theo cấp số nhân này và thời gian số ca tăng gấp đôi, sử dụng công thức số ca nhiễm tại hai thời điểm \\(t_1\\) và \\(t_2\\)\n\\[r = \\frac{1}{t_2 - t_1} ln(\\frac{I(t_2)}{I(t_1)})\\]\nDữ liệu báo cáo này là số ca cập nhật hàng tuần, vì vậy bạn sẽ cần chia các tần suất cho 7 để có được giá trị theo đơn vị ngày. Có thể tính bằng Excel.\n\n\\(r_{tuần} = \\frac{1}{tuần_2 - tuần_1}ln(\\frac{I(tuần_2)}{I(tuần_1)}) =\\) (mỗi tuần)\n\\(r_{ngày} = \\frac{1}{7} r_{tuần} =\\) (mỗi ngày)\nThời gian số ca tăng gấp đôi = $ = $ (ngày)\n\nBài tập 2. Thông thường trong phân tích dịch, chúng ta làm việc với dữ liệu danh sách dòng (linelist data) với mỗi hàng trong bộ dữ liệu tương ứng với một ca bệnh được báo cáo. Sheet ‘Danh sách ca bệnh SARS-CoV-2 ở London’ là một ví dụ về dữ liệu danh sách ca bệnh (mô phỏng). Chúng ta sẽ tính toán số mới mắc (incidence), là số ca bệnh mới được báo cáo hàng ngày từ danh sách ca. Chúng ta cần đếm xem có bao nhiêu ca được báo cáo mỗi ngày. Điều này có thể được thực hiện bằng cách sử dụng PivotTable trong tab Insert.\nBấm vào PivotTable trong tab Insert. Một cửa sổ sẽ xuất hiện yêu cầu bạn chọn dữ liệu mà muốn phân tích. Chọn cột B (ngày_bắt_đầu). Chúng ta sẽ đặt kết quả tính được ngay trong sheet này (Existing Worksheet). Bấm OK.\nBạn sẽ thấy một Bảng xuất hiện ở bên phải màn hình. Chúng ta cần chọn tính số lần mỗi ngày xuất hiện trong danh sách dòng. Nhấp vào “onset_date” ở bảng trên cùng. (Bạn có thể thấy biến “Months” xuất hiện, hãy bỏ qua nó)\nSau đó, kéo “ngày_bắt đầu” vào phần Values ở dưới cùng bên phải của bảng\nTỷ lệ mắc hàng ngày sẽ xuất hiện trong bảng tính\nSao chép số mới mắc hàng ngày vào tab Task 2 và ước tính tốc độ tăng theo cấp số nhân bằng cách sử dụng cùng một cửa sổ thời gian với dữ liệu hàng tuần. Nếu muốn thử dùng một phương pháp khác, bạn có thể ước tính tốc độ tăng trưởng bằng cách sử dụng hồi quy tuyến tính thay vì sử dụng công thức được đưa ra trong biểu thức 1.\nTrong Excel, bạn có thể chạy hồi quy tuyến tính bằng hàm LINEST(). LINEST() xuất ra độ dốc (slope) và giao điểm với trục tung (intercept), do đó nó cần hai ô để xuất kết quả. Chọn hai ô (ví dụ: H3 và I3) và chèn công thức hồi quy tuyến tính, chỉ định giá trị y làm đối số (argument) thứ nhất và giá trị x làm đối số thứ hai.\nKiểm tra hiệu suất của mô hình trên dữ liệu chuỗi thời gian mở rộng.\nTỷ lệ tăng trưởng tính được có giống nhau khi bạn sử dụng dữ liệu theo tuần so với dự liệu theo ngày không? Dịch bệnh có ngừng phát triển theo cấp số nhân vào một thời điểm nào đó không? Tại sao?\n\nCó, các giá trị có kết quả tương tự khi sử dụng dữ liệu hàng ngày (tốc độ tăng trưởng theo ngày = 0,309).\nDịch bệnh ngừng phát triển theo cấp số nhân từ khoảng ngày 22. Sự phát triển theo cấp số nhân chậm lại do tác động của các biện pháp can thiệp không dùng thuốc (non-pharmaceutical interventions).\n\n\n\n\nThời gian thế hệ \\(T_g\\) là khoảng thời gian từ lúc 1 người bị nhiễm đến khi người này lây nhiễm cho người tiếp theo. Nếu ta có tốc độ tăng trưởng dịch r và thời gian thế hệ \\(T_g\\), có thể ước lượng \\(R_0\\) từ phương trình sau:\n\\[R_0 = \\frac{1}{\\int_0^\\infty exp(-rt)g(t)dt}\\]\nvới \\(g(t)\\) là phân phối thời gian thế hệ (xác suất thời gian thế hệ tại thời điểm t)\nCó thể viết phương trình \\(R_0\\) cho 3 mô hình đơn giản sau:\nThế hệ rời rạc (discrete generation): \\(R = exp(rT_g)\\)\nSIR: \\(R = 1 + rD\\)\nSEIR: \\(R = (1 + rD)(1 + rL)\\)\nvới \\(D\\) là thời gian lây nhiễm trung bình (từ lúc có khả năng lây cho đến khi hồi phục) và \\(L\\) là thời gian tiềm ẩn trung bình (từ lúc bị nhiễm đến khi có khả năng lây)\n\n\n\nBiểu đồ sau thể hiện phân bố thời gian thế hệ của SARS-CoV-2 (nguồn: Cereda và cộng sự, arxiv, 2020) và cúm mùa (nguồn: Ferguson và cộng sự, Nature, 2005). Thời gian thế hệ trung bình của SARS-CoV-2 là 6,6 ngày và của bệnh cúm là 2,6 ngày.\nBạn có nghĩ rằng sự khác biệt giữa sự phân bố của SARS-CoV-2 và bệnh cúm là vấn đề cần kiểm soát không? Tại sao?\nVí dụ, bạn có thể nghĩ về vấn đề cấp thuốc kháng virus trong đại dịch. Nếu thuốc được giao 3 ngày sau ngày nhiễm bệnh của ca đầu tiên trong một hộ gia đình thì ảnh hưởng như thế nào đến sự lây truyền dịch?\n\nSự khác biệt của phân phối thời gian thế hệ giữa các tác nhân khác nhau là quan trọng.\nĐối với bệnh nhân cúm mùa, hầu hết nguy cơ lây nhiễm xảy ra trong 3 ngày đầu. Vì vậy nếu cấp thuốc kháng virus sau 3 ngày này thì việc dùng thuốc hầu như không còn ý nghĩa trong việc ngăn chặn tiến trình lây nhiễm của bệnh nhân cho người khác.\nTrong trường hợp một ca nhiễm trùng có thời gian thế hệ kiểu SARS-CoV-2, nếu dùng 1 loại thuốc kháng virus hiệu quả 3 ngày sau khi bị lây nhiễm sẽ có tác động đến tiến trình lây truyền dịch, vì khả năng lây nhiễm trong 3 ngày đầu là thấp và hầu hết lây nhiễm xảy ra sau 3 ngày.\n\nBạn sẽ xem xét tổng cộng 6 mô hình, 3 mô hình bệnh cúm mùa có thời gian thế hệ là 2,6 ngày (như Ferguson và cộng sự) và 3 mô hình SARS-CoV-2 có thời gian thế hệ là 6,6 ngày (như Cereda và cộng sự).\n\n\n\n\n\n\n\n\n\nSARS-CoV-2\nCúm mùa\n\n\n\n\nThế hệ rời rạc\n\\(T_g\\) = 6,6 ngày\n\\(T_g\\) = 2,6 ngày\n\n\nSIR\n\\(D\\) = 6,6 ngày\n\\(D\\) = 2,6 ngày\n\n\nSEIR\n\\(L\\) = 5 ngày; \\(D\\) = 1,6 ngày\n\\(L\\) = 1 ngày; \\(T_g\\) = 1,6 ngày\n\n\n\nBài tập 3. Đối với mỗi mô hình, hãy sử dụng các “Phương trình R cho 3 mô hình đơn giản” để ước tính \\(R_0\\) ở London, năm 2020. Giả sử rằng tốc độ tăng trưởng r là như nhau đối với cả SARS-CoV-2 và bệnh cúm mùa, đồng thời sử dụng giá trị được ước tính trong Bài tập 1.\n\n\n\n\nSARS-CoV-2\nCúm mùa\n\n\n\n\nThế hệ rời rạc\n\\(R\\) = 8.07\n\\(R\\) = 2.28\n\n\nSIR\n\\(R\\) = 3.10\n\\(R\\) = 1.82\n\n\nSEIR\n\\(R\\) = 3.82\n\\(R\\) = 1.98\n\n\n\nCác ước tính của R có bị ảnh hưởng bởi các giả định về \\(T_g\\) không? Sự khác biệt có liên quan về mặt dịch tễ học?\n\nCó, ước tính \\(R_0\\) bị ảnh hưởng bởi phân phối thời gian thế hệ giả định.\nƯớc tính \\(R_0\\) phụ thuộc vào giá trị trung bình của \\(T_g\\): \\(T_g\\) trung bình lớn hơn dẫn đến ước tính \\(R_0\\) lớn hơn.\nƯớc tính của \\(R_0\\) cũng bị ảnh hưởng bởi phương sai và hình dạng của phân phối thời gian thế hệ. Với 3 mô hình có cùng \\(T_g\\) trung bình (= 2,6 ngày) nhưng phân phối \\(T_g\\) khác nhau thì ước lượng \\(R_0\\) là khác nhau.\nSự khác biệt có liên quan đến dịch tễ học: Đối với các bệnh nhiễm như SARS-CoV-2, độ bao phủ vaccine, miễn dịch cộng đồng và tác động của các biện pháp can thiệp phải cao tới khoảng 70% để kiểm soát được dịch.\nĐối với bệnh cúm, miễn dịch cộng đồng đạt được khi khoảng 50% dân số đề kháng (thông qua lây nhiễm tự nhiên hoặc tiêm phòng)\nCác mô hình đại dịch thường cân nhắc phân tích độ nhạy trên các phân phối thời gian thế hệ giả định để đánh giá tác động của các chiến lược phòng dịch giả lập đối với từng loại phân phối thời gian thế hệ (cũng như \\(R_0\\) ước lượng được). Một số chiến lược can thiệp có thể mang lại kết quả tốt cho \\(R_0\\) = 1.8 nhưng không phải cho \\(R_0\\) = 2,3.\n\nƯớc lượng \\(R_0\\) còn nhạy với yếu tố gì? Bạn có nghĩ các ước tính sẽ bị sai lệch nếu báo cáo không đủ số ca thực tế không? Nếu tỷ lệ báo cáo không đổi theo thời gian thì sao? Nếu nó thay đổi theo thời gian thì sao?\n\nCác ước lượng nhạy cảm với khoảng thời gian chúng ta chọn để mô tả mức tăng trưởng theo cấp số nhân.\nCác ước lượng sẽ không bị ảnh hưởng bởi việc báo cáo thiếu số ca thực tế nếu tỷ lệ báo cáo không đổi theo thời gian. Tuy nhiên, chúng sẽ bị ảnh hưởng nếu báo cáo thay đổi theo thời gian.\nSự hiện diện của các ca nhiễm không triệu chứng, là một dạng báo cáo thiếu, không làm sai lệch ước tính \\(R_0\\) nếu tỷ lệ nhiễm không triệu chứng không đổi theo thời gian.\nNhững thay đổi về năng lực xét nghiệm theo thời gian, dẫn đến thay đổi định nghĩa về dân số đủ điều kiện để xét nghiệm và báo cáo, dẫn đến sai lệch ước tính \\(R_0\\).\n\nCác bài tập tùy chọn\nBài tập tùy chọn 4. Nếu còn thời gian, hãy tìm hiểu \\(R_0\\) thay đổi như thế nào theo giả định thời gian thế hệ trung bình bằng cách sử dụng các mô hình SIR và SEIR.\nCác ước tính \\(R_0\\) có thay đổi theo giả địnhthời gian thế hệ trung bình không? Như thế nào?\n\nThời gian thế hệ trung bình dài hơn thì R0 cao hơn (cả với SIR và SEIR).\n\nBài tập tùy chọn 5. Nếu còn thời gian, hãy xem trang tính ‘under-reporting effects’. Tìm hiểu cách các chuỗi thời gian khác nhau được tạo, sau đó sử dụng chúng làm dữ liệu để ước tính \\(R_0\\).\nCác ước tính \\(R_0\\) có bị ảnh hưởng khi tỉ lệ báo cáo thiếu không đổi không? Còn khi tỉ lệ này thay đổi theo thời gian? So sánh kết quả của bạn với các câu trả lời được cung cấp trong Bài tập 3.\n\nKhông, các ước tính không bị ảnh hưởng khi tỉ lệ báo cáo thiếu không đổi bất kể tỉ lệ này là bao nhiêu.\nTuy nhiên, tỉ lệ báo cáo thiếu thay đổi theo thời gian sẽ ảnh hưởng đến các ước tính."
+    "text": "Chúng ta sẽ tìm hiểu cách ước lượng hệ số lây nhiễm cơ bản (\\(R_{0}\\)) bằng Excel, sử dụng dữ liệu chuỗi thời gian của các ca SARS-CoV-2 được báo cáo tại London vào tháng 2 và tháng 3 năm 2020. Dữ liệu chuỗi thời gian là tập tin ‘Estimating_R0_part1.xls’.\n\n\nBảng tính ‘SARS-CoV-2 London (data)’ chứa số ca nhiễm SARS-CoV-2 tích lũy hàng tuần được báo cáo ở London trong giai đoạn đầu của đại dịch COVID-19.\nBài tập 1. Tính số mới mắc, sau đó vẽ đường cong dịch theo thang đo tự nhiên và logarit. Sự gia tăng tuyến tính của các ca theo thang logarit cho thấy số lượng ca nhiễm tăng theo cấp số nhân.\nDịch bệnh phát triển theo cấp số nhân trong bao lâu?\n\n3 tuần\n\nƯớc tính tốc độ tăng trưởng (r) của dịch trong giai đoạn tăng trưởng theo cấp số nhân này và thời gian số ca tăng gấp đôi, sử dụng công thức số ca nhiễm tại hai thời điểm \\(t_1\\) và \\(t_2\\)\n\\[r = \\frac{1}{t_2 - t_1} ln(\\frac{I(t_2)}{I(t_1)})\\]\nDữ liệu báo cáo này là số ca cập nhật hàng tuần, vì vậy bạn sẽ cần chia các tần suất cho 7 để có được giá trị theo đơn vị ngày. Có thể tính bằng Excel.\n\n\\(r_{tuần} = \\frac{1}{tuần_2 - tuần_1}ln(\\frac{I(tuần_2)}{I(tuần_1)}) =\\) (mỗi tuần)\n\\(r_{ngày} = \\frac{1}{7} r_{tuần} =\\) (mỗi ngày)\nThời gian số ca tăng gấp đôi = $ = $ (ngày)\n\nBài tập 2. Thông thường trong phân tích dịch, chúng ta làm việc với dữ liệu danh sách dòng (linelist data) với mỗi hàng trong bộ dữ liệu tương ứng với một ca bệnh được báo cáo. Sheet ‘Danh sách ca bệnh SARS-CoV-2 ở London’ là một ví dụ về dữ liệu danh sách ca bệnh (mô phỏng). Chúng ta sẽ tính toán số mới mắc (incidence), là số ca bệnh mới được báo cáo hàng ngày từ danh sách ca. Chúng ta cần đếm xem có bao nhiêu ca được báo cáo mỗi ngày. Điều này có thể được thực hiện bằng cách sử dụng PivotTable trong tab Insert.\nBấm vào PivotTable trong tab Insert. Một cửa sổ sẽ xuất hiện yêu cầu bạn chọn dữ liệu mà muốn phân tích. Chọn cột B (ngày_bắt_đầu). Chúng ta sẽ đặt kết quả tính được ngay trong sheet này (Existing Worksheet). Bấm OK.\n\nBạn sẽ thấy một Bảng xuất hiện ở bên phải màn hình. Chúng ta cần chọn tính số lần mỗi ngày xuất hiện trong danh sách dòng. Nhấp vào “onset_date” ở bảng trên cùng. (Bạn có thể thấy biến “Months” xuất hiện, hãy bỏ qua nó)\nSau đó, kéo “ngày_bắt đầu” vào phần Values ở dưới cùng bên phải của bảng\n\nTỷ lệ mắc hàng ngày sẽ xuất hiện trong bảng tính\n\nSao chép số mới mắc hàng ngày vào tab Task 2 và ước tính tốc độ tăng theo cấp số nhân bằng cách sử dụng cùng một cửa sổ thời gian với dữ liệu hàng tuần. Nếu muốn thử dùng một phương pháp khác, bạn có thể ước tính tốc độ tăng trưởng bằng cách sử dụng hồi quy tuyến tính thay vì sử dụng công thức được đưa ra trong biểu thức 1.\nTrong Excel, bạn có thể chạy hồi quy tuyến tính bằng hàm LINEST(). LINEST() xuất ra độ dốc (slope) và giao điểm với trục tung (intercept), do đó nó cần hai ô để xuất kết quả. Chọn hai ô (ví dụ: H3 và I3) và chèn công thức hồi quy tuyến tính, chỉ định giá trị y làm đối số (argument) thứ nhất và giá trị x làm đối số thứ hai.\n\nKiểm tra hiệu suất của mô hình trên dữ liệu chuỗi thời gian mở rộng.\nTỷ lệ tăng trưởng tính được có giống nhau khi bạn sử dụng dữ liệu theo tuần so với dự liệu theo ngày không? Dịch bệnh có ngừng phát triển theo cấp số nhân vào một thời điểm nào đó không? Tại sao?\n\nCó, các giá trị có kết quả tương tự khi sử dụng dữ liệu hàng ngày (tốc độ tăng trưởng theo ngày = 0,309).\nDịch bệnh ngừng phát triển theo cấp số nhân từ khoảng ngày 22. Sự phát triển theo cấp số nhân chậm lại do tác động của các biện pháp can thiệp không dùng thuốc (non-pharmaceutical interventions).\n\n\n\n\nThời gian thế hệ \\(T_g\\) là khoảng thời gian từ lúc 1 người bị nhiễm đến khi người này lây nhiễm cho người tiếp theo. Nếu ta có tốc độ tăng trưởng dịch r và thời gian thế hệ \\(T_g\\), có thể ước lượng \\(R_0\\) từ phương trình sau:\n\\[R_0 = \\frac{1}{\\int_0^\\infty exp(-rt)g(t)dt}\\]\nvới \\(g(t)\\) là phân phối thời gian thế hệ (xác suất thời gian thế hệ tại thời điểm t)\nCó thể viết phương trình \\(R_0\\) cho 3 mô hình đơn giản sau:\nThế hệ rời rạc (discrete generation): \\(R_0 = exp(rT_g)\\)\nSIR: \\(R_0 = 1 + rD\\)\nSEIR: \\(R_0 = (1 + rD)(1 + rL)\\)\nvới \\(D\\) là thời gian lây nhiễm trung bình (từ lúc có khả năng lây cho đến khi hồi phục) và \\(L\\) là thời gian tiềm ẩn trung bình (từ lúc bị nhiễm đến khi có khả năng lây)\n\n\n\nBiểu đồ sau thể hiện phân bố thời gian thế hệ của SARS-CoV-2 (nguồn: Cereda và cộng sự, arxiv, 2020) và cúm mùa (nguồn: Ferguson và cộng sự, Nature, 2005). Thời gian thế hệ trung bình của SARS-CoV-2 là 6,6 ngày và của bệnh cúm là 2,6 ngày.\n\nBạn có nghĩ rằng sự khác biệt giữa sự phân bố của SARS-CoV-2 và bệnh cúm là vấn đề cần kiểm soát không? Tại sao?\nVí dụ, bạn có thể nghĩ về vấn đề cấp thuốc kháng virus trong đại dịch. Nếu thuốc được giao 3 ngày sau ngày nhiễm bệnh của ca đầu tiên trong một hộ gia đình thì ảnh hưởng như thế nào đến sự lây truyền dịch?\n\nSự khác biệt của phân phối thời gian thế hệ giữa các tác nhân khác nhau là quan trọng.\nĐối với bệnh nhân cúm mùa, hầu hết nguy cơ lây nhiễm xảy ra trong 3 ngày đầu. Vì vậy nếu cấp thuốc kháng virus sau 3 ngày này thì việc dùng thuốc hầu như không còn ý nghĩa trong việc ngăn chặn tiến trình lây nhiễm của bệnh nhân cho người khác.\nTrong trường hợp một ca nhiễm trùng có thời gian thế hệ kiểu SARS-CoV-2, nếu dùng 1 loại thuốc kháng virus hiệu quả 3 ngày sau khi bị lây nhiễm sẽ có tác động đến tiến trình lây truyền dịch, vì khả năng lây nhiễm trong 3 ngày đầu là thấp và hầu hết lây nhiễm xảy ra sau 3 ngày.\n\nBạn sẽ xem xét tổng cộng 6 mô hình, 3 mô hình bệnh cúm mùa có thời gian thế hệ là 2,6 ngày (như Ferguson và cộng sự) và 3 mô hình SARS-CoV-2 có thời gian thế hệ là 6,6 ngày (như Cereda và cộng sự).\n\n\n\n\n\n\n\n\n\nSARS-CoV-2\nCúm mùa\n\n\n\n\nThế hệ rời rạc\n\\(T_g\\) = 6,6 ngày\n\\(T_g\\) = 2,6 ngày\n\n\nSIR\n\\(D\\) = 6,6 ngày\n\\(D\\) = 2,6 ngày\n\n\nSEIR\n\\(L\\) = 5 ngày; \\(D\\) = 1,6 ngày\n\\(L\\) = 1 ngày; \\(T_g\\) = 1,6 ngày\n\n\n\nBài tập 3. Đối với mỗi mô hình, hãy sử dụng các “Phương trình R cho 3 mô hình đơn giản” để ước tính \\(R_0\\) ở London, năm 2020. Giả sử rằng tốc độ tăng trưởng r là như nhau đối với cả SARS-CoV-2 và bệnh cúm mùa, đồng thời sử dụng giá trị được ước tính trong Bài tập 1.\n\n\n\n\nSARS-CoV-2\nCúm mùa\n\n\n\n\nThế hệ rời rạc\n\\(R\\) = 8.07\n\\(R\\) = 2.28\n\n\nSIR\n\\(R\\) = 3.10\n\\(R\\) = 1.82\n\n\nSEIR\n\\(R\\) = 3.82\n\\(R\\) = 1.98\n\n\n\nCác ước tính của R có bị ảnh hưởng bởi các giả định về \\(T_g\\) không? Sự khác biệt có liên quan về mặt dịch tễ học?\n\nCó, ước tính \\(R_0\\) bị ảnh hưởng bởi phân phối thời gian thế hệ giả định.\nƯớc tính \\(R_0\\) phụ thuộc vào giá trị trung bình của \\(T_g\\): \\(T_g\\) trung bình lớn hơn dẫn đến ước tính \\(R_0\\) lớn hơn.\nƯớc tính của \\(R_0\\) cũng bị ảnh hưởng bởi phương sai và hình dạng của phân phối thời gian thế hệ. Với 3 mô hình có cùng \\(T_g\\) trung bình (= 2,6 ngày) nhưng phân phối \\(T_g\\) khác nhau thì ước lượng \\(R_0\\) là khác nhau.\nSự khác biệt có liên quan đến dịch tễ học: Đối với các bệnh nhiễm như SARS-CoV-2, độ bao phủ vaccine, miễn dịch cộng đồng và tác động của các biện pháp can thiệp phải cao tới khoảng 70% để kiểm soát được dịch.\nĐối với bệnh cúm, miễn dịch cộng đồng đạt được khi khoảng 50% dân số đề kháng (thông qua lây nhiễm tự nhiên hoặc tiêm phòng)\nCác mô hình đại dịch thường cân nhắc phân tích độ nhạy trên các phân phối thời gian thế hệ giả định để đánh giá tác động của các chiến lược phòng dịch giả lập đối với từng loại phân phối thời gian thế hệ (cũng như \\(R_0\\) ước lượng được). Một số chiến lược can thiệp có thể mang lại kết quả tốt cho \\(R_0\\) = 1.8 nhưng không phải cho \\(R_0\\) = 2,3.\n\nƯớc lượng \\(R_0\\) còn nhạy với yếu tố gì? Bạn có nghĩ các ước tính sẽ bị sai lệch nếu báo cáo không đủ số ca thực tế không? Nếu tỷ lệ báo cáo không đổi theo thời gian thì sao? Nếu nó thay đổi theo thời gian thì sao?\n\nCác ước lượng nhạy cảm với khoảng thời gian chúng ta chọn để mô tả mức tăng trưởng theo cấp số nhân.\nCác ước lượng sẽ không bị ảnh hưởng bởi việc báo cáo thiếu số ca thực tế nếu tỷ lệ báo cáo không đổi theo thời gian. Tuy nhiên, chúng sẽ bị ảnh hưởng nếu báo cáo thay đổi theo thời gian.\nSự hiện diện của các ca nhiễm không triệu chứng, là một dạng báo cáo thiếu, không làm sai lệch ước tính \\(R_0\\) nếu tỷ lệ nhiễm không triệu chứng không đổi theo thời gian.\nNhững thay đổi về năng lực xét nghiệm theo thời gian, dẫn đến thay đổi định nghĩa về dân số đủ điều kiện để xét nghiệm và báo cáo, dẫn đến sai lệch ước tính \\(R_0\\).\n\nCác bài tập tùy chọn\nBài tập tùy chọn 4. Nếu còn thời gian, hãy tìm hiểu \\(R_0\\) thay đổi như thế nào theo giả định thời gian thế hệ trung bình bằng cách sử dụng các mô hình SIR và SEIR.\nCác ước tính \\(R_0\\) có thay đổi theo giả địnhthời gian thế hệ trung bình không? Như thế nào?\n\nThời gian thế hệ trung bình dài hơn thì R0 cao hơn (cả với SIR và SEIR).\n\nBài tập tùy chọn 5. Nếu còn thời gian, hãy xem trang tính ‘under-reporting effects’. Tìm hiểu cách các chuỗi thời gian khác nhau được tạo, sau đó sử dụng chúng làm dữ liệu để ước tính \\(R_0\\).\nCác ước tính \\(R_0\\) có bị ảnh hưởng khi tỉ lệ báo cáo thiếu không đổi không? Còn khi tỉ lệ này thay đổi theo thời gian? So sánh kết quả của bạn với các câu trả lời được cung cấp trong Bài tập 3.\n\nKhông, các ước tính không bị ảnh hưởng khi tỉ lệ báo cáo thiếu không đổi bất kể tỉ lệ này là bao nhiêu.\nTuy nhiên, tỉ lệ báo cáo thiếu thay đổi theo thời gian sẽ ảnh hưởng đến các ước tính."
   },
   {
     "objectID": "Practice_2.html#ước-lượng-hệ-số-lây-nhiễm-bằng-cách-khớp-mô-hình-truyền-nhiễm",
@@ -523,5 +523,243 @@
     "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
     "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate)",
     "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate)"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-cơ-bản-r_0-basic-reproduction-number",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-cơ-bản-r_0-basic-reproduction-number",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm cơ bản \\(R_0\\) (basic reproduction number)",
+    "text": "Hệ số lây nhiễm cơ bản \\(R_0\\) (basic reproduction number)\n\nTrung bình số ca nhiễm thứ phát bị lây nhiễm từ 1 ca nguồn trong 1 dân số rất lớn và toàn bộ đều là người cảm nhiễm"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-hiệu-quả-rt-effective-reproduction-number",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-hiệu-quả-rt-effective-reproduction-number",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm hiệu quả R(t) (effective reproduction number)",
+    "text": "Hệ số lây nhiễm hiệu quả R(t) (effective reproduction number)\n\nTrung bình số ca nhiễm thứ phát bị lây nhiễm từ 1 ca nguồn tại thời điểm t (giải thích cho trường hợp dân số hữu hạn, hoặc đã có 1 số cá thể nhất định có miễn dịch trong dân số)\n\\[R(t) = s(t)R_0\\]"
+  },
+  {
+    "objectID": "Slide_Day2.html#chú-ý",
+    "href": "Slide_Day2.html#chú-ý",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Chú ý",
+    "text": "Chú ý\n\\[R(t) = s(t)R_0\\]\n\\(R_0\\) là 1 trường hợp của R(t) khi t = 0, toàn bộ dân số là cảm nhiễm\n\nR(t) sẽ giảm khi số người cảm nhiễm giảm\nR(t) thay đổi nếu khả năng lây truyền thay đổi\n\n-> Dịch bệnh sẽ tăng (R(t)>1) hay giảm (R(t)<1) và giảm mạnh như thế nào?\n-> Các biện pháp kiểm soát có hiệu quả không?"
+  },
+  {
+    "objectID": "Slide_Day2.html#tốc-độ-tăng-trưởng-dịch-epidemic-growth-rate",
+    "href": "Slide_Day2.html#tốc-độ-tăng-trưởng-dịch-epidemic-growth-rate",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Tốc độ tăng trưởng dịch (epidemic growth rate)",
+    "text": "Tốc độ tăng trưởng dịch (epidemic growth rate)\nDịch bệnh sẽ tăng theo cấp số nhân miễn là tỉ lệ cảm nhiễm trong dân số đủ lớn và không có can thiệp gì (có thể kiểm tra bằng cách biểu diễn số liệu trên thang log)\n\\[\nI_t = I_0e^{rt}\n\\]"
+  },
+  {
+    "objectID": "Slide_Day2.html#khớp-mô-hình-với-dữ-liệu",
+    "href": "Slide_Day2.html#khớp-mô-hình-với-dữ-liệu",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Khớp mô hình với dữ liệu",
+    "text": "Khớp mô hình với dữ liệu\nVí dụ: Có số ca mới mắc theo ngày như sau\n\nTRUE"
+  },
+  {
+    "objectID": "Slide_Day2.html#khớp-mô-hình-với-dữ-liệu-1",
+    "href": "Slide_Day2.html#khớp-mô-hình-với-dữ-liệu-1",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Khớp mô hình với dữ liệu",
+    "text": "Khớp mô hình với dữ liệu\nChúng ta có thể khớp mô hình SIR đơn giản sau với dữ liệu"
+  },
+  {
+    "objectID": "Slide_Day2.html#khớp-mô-hình-với-dữ-liệu-2",
+    "href": "Slide_Day2.html#khớp-mô-hình-với-dữ-liệu-2",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Khớp mô hình với dữ liệu",
+    "text": "Khớp mô hình với dữ liệu"
+  },
+  {
+    "objectID": "Slide_Day2.html#khớp-mô-hình-với-dữ-liệu-3",
+    "href": "Slide_Day2.html#khớp-mô-hình-với-dữ-liệu-3",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Khớp mô hình với dữ liệu",
+    "text": "Khớp mô hình với dữ liệu\n\nRiley et al. Science 2003"
+  },
+  {
+    "objectID": "Slide_Day2.html#truy-vết",
+    "href": "Slide_Day2.html#truy-vết",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Truy vết",
+    "text": "Truy vết"
+  },
+  {
+    "objectID": "Slide_Day2.html#tái-cấu-trúc-vụ-dịch",
+    "href": "Slide_Day2.html#tái-cấu-trúc-vụ-dịch",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Tái cấu trúc vụ dịch",
+    "text": "Tái cấu trúc vụ dịch\nSuy luận ai lây cho ai dựa trên:\n\nĐường cong dịch\nGiả định về phân phối thời gian thế hệ"
+  },
+  {
+    "objectID": "Slide_Day2.html#tái-cấu-trúc-vụ-dịch-1",
+    "href": "Slide_Day2.html#tái-cấu-trúc-vụ-dịch-1",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Tái cấu trúc vụ dịch",
+    "text": "Tái cấu trúc vụ dịch\nVí dụ: Có 2 ca nhiễm trong 1 vụ dịch\n\n\nBệnh nhân 1 bị nhiễm vào ngày 0\nBệnh nhân 2 bị nhiễm vào ngày 2\n\nHỏi ai lây cho ai?"
+  },
+  {
+    "objectID": "Slide_Day2.html#tái-cấu-trúc-vụ-dịch-2",
+    "href": "Slide_Day2.html#tái-cấu-trúc-vụ-dịch-2",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Tái cấu trúc vụ dịch",
+    "text": "Tái cấu trúc vụ dịch\nVí dụ: 1 vụ dịch kết thúc với 4 ca nhiễm\n\n\n\nBệnh nhân\nNhiễm ngày\n\n\n\n\n1\n0\n\n\n2\n2\n\n\n3\n2\n\n\n4\n4"
+  },
+  {
+    "objectID": "Slide_Day2.html#tái-cấu-trúc-vụ-dịch-3",
+    "href": "Slide_Day2.html#tái-cấu-trúc-vụ-dịch-3",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Tái cấu trúc vụ dịch",
+    "text": "Tái cấu trúc vụ dịch\nVới phân phối thời gian thế hệ sau (giả định hoặc lấy từ nghiên cứu truy vết trước)"
+  },
+  {
+    "objectID": "Slide_Day2.html#ai-đã-lây-nhiễm-cho-bệnh-nhân-2",
+    "href": "Slide_Day2.html#ai-đã-lây-nhiễm-cho-bệnh-nhân-2",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Ai đã lây nhiễm cho bệnh nhân 2?",
+    "text": "Ai đã lây nhiễm cho bệnh nhân 2?\n\nBN2 có xác suất 50% bị lây từ BN1, 0% từ BN3 và 0% từ BN4"
+  },
+  {
+    "objectID": "Slide_Day2.html#ai-đã-lây-nhiễm-cho-bệnh-nhân-2-1",
+    "href": "Slide_Day2.html#ai-đã-lây-nhiễm-cho-bệnh-nhân-2-1",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Ai đã lây nhiễm cho bệnh nhân 2?",
+    "text": "Ai đã lây nhiễm cho bệnh nhân 2?\nHiệu chỉnh xác suất này theo công thức (để tổng lại là 100%)\n\\[P(i \\rightarrow j) = \\frac{w(t_j - t_i)}{\\sum_{k \\ne j} w(t_j - t_k)}\\]"
+  },
+  {
+    "objectID": "Slide_Day2.html#suy-diễn-mạng-lưới-lây-nhiễm",
+    "href": "Slide_Day2.html#suy-diễn-mạng-lưới-lây-nhiễm",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Suy diễn mạng lưới lây nhiễm",
+    "text": "Suy diễn mạng lưới lây nhiễm\nLàm tương tự cho bệnh nhân 3, bệnh nhân 4"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-hiệu-quả",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-hiệu-quả",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm hiệu quả",
+    "text": "Hệ số lây nhiễm hiệu quả\nƯớc lượng R của bệnh nhân i = tổng các xác suất"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-hiệu-quả-1",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-hiệu-quả-1",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm hiệu quả",
+    "text": "Hệ số lây nhiễm hiệu quả\nXếp các giá trị R này theo ngày nhiễm của các bệnh nhân, ta có R(0), R(2) và R(4)"
+  },
+  {
+    "objectID": "Slide_Day2.html#tái-cấu-trúc-vụ-dịch-4",
+    "href": "Slide_Day2.html#tái-cấu-trúc-vụ-dịch-4",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Tái cấu trúc vụ dịch",
+    "text": "Tái cấu trúc vụ dịch\n\nCho phép ước lượng R(t)\nPhương pháp được giới thiệu bởi Ferguson et al. (Nature 2001) và Wallinga & Teunis (AJE 2004)"
+  },
+  {
+    "objectID": "Slide_Day2.html#tái-cấu-trúc-vụ-dịch-5",
+    "href": "Slide_Day2.html#tái-cấu-trúc-vụ-dịch-5",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Tái cấu trúc vụ dịch",
+    "text": "Tái cấu trúc vụ dịch\nVấn đề:\n\nChỉ có thể thực hiện hồi cứu (phương pháp mở rộng ước lượng theo thời gian thực giới thiệu bởi Cauchemez et al. EID 2006)\nKhông ước lượng được R(t) cho những ngày không có ca nhiễm\nPhương pháp để đánh giá sự bất định rất phức tạp\nƯớc lượng R(t) thể hiện khả năng lây nhiễm từ thời điểm t về sau -> không phải khả năng lây nhiễm tại thời điểm t"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)",
+    "text": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)\nLà trung bình số ca nhiễm thứ phát kì vọng ở thời điểm t bị lây từ 1 ca đang nhiễm, nếu tình hình giữ nguyên từ t trở về sau"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-1",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-1",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)",
+    "text": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)\nĐể ước lượng \\(R^i(t)\\):\n\nĐếm số ca mới tại thời điểm t\nTính tổng xác suất có thể lây nhiễm ở thời điểm t\nChia tỉ số 2 giá trị này"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-2",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-2",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)",
+    "text": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)\nDùng lại ví dụ trước:\n\n\n\nBệnh nhân\nNhiễm ngày\n\n\n\n\n1\n0\n\n\n2\n2\n\n\n3\n2\n\n\n4\n4"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-3",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-3",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)",
+    "text": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-4",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-4",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)",
+    "text": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-5",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-5",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)",
+    "text": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-6",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-6",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)",
+    "text": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-7",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-7",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)",
+    "text": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)\nTa có ước lượng hệ số lây nhiễm tức thời của từng ngày:"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-8",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-8",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)",
+    "text": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)\n\\(R^i(t)\\) = khả năng lây nhiễm (transmissibility) ở thời điểm t\nPhương pháp này được giới thiệu lần đầu bởi Fraser et al. (PLoS One 2007), được sửa đổi bởi Cori et al. (AJE 2013) và Thompson et al. (Epidemics 2019)\nĐã được áp dụng phân tích theo thời gian thực trong nhiều vụ dịch"
+  },
+  {
+    "objectID": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-9",
+    "href": "Slide_Day2.html#hệ-số-lây-nhiễm-tức-thời-rit-9",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)",
+    "text": "Hệ số lây nhiễm tức thời \\(R^i(t)\\)\nPhương pháp đánh giá độ bất định rất đơn giản.\nThực hiện trong:\n\nExcel\nR\nMột ứng dụng tương tác\n\nƯớc lượng \\(R^i\\) vào những ngày không có ca mắc = 0\nKhả năng tính đến sự không chắc chắn trong phân phối thời gian thế hệ và các ca nhập khẩu (imported cases)."
+  },
+  {
+    "objectID": "Slide_Day2.html#điểm-mạnh-và-điểm-yếu",
+    "href": "Slide_Day2.html#điểm-mạnh-và-điểm-yếu",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Điểm mạnh và điểm yếu",
+    "text": "Điểm mạnh và điểm yếu\n\n\n\n\n\n\n\n\n\n\nPhương pháp\nƯớc lượng\nCần có\nĐiểm mạnh\nĐiểm yếu\n\n\n\n\nTốc độ tăng trưởng\n\\(R_0\\)\nĐường cong dịch giai đoạn sớm; phân phối thời gian thế hệ\nKhông cần giả định về cơ chế lây truyền; Có thể ước lượng sớm trong vụ dịch; Dễ dùng (có thể dùng Excel); Có thể ước lượng cho các vụ dịch lớn; Chính xác với dữ liệu báo cáo thiếu\nGiả định tiếp xúc đồng nhất (homogenous mixing); Đôi khi khó có thể giới hạn giai đoạn tăng theo cấp số nhân của vụ dịch (ví dụ khi dữ liệu không thu thập theo ngày mà theo tuần, tháng)\n\n\nKhớp mô hình\n\\(R_t\\)\nĐường cong dịch; Số người trong dân số; Tỉ lệ người cảm nhiễm và miễn dịch ban đầu trong dân số\nDễ dùng (sử dụng R); Có thể ước lượng cho các vụ dịch lớn\nKhông thể thực hiện theo thời gian thực; Giả định quan trọng về cơ chế lây nhiễm; Giá định sự lây nhiễm là hằng định (constant transmissibility) (trừ khi được quy định khác đi trong mô hình); Giả định tiếp xúc đồng nhất (trừ khi được quy định khác đi trong mô hình); Tỉ lệ báo cáo thiếu phải được quy định trong mô hình\n\n\nTruy vết\nR(t)\nDữ liệu chi tiết sự tiếp xúc của từng ca nhiễm\nĐo lường thực tế R(t) chứ không phải ước lượng (tiêu chuẩn vàng); Không có bất cứ giả định gì về cơ chế lây nhiễm\nĐắt; Tốn thời gian; Không thể thực hiện cho vụ dịch lớn; Không thể thực hiện theo thời gian thực\n\n\nSuy luận ai lây cho ai (who infected whom)\nR(t)\nĐường cong dịch; Phân phối thời gian thế hệ\nĐỡ tốn tiền, tốn thời gian hơn truy vết; Có thể ước lượng cho các vụ dịch lớn; Chính xác với dữ liệu báo cáo thiếu\nKhông thể thực hiện theo thời gian thực; Giả định tiếp xúc đồng nhất; Giả định phân phối thời gian thế hệ đặc biệt (unique generation time distribution)\n\n\nTỉ số giữa số người mới bị nhiễm / khả năng lây nhiễm (available infectivity)\n\\(R^i(t)\\)\nĐường cong dịch; Phân phối thời gian thế hệ\nKhông cần giả định về cơ chế lây truyền; Có thể thực hiện theo thời gian thực; Có thể làm bằng Excel hoặc R; Có thể ước lượng cho các vụ dịch lớn; Có khả năng giải thích cho sự bất định của phân phối thời gian thế hệ; Chính xác với dữ liệu báo cáo thiếu\nGiả định tiếp xúc đồng nhất; Không thể hiện được điều gì đã thực sự xảy ra hoặc dự báo tương lai"
+  },
+  {
+    "objectID": "Slide_Day2.html#tổng-kết",
+    "href": "Slide_Day2.html#tổng-kết",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Tổng kết",
+    "text": "Tổng kết\n\n\\(R_0\\): Hệ số lây nhiễm cơ bản = Trung bình số ca nhiễm thứ phát bị lây nhiễm từ 1 ca nguồn trong 1 dân số rất lớn và toàn bộ đều là người cảm nhiễm\n\nCó thể ước tính từ tốc độ tăng trưởng dịch + phân phối thời gian thế hệ + tỷ lệ cảm nhiễm ban đầu\nBằng cách khớp mô hình với đường cong dịch"
+  },
+  {
+    "objectID": "Slide_Day2.html#tổng-kết-1",
+    "href": "Slide_Day2.html#tổng-kết-1",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Tổng kết",
+    "text": "Tổng kết\n\nR(t): Hệ số lây nhiễm hiệu quả = Trung bình số ca nhiễm thứ phát bị lây nhiễm từ 1 ca nguồn tại thời điểm t\n\\(R^i(t)\\): Hệ số lây nhiễm tức thời = Số ca thứ phát kì vọng trên mỗi ca đang nhiễm tại thời điểm t, nếu tình hình không đổi\n\nCó thể ước tính từ đường cong dịch và phân bố thời gian thế hệ bằng cách suy ra cây lây truyền\n\nThời gian nhiễm thường không thể quan sát được, chúng ta thường dựa vào ngày khởi phát triệu chứng.\nSử dụng khoảng thời gian nối tiếp (thời gian từ ngày khởi phát triệu chứng ở người đang nhiễm tới ngày khởi phát triệu chứng của người bị lây nhiễm) hơn là thời gian thế hệ\nỞ đây chúng ta tập trung vào các phương pháp chỉ sử dụng dữ liệu dịch tễ học\nNgoài ra còn có các phương pháp khác, ví dụ: sử dụng dữ liệu di truyền\n\nStadler et al. MBE, 2011\nVolz và Siveroni, PLoS Comp Biol 2018"
+  },
+  {
+    "objectID": "Slide_Day2.html#tốc-độ-tăng-trưởng-dịch-epidemic-growth-rate-1",
+    "href": "Slide_Day2.html#tốc-độ-tăng-trưởng-dịch-epidemic-growth-rate-1",
+    "title": "Tính toán và ứng dụng hệ số lây nhiễm",
+    "section": "Tốc độ tăng trưởng dịch (epidemic growth rate)",
+    "text": "Tốc độ tăng trưởng dịch (epidemic growth rate)\nNếu biết thời gian thế hệ (generation time: thời gian từ khi ca nguồn bị nhiễm đến khi ca thứ phát bị nhiễm) thì có thể ước lượng được \\(R_0\\)\n\\(R_0 = e^{rT_g}\\)"
   }
 ]
