@@ -70,15 +70,23 @@ Thời gian số ca tăng gấp đôi = \$\frac{ln(2)}{r} = \$ (ngày)
 
 Bấm vào PivotTable trong tab Insert. Một cửa sổ sẽ xuất hiện yêu cầu bạn chọn dữ liệu mà muốn phân tích. Chọn cột B (ngày_bắt_đầu). Chúng ta sẽ đặt kết quả tính được ngay trong sheet này (Existing Worksheet). Bấm OK.
 
+![](figures/pivotTable.png)
+
 Bạn sẽ thấy một Bảng xuất hiện ở bên phải màn hình. Chúng ta cần chọn tính số lần mỗi ngày xuất hiện trong danh sách dòng. Nhấp vào "onset_date" ở bảng trên cùng. (Bạn có thể thấy biến "Months" xuất hiện, hãy bỏ qua nó)
 
 Sau đó, kéo "ngày_bắt đầu" vào phần Values ở dưới cùng bên phải của bảng
 
+![](figures/pivotFields.png)
+
 Tỷ lệ mắc hàng ngày sẽ xuất hiện trong bảng tính
+
+![](figures/pivotDailyIncidence.png)
 
 Sao chép số mới mắc hàng ngày vào tab Task 2 và ước tính tốc độ tăng theo cấp số nhân bằng cách sử dụng cùng một cửa sổ thời gian với dữ liệu hàng tuần. Nếu muốn thử dùng một phương pháp khác, bạn có thể ước tính tốc độ tăng trưởng bằng cách sử dụng hồi quy tuyến tính thay vì sử dụng công thức được đưa ra trong biểu thức 1.
 
 Trong Excel, bạn có thể chạy hồi quy tuyến tính bằng hàm LINEST(). LINEST() xuất ra độ dốc (slope) và giao điểm với trục tung (intercept), do đó nó cần hai ô để xuất kết quả. Chọn hai ô (ví dụ: H3 và I3) và chèn công thức hồi quy tuyến tính, chỉ định giá trị y làm đối số (argument) thứ nhất và giá trị x làm đối số thứ hai.
+
+![](figures/linest.png)
 
 Kiểm tra hiệu suất của mô hình trên dữ liệu chuỗi thời gian mở rộng.
 
@@ -112,6 +120,8 @@ với $D$ là thời gian lây nhiễm trung bình (từ lúc có khả năng l�
 
 Biểu đồ sau thể hiện phân bố thời gian thế hệ của SARS-CoV-2 (nguồn: Cereda và cộng sự, arxiv, 2020) và cúm mùa (nguồn: Ferguson và cộng sự, Nature, 2005). Thời gian thế hệ trung bình của SARS-CoV-2 là 6,6 ngày và của bệnh cúm là 2,6 ngày.
 
+![](figures/sars_flu.png)
+
 Bạn có nghĩ rằng sự khác biệt giữa sự phân bố của SARS-CoV-2 và bệnh cúm là vấn đề cần kiểm soát không? Tại sao?
 
 Ví dụ, bạn có thể nghĩ về vấn đề cấp thuốc kháng virus trong đại dịch. Nếu thuốc được giao 3 ngày sau ngày nhiễm bệnh của ca đầu tiên trong một hộ gia đình thì ảnh hưởng như thế nào đến sự lây truyền dịch?
@@ -127,7 +137,7 @@ Trong trường hợp một ca nhiễm trùng có thời gian thế hệ kiểu 
 Bạn sẽ xem xét tổng cộng 6 mô hình, 3 mô hình bệnh cúm mùa có thời gian thế hệ là 2,6 ngày (như Ferguson và cộng sự) và 3 mô hình SARS-CoV-2 có thời gian thế hệ là 6,6 ngày (như Cereda và cộng sự).
 
 |                | SARS-CoV-2                   | Cúm mùa                        |
-|------------------|---------------------------|----------------------------|
+|------------------|--------------------------|---------------------------|
 | Thế hệ rời rạc | $T_g$ = 6,6 ngày             | $T_g$ = 2,6 ngày               |
 | SIR            | $D$ = 6,6 ngày               | $D$ = 2,6 ngày                 |
 | SEIR           | $L$ = 5 ngày; $D$ = 1,6 ngày | $L$ = 1 ngày; $T_g$ = 1,6 ngày |
