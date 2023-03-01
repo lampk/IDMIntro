@@ -108,11 +108,11 @@ với $g(t)$ là phân phối thời gian thế hệ (xác suất thời gian th
 
 Có thể viết phương trình $R_0$ cho 3 mô hình đơn giản sau:
 
-Thế hệ rời rạc (discrete generation): $R = exp(rT_g)$
+Thế hệ rời rạc (discrete generation): $R_0 = exp(rT_g)$
 
-SIR: $R = 1 + rD$
+SIR: $R_0 = 1 + rD$
 
-SEIR: $R = (1 + rD)(1 + rL)$
+SEIR: $R_0 = (1 + rD)(1 + rL)$
 
 với $D$ là thời gian lây nhiễm trung bình (từ lúc có khả năng lây cho đến khi hồi phục) và $L$ là thời gian tiềm ẩn trung bình (từ lúc bị nhiễm đến khi có khả năng lây)
 
@@ -137,7 +137,7 @@ Trong trường hợp một ca nhiễm trùng có thời gian thế hệ kiểu 
 Bạn sẽ xem xét tổng cộng 6 mô hình, 3 mô hình bệnh cúm mùa có thời gian thế hệ là 2,6 ngày (như Ferguson và cộng sự) và 3 mô hình SARS-CoV-2 có thời gian thế hệ là 6,6 ngày (như Cereda và cộng sự).
 
 |                | SARS-CoV-2                   | Cúm mùa                        |
-|------------------|--------------------------|---------------------------|
+|-----------------|---------------------------|----------------------------|
 | Thế hệ rời rạc | $T_g$ = 6,6 ngày             | $T_g$ = 2,6 ngày               |
 | SIR            | $D$ = 6,6 ngày               | $D$ = 2,6 ngày                 |
 | SEIR           | $L$ = 5 ngày; $D$ = 1,6 ngày | $L$ = 1 ngày; $T_g$ = 1,6 ngày |

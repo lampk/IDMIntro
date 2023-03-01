@@ -33,6 +33,8 @@
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -365,9 +367,16 @@ Phùng Khánh Lâm, Ong Phúc Thịnh
 </section>
 <section id="tốc-độ-tăng-trưởng-dịch-epidemic-growth-rate" class="slide level2">
 <h2>Tốc độ tăng trưởng dịch (epidemic growth rate)</h2>
-<p>Dịch bệnh sẽ tăng theo cấp số nhân miễn là tỉ lệ cảm nhiễm trong dân số đủ lớn (có thể kiểm tra bằng cách biểu diễn số liệu trên thang log)</p>
+<p>Dịch bệnh sẽ tăng theo cấp số nhân miễn là tỉ lệ cảm nhiễm trong dân số đủ lớn và không có can thiệp gì (có thể kiểm tra bằng cách biểu diễn số liệu trên thang log)</p>
+<p><span class="math display">\[
+I_t = I_0e^{rt}
+\]</span></p>
 
-<img data-src="figures/R0_expGrowth.png" class="r-stretch"><p>Nếu biết thời gian thế hệ (generation time: thời gian từ khi ca nguồn bị nhiễm đến khi ca thứ phát bị nhiễm) thì có thể ước lượng được <span class="math inline">\(R_0\)</span></p>
+<img data-src="figures/R0_expGrowth.png" class="r-stretch"></section>
+<section id="tốc-độ-tăng-trưởng-dịch-epidemic-growth-rate-1" class="slide level2">
+<h2>Tốc độ tăng trưởng dịch (epidemic growth rate)</h2>
+<p>Nếu biết thời gian thế hệ (generation time: thời gian từ khi ca nguồn bị nhiễm đến khi ca thứ phát bị nhiễm) thì có thể ước lượng được <span class="math inline">\(R_0\)</span></p>
+<p><span class="math inline">\(R_0 = e^{rT_g}\)</span></p>
 </section>
 <section id="khớp-mô-hình-với-dữ-liệu" class="slide level2">
 <h2>Khớp mô hình với dữ liệu</h2>
@@ -405,14 +414,14 @@ Phùng Khánh Lâm, Ong Phúc Thịnh
 <p>Ví dụ: Có 2 ca nhiễm trong 1 vụ dịch</p>
 
 <img data-src="figures/epiReconstruct.png" class="r-stretch"><ul>
-<li>Bệnh nhân 1 bị nhiễm vào ngày 1</li>
-<li>Bệnh nhân 2 bị nhiễm vào ngày 3</li>
+<li>Bệnh nhân 1 bị nhiễm vào ngày 0</li>
+<li>Bệnh nhân 2 bị nhiễm vào ngày 2</li>
 </ul>
 <p>Hỏi ai lây cho ai?</p>
 </section>
 <section id="tái-cấu-trúc-vụ-dịch-2" class="slide level2">
 <h2>Tái cấu trúc vụ dịch</h2>
-<p>Ví dụ thực hành: 1 vụ dịch kết thúc với 4 ca nhiễm</p>
+<p>Ví dụ: 1 vụ dịch kết thúc với 4 ca nhiễm</p>
 <table>
 <thead>
 <tr class="header">
@@ -490,16 +499,14 @@ Phùng Khánh Lâm, Ong Phúc Thịnh
 </section>
 <section id="hệ-số-lây-nhiễm-tức-thời-rit" class="slide level2">
 <h2>Hệ số lây nhiễm tức thời <span class="math inline">\(R^i(t)\)</span></h2>
-<p>Là trung bình số ca nhiễm thứ phát bị lây nhiễm từ mỗi ca đang nhiễm tại thời điểm t, không phải thời điểm t trở về sau</p>
-<p><span class="math inline">\(R^i(t)\)</span> giả định rằng khả năng lây nhiễm giữ nguyên trong tương lai (dự đoán bao nhiêu ca nhiễm thứ phát bị lây nhiễm từ mỗi ca nguồn nếu khả năng lây nhiễm giữ nguyên ở thời điểm t)</p>
-<p><span class="math inline">\(R^i(t)\)</span> / R(t) = tuổi kỳ vọng / tuổi thực</p>
+<p>Là trung bình số ca nhiễm thứ phát kì vọng ở thời điểm t bị lây từ 1 ca đang nhiễm, nếu tình hình giữ nguyên từ t trở về sau</p>
 </section>
 <section id="hệ-số-lây-nhiễm-tức-thời-rit-1" class="slide level2">
 <h2>Hệ số lây nhiễm tức thời <span class="math inline">\(R^i(t)\)</span></h2>
 <p>Để ước lượng <span class="math inline">\(R^i(t)\)</span>:</p>
 <ul>
 <li>Đếm số ca mới tại thời điểm t</li>
-<li>Tính tổng số có thể lây nhiễm ở thời điểm t</li>
+<li>Tính tổng xác suất có thể lây nhiễm ở thời điểm t</li>
 <li>Chia tỉ số 2 giá trị này</li>
 </ul>
 </section>
@@ -603,7 +610,7 @@ Phùng Khánh Lâm, Ong Phúc Thịnh
 </tr>
 <tr class="even">
 <td>Khớp mô hình</td>
-<td><span class="math inline">\(R_0\)</span></td>
+<td><span class="math inline">\(R_t\)</span></td>
 <td>Đường cong dịch; Số người trong dân số; Tỉ lệ người cảm nhiễm và miễn dịch ban đầu trong dân số</td>
 <td>Dễ dùng (sử dụng R); Có thể ước lượng cho các vụ dịch lớn</td>
 <td>Không thể thực hiện theo thời gian thực; Giả định quan trọng về cơ chế lây nhiễm; Giá định sự lây nhiễm là hằng định (constant transmissibility) (trừ khi được quy định khác đi trong mô hình); Giả định tiếp xúc đồng nhất (trừ khi được quy định khác đi trong mô hình); Tỉ lệ báo cáo thiếu phải được quy định trong mô hình</td>
@@ -646,7 +653,7 @@ Phùng Khánh Lâm, Ong Phúc Thịnh
 <h2>Tổng kết</h2>
 <ul>
 <li><p>R(t): Hệ số lây nhiễm hiệu quả = Trung bình số ca nhiễm thứ phát bị lây nhiễm từ 1 ca nguồn tại thời điểm t</p></li>
-<li><p><span class="math inline">\(R^i(t)\)</span>: Hệ số lây nhiễm tức thời = Số ca thứ phát trên mỗi ca đang nhiễm tại thời điểm t</p>
+<li><p><span class="math inline">\(R^i(t)\)</span>: Hệ số lây nhiễm tức thời = Số ca thứ phát kì vọng trên mỗi ca đang nhiễm tại thời điểm t, nếu tình hình không đổi</p>
 <ul>
 <li>Có thể ước tính từ đường cong dịch và phân bố thời gian thế hệ bằng cách suy ra cây lây truyền</li>
 </ul></li>
@@ -674,6 +681,7 @@ Phùng Khánh Lâm, Ong Phúc Thịnh
   <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -695,7 +703,8 @@ Phùng Khánh Lâm, Ong Phúc Thịnh
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -866,7 +875,7 @@ Phùng Khánh Lâm, Ong Phúc Thịnh
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
