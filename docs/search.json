@@ -4,21 +4,7 @@
     "href": "index.html",
     "title": "Giới thiệu khoá học",
     "section": "",
-    "text": "Để đánh giá và kiểm soát dịch bệnh truyền nhiễm một cách hiệu quả, việc ước tính được mức độ lây nhiễm của bệnh trong cộng đồng, thông qua chỉ số hệ số lây nhiễm, có vai trò rất quan trọng. Ngoài việc giúp đánh giá được diễn tiến hiện tại của dịch, hệ số lây nhiễm còn có thể được dùng để so sánh và đánh giá hiệu quả của các biện pháp can thiệp trong các tình huống khác nhau, từ đó đóng góp nguồn thông tin quan trọng để cơ quan chức năng lựa chọn và đưa ra giải pháp phòng ngừa và kiểm soát dịch bệnh tối ưu. Để ước tính được hệ số lây nhiễm và ứng dụng hiệu quả chỉ số dịch tễ này, chúng ta cần đến các mô hình toán học về dịch tễ học bệnh truyền nhiễm. Trong thời gian gần đây, đặc biệt là trong đại dịch COVID-19, các mô hình này đã được ứng dụng rộng rãi và là công cụ đóng góp đắc lực vào nỗ lực kiểm soát dịch bệnh truyền nhiễm tại nhiều quốc gia trên thế giới.\nTừ đề xuất của lãnh đạo HCDC nhằm từng bước giới thiệu và ứng dụng công cụ này tại đơn vị, workshop “Giới thiệu về mô hình toán học trong đánh giá và kiểm soát dịch bệnh truyền nhiễm” được tổ chức với 2 mục tiêu chính:\n\nGiới thiệu một số nguyên tắc cơ bản trong việc xây dựng và ứng dụng mô hình toán học trong đánh giá và kiểm soát dịch bệnh truyền nhiễm.\nGiới thiệu định nghĩa, cách tính toán và ứng dụng hệ số lây nhiễm trong đánh giá và kiểm soát dịch bệnh truyền nhiễm."
-  },
-  {
-    "objectID": "index.html#nội-dung",
-    "href": "index.html#nội-dung",
-    "title": "Giới thiệu khoá học",
-    "section": "1 Nội dung",
-    "text": "1 Nội dung\n\nInfectious diseases and mathematical models.\nIntroduction to designing infectious disease models.\nThe herd effect in infectious disease epidemiology\nÝ nghĩa, ứng dụng và cách tính Ro, Rt. Dự đoán khi nào là đỉnh dịch, dịch sẽ kéo dài bao lâu, số người cảm nhiễm/tử vong. Sử dụng vẽ bằng excel."
-  },
-  {
-    "objectID": "index.html#vì-sao-có-workshop-này",
-    "href": "index.html#vì-sao-có-workshop-này",
-    "title": "Giới thiệu khoá học",
-    "section": "2 Vì sao có workshop này?",
-    "text": "2 Vì sao có workshop này?\n\nKhoá học “Introduction to mathematical models of the Epidemiology & Control of Infectious Diseases”\nSingapore, 13-16/10/2022\nMRC Centre for Global Infectious Disease Analysis (Imperial College London) & Lee Kong Chian School of Medicine (Nanyang Technical University)\nGS Azra Ghani và cộng sự"
+    "text": "Chương trình\n\n\n\n\n\n\n\n\n\nNgày\nGiờ\nNội dung\nGiảng viên\n\n\n\n\nThứ tư\n01/03/2023\n14:00 - 15:00\nLý thuyết 1\nGiới thiệu về mô hình toán học\nPhùng Khánh Lâm\n\n\n\n15:00 - 15:15\nGiải lao\n\n\n\n\n15:15 - 16:00\nThực hành 1\nThiết kế mô hình\nOng Phúc Thịnh & Phùng Khánh Lâm\n\n\nThứ năm\n02/03/2023\n14:00 - 15:00\nLý thuyết 2\nTính toán và ứng dụng hệ số lây nhiễm\nOng Phúc Thịnh\n\n\n\n15:00 - 15:15\nGiải lao\n\n\n\n\n15:15 - 16:00\nThực hành 2\nTính toán hệ số lây nhiễm bằng Excel\nOng Phúc Thịnh & Phùng Khánh Lâm\n\n\n\nNội dung khoá học được tham khảo và dựa theo cấu trúc của khoá học “Introduction to mathematical models of the Epidemiology & Control of Infectious Diseases” tại Singapore, 13-16/10/2022, do GS Azra Ghani và MRC Centre for Global Infectious Disease Analysis (Imperial College London) & Lee Kong Chian School of Medicine (Nanyang Technical University) tổ chức.\n\n\nNgười trình bày\n\nPhùng Khánh Lâm, TS.BS., giảng viên Bộ môn Dịch tễ học, Khoa Y tế công cộng, Đại học Y Dược TPHCM.\nOng Phúc Thịnh, BS., nghiên cứu sinh tại Đại học Oxford, thành viên nhóm Mô hình toán tại Đơn vị nghiên cứu lâm sàng Đại học Oxford.\n\n\n\nSlide\nLý thuyết 1\nLý thuyết 2:\nTóm tắt và một số điểm lưu ý"
   },
   {
     "objectID": "Note.html",
@@ -32,7 +18,7 @@
     "href": "Note.html#dịch-tễ-học-bệnh-truyền-nhiễm",
     "title": "Giới thiệu về mô hình toán học trong dịch tễ học và kiểm soát bệnh truyền nhiễm",
     "section": "2 Dịch tễ học bệnh truyền nhiễm",
-    "text": "2 Dịch tễ học bệnh truyền nhiễm\nBệnh truyền nhiễm gây ra do sự lây truyền các tác nhân gây bệnh trong dân số cảm nhiễm, và đặc trưng bởi khả năng lây lan từ người này sang người khác, qua dây chuyền lây.\nDiễn tiến theo thời gian của bệnh truyền nhiễm trong một cá thể có thể được mô tả theo diễn tiến lâm sàng hoặc theo khả năng lây nhiễm. Về diễn tiến lâm sàng, bệnh bao gồm các giai đoạn: cảm nhiễm, bệnh bán lâm sàng (sau khi nhiễm bệnh và trước khi có biểu hiện lâm sàng), bệnh lâm sàng, hồi phục/tàn tật/tử vong. Theo khả năng lây nhiễm, bệnh bao gồm giai đoạn tiềm ẩn và giai đoạn lây nhiễm. Hình 1 tóm tắt bệnh sử tự nhiên và dây chuyền lây của bệnh truyền nhiễm.\n\n\n\nHình 1: Lịch sử tự nhiên và dây chuyền lây của bệnh truyền nhiễm\n\n\nMặc dù bệnh truyền nhiễm có thể do nhiều loại tác nhân gây bệnh khác nhau gây ra (virus, vi khuẩn, ký sinh trùng) và có nhiều cơ chế lây truyền khác nhau (khí dung/giọt bắn, phân miệng, quan hệ tình dục, vật trung gian, …), tuy nhiên kết quả cuối cùng đều giống nhau khi xét ở góc độ cộng đồng\n\ntừ một (một số) người nhiễm ban đầu,\nbệnh được lây truyền tiếp tục cho những người khác,\ntạo ra một chuỗi phản ứng dây chuyền, từ đó tạo thành một vụ dịch\n\nThông thường, một vụ dịch bệnh truyền nhiễm sẽ trải qua 4 giai đoạn (WHO 2018): khởi phát, lây truyền tại chỗ, lan rộng, và suy giảm. Hình 2 minh hoạ 4 giai đoạn này cùng các nhóm biện pháp đáp ứng tương ứng.\n\nWHO. 2018. Managing Epidemics: Key Facts about Major Deadly Diseases.\n\n\n\nHình 2: Các giai đoạn của một vụ dịch và biện pháp đáp ứng\n\n\nDưới góc độ của người phải đưa ra các quyết định nhằm đáp ứng với vụ dịch, những câu hỏi sau cần phải được trả lời (Cori et al. 2017)\n\nCori, Anne, Christl A. Donnelly, Ilaria Dorigatti, Neil M. Ferguson, Christophe Fraser, Tini Garske, Thibaut Jombart, et al. 2017. “Key Data for Outbreak Evaluation: Building on the Ebola Experience.” Philosophical Transactions of the Royal Society B: Biological Sciences 372 (1721): 20160371. https://doi.org/10.1098/rstb.2016.0371.\n\nLiệu vụ dịch có bùng phát hay không?\nVụ dịch sẽ có tác động như thế nào đến y tế công cộng? (mức độ nghiêm trọng của vụ dịch)\nLiệu có thể kiểm soát được vụ dịch hay không?\nBiện pháp nào là phù hợp để kiểm soát vụ dịch?\nLiệu biện pháp can thiệp đang được sử dụng có hiệu quả không và chúng ta có thể cải thiện biện pháp này như thế nào?\n\nĐể trả lời những câu hỏi này, chúng ta cần ước tính được khả năng lây truyền (transmissibility) của dịch. Khả năng lây truyền của dịch có thể được ước tính thông qua hai chỉ số dịch tễ học (Anderson et al. 2020)\n\nAnderson, Roy, Christl Donnelly, Deirdre Hollingsworth, Matt Keeling, Carolin Vegvari, Rebecca Baggaley, and Rosie Maddren. 2020. “Reproduction Number (R) and Growth Rate (r) of the COVID-19 Epidemic in the UK.”\n\nHệ số lây nhiễm (reproductive number, \\(R\\)): số lượng ca nhiễm thứ phát từ một ca nhiễm nguyên phát ban đầu.\nTốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\)): số ca nhiễm tăng lên trong một đơn vị thời gian. Tốc độ tăng trưởng này phụ thuộc vào hai thông số: hệ số lây nhiễm và khoảng thời gian giữa hai thế hệ lây nhiễm.\n\n\n2.1 Hệ số lây nhiễm \\(R\\)\nHệ số lây nhiễm (Reproductive number, \\(R\\)) là số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó.\nHệ số lây nhiễm cơ bản (Reproductive number, \\(R_0\\)) là số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó, trong dân số hoàn toàn cảm nhiễm với bệnh (tại thời điểm dịch mới xuất hiện).\n\\(R_0\\) quan trọng vì:\n\n\\(R_0\\) giúp xác định:\n\nTốc độ lây truyền của bệnh trong cộng đồng\nNgưỡng cân bằng của vụ dịch\n“the age at which hosts acquire infection”\nMức độ can thiệp cần thiết để kiểm soát vụ dịch\n\nChúng ta có thể dùng \\(R_0\\) để\n\nĐánh giá liệu vụ dịch có đang được kiểm soát hay không\nHiểu về mức độ can thiệp cần thiết để kiểm soát hoàn toàn vụ dịch\n\n\n\n\n2.2 Tốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\))\nThể hiện số ca nhiễm tăng lên trong một đơn vị thời gian.\nTốc độ tăng trưởng này phụ thuộc vào hai thông số: hệ số lây nhiễm (reproductive number) và khoảng thời gian giữa hai thế hệ lây nhiễm (generation time).\n\\(r\\) có thể được ước tính theo công thức\n\\[\nr = \\dfrac{R-1}{Tg}\n\\]\nVới \\(R\\) là hệ số lây nhiễm và \\(T_g\\) là khoảng thời gian trung bình giữa hai thế hệ lây nhiễm.\nỞ giai đoạn đầu dịch, số ca mới mắc sẽ tăng theo cấp số nhân và tỉ lệ theo:\n\\[exp[\\frac{(R_0 - 1)}{T_g}t]\\]\nVới \\(R_0\\) là hệ số lây nhiễm cơ bản.\nGiai đoạn gia tăng theo cấp số nhân sẽ ngừng lại khi lượng người để lây nhiễm giảm đi theo thời gian.\n\n\n2.3 Thời gian thế hệ \\(T_g\\)\nLà thời gian trung bình từ lúc 1 ca bị lây nhiễm đến khi ca tiếp theo bị lây nhiễm từ ca này (khái niệm này định nghĩa theo khả năng lây nhiễm).\nPhân biệt với khoảng thời gian nối tiếp (serial interval) - thời gian từ khi 1 ca có triệu chứng lâm sàng đến khi ca tiếp theo bị lây nhiễm từ ca này xuất hiện các triệu chứng (khái niệm này định nghĩa theo lâm sàng).\nTrong thực tế, chúng ta không quan sát được khoảng thời gian thế hệ mà chỉ quan sát được khoảng thời gian nối tiếp. Vì vậy, khoảng thời gian nối tiếp được dùng để ước lượng cho khoảng thời gian thế hệ."
+    "text": "2 Dịch tễ học bệnh truyền nhiễm\nBệnh truyền nhiễm gây ra do sự lây truyền các tác nhân gây bệnh trong dân số cảm nhiễm, và đặc trưng bởi khả năng lây lan từ người này sang người khác, qua dây chuyền lây.\nDiễn tiến theo thời gian của bệnh truyền nhiễm trong một cá thể có thể được mô tả theo diễn tiến lâm sàng hoặc theo khả năng lây nhiễm. Về diễn tiến lâm sàng, bệnh bao gồm các giai đoạn: cảm nhiễm, bệnh bán lâm sàng (sau khi nhiễm bệnh và trước khi có biểu hiện lâm sàng), bệnh lâm sàng, hồi phục/tàn tật/tử vong. Theo khả năng lây nhiễm, bệnh bao gồm giai đoạn tiềm ẩn và giai đoạn lây nhiễm. Hình 1 tóm tắt bệnh sử tự nhiên và dây chuyền lây của bệnh truyền nhiễm.\n\n\n\nHình 1: Lịch sử tự nhiên và dây chuyền lây của bệnh truyền nhiễm\n\n\nMặc dù bệnh truyền nhiễm có thể do nhiều loại tác nhân gây bệnh khác nhau gây ra (virus, vi khuẩn, ký sinh trùng) và có nhiều cơ chế lây truyền khác nhau (khí dung/giọt bắn, phân miệng, quan hệ tình dục, vật trung gian, …), tuy nhiên kết quả cuối cùng đều giống nhau khi xét ở góc độ cộng đồng\n\ntừ một (một số) người nhiễm ban đầu,\nbệnh được lây truyền tiếp tục cho những người khác,\ntạo ra một chuỗi phản ứng dây chuyền, từ đó tạo thành một vụ dịch\n\nThông thường, một vụ dịch bệnh truyền nhiễm sẽ trải qua 4 giai đoạn (WHO 2018): khởi phát, lây truyền tại chỗ, lan rộng, và suy giảm. Hình 2 minh hoạ 4 giai đoạn này cùng các nhóm biện pháp đáp ứng tương ứng.\n\nWHO. 2018. Managing Epidemics: Key Facts about Major Deadly Diseases.\n\n\n\nHình 2: Các giai đoạn của một vụ dịch và biện pháp đáp ứng\n\n\nDưới góc độ của người phải đưa ra các quyết định nhằm đáp ứng với vụ dịch, những câu hỏi sau cần phải được trả lời (Cori et al. 2017)\n\nCori, Anne, Christl A. Donnelly, Ilaria Dorigatti, Neil M. Ferguson, Christophe Fraser, Tini Garske, Thibaut Jombart, et al. 2017. “Key Data for Outbreak Evaluation: Building on the Ebola Experience.” Philosophical Transactions of the Royal Society B: Biological Sciences 372 (1721): 20160371. https://doi.org/10.1098/rstb.2016.0371.\n\nLiệu vụ dịch có bùng phát hay không?\nVụ dịch sẽ có tác động như thế nào đến y tế công cộng? (mức độ nghiêm trọng của vụ dịch)\nLiệu có thể kiểm soát được vụ dịch hay không?\nBiện pháp nào là phù hợp để kiểm soát vụ dịch?\nLiệu biện pháp can thiệp đang được sử dụng có hiệu quả không và chúng ta có thể cải thiện biện pháp này như thế nào?\n\nĐể trả lời những câu hỏi này, chúng ta cần ước tính được khả năng lây truyền (transmissibility) của dịch. Khả năng lây truyền của dịch có thể được ước tính thông qua hai chỉ số dịch tễ học (Anderson et al. 2020)\n\nAnderson, Roy, Christl Donnelly, Deirdre Hollingsworth, Matt Keeling, Carolin Vegvari, Rebecca Baggaley, and Rosie Maddren. 2020. “Reproduction Number (R) and Growth Rate (r) of the COVID-19 Epidemic in the UK.”\n\nHệ số lây nhiễm (reproductive number, \\(R\\)): số lượng ca nhiễm thứ phát từ một ca nhiễm nguyên phát ban đầu.\nTốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\)): số ca nhiễm tăng lên trong một đơn vị thời gian. Tốc độ tăng trưởng này phụ thuộc vào hai thông số: hệ số lây nhiễm và khoảng thời gian giữa hai thế hệ lây nhiễm.\n\n\n2.1 Hệ số lây nhiễm \\(R\\)\nHệ số lây nhiễm (Reproductive number, \\(R\\)) là số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó.\nHệ số lây nhiễm cơ bản (Reproductive number, \\(R_0\\)) là số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó, trong dân số hoàn toàn cảm nhiễm với bệnh (tại thời điểm dịch mới xuất hiện).\n\n\n2.2 Tốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\))\nThể hiện số ca nhiễm tăng lên trong một đơn vị thời gian.\nTốc độ tăng trưởng này phụ thuộc vào hai thông số: hệ số lây nhiễm (reproductive number) và khoảng thời gian giữa hai thế hệ lây nhiễm (generation time).\n\\(r\\) có thể được ước tính theo công thức\n\\[\nr = \\dfrac{R-1}{Tg}\n\\]\nVới \\(R\\) là hệ số lây nhiễm và \\(T_g\\) là khoảng thời gian trung bình giữa hai thế hệ lây nhiễm.\nỞ giai đoạn đầu dịch, số ca mới mắc sẽ tăng theo cấp số nhân và tỉ lệ theo:\n\\[exp[\\frac{(R_0 - 1)}{T_g}t]\\]\nVới \\(R_0\\) là hệ số lây nhiễm cơ bản.\nGiai đoạn gia tăng theo cấp số nhân sẽ ngừng lại khi lượng người để lây nhiễm giảm đi theo thời gian.\n\n\n2.3 Thời gian thế hệ \\(T_g\\)\nLà thời gian trung bình từ lúc 1 ca bị lây nhiễm đến khi ca tiếp theo bị lây nhiễm từ ca này (khái niệm này định nghĩa theo khả năng lây nhiễm).\nPhân biệt với khoảng thời gian nối tiếp (serial interval) - thời gian từ khi 1 ca có triệu chứng lâm sàng đến khi ca tiếp theo bị lây nhiễm từ ca này xuất hiện các triệu chứng (khái niệm này định nghĩa theo lâm sàng).\nTrong thực tế, chúng ta không quan sát được khoảng thời gian thế hệ mà chỉ quan sát được khoảng thời gian nối tiếp. Vì vậy, khoảng thời gian nối tiếp được dùng để ước lượng cho khoảng thời gian thế hệ."
   },
   {
     "objectID": "Note.html#hệ-số-lây-nhiễm",
@@ -61,6 +47,139 @@
     "title": "About",
     "section": "",
     "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#nội-dung-khoá-học",
+    "href": "Slide_Conclusion.html#nội-dung-khoá-học",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Nội dung khoá học",
+    "text": "Nội dung khoá học\n\nDịch tễ học bệnh truyền nhiễm\nHệ số lây nhiễm\nMô hình toán học bệnh truyền nhiễm\nTính toán hệ số lây nhiễm"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#dịch-tễ-học-bệnh-truyền-nhiễm",
+    "href": "Slide_Conclusion.html#dịch-tễ-học-bệnh-truyền-nhiễm",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Dịch tễ học bệnh truyền nhiễm",
+    "text": "Dịch tễ học bệnh truyền nhiễm\nKhái niệm\nKhả năng lây nhiễm của dịch\n\nHệ số lây nhiễm\nTốc độ tăng trưởng"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#hệ-số-lây-nhiễm",
+    "href": "Slide_Conclusion.html#hệ-số-lây-nhiễm",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Hệ số lây nhiễm",
+    "text": "Hệ số lây nhiễm\n\n\\(R_0\\), \\(R_t\\)\n\n\n\\(R_0\\) không phải là một hằng số sinh học cơ bản\n\n\n\\(R\\) thay đổi theo thời gian (D, O, T, S)\n\n\n\\(R ~ 1\\)\n\n\\(R > 1\\): Stochastic fadeout\n\\(R < 1\\): Metapopulation dynamics\nSự đồng nhất của dân số"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#ước-tính-hệ-số-lây-nhiễm",
+    "href": "Slide_Conclusion.html#ước-tính-hệ-số-lây-nhiễm",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Ước tính hệ số lây nhiễm",
+    "text": "Ước tính hệ số lây nhiễm\nNhiều phương pháp ước tính\nPhụ thuộc giả định về khoảng thời gian thế hệ\nĐộ trễ của dữ liệu (báo cáo vs nhiễm bệnh)\nDữ liệu không đầy đủ ở thời điểm hiện tại\nQuan sát không đầy đủ\nCửa sổ đánh giá"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#ước-tính-hệ-số-lây-nhiễm-1",
+    "href": "Slide_Conclusion.html#ước-tính-hệ-số-lây-nhiễm-1",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Ước tính hệ số lây nhiễm",
+    "text": "Ước tính hệ số lây nhiễm\nR\n\nEpiEstim\nEpiNow2"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#mô-hình-toán-học-bệnh-truyền-nhiễm",
+    "href": "Slide_Conclusion.html#mô-hình-toán-học-bệnh-truyền-nhiễm",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Mô hình toán học bệnh truyền nhiễm",
+    "text": "Mô hình toán học bệnh truyền nhiễm\n\nHiểu biết thêm về vai trò và mối quan hệ của các yếu tố.\nDự đoán diễn tiến của dịch bệnh."
+  },
+  {
+    "objectID": "Slide_Conclusion.html#dự-đoán-diễn-tiến-của-dịch-bệnh",
+    "href": "Slide_Conclusion.html#dự-đoán-diễn-tiến-của-dịch-bệnh",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Dự đoán diễn tiến của dịch bệnh",
+    "text": "Dự đoán diễn tiến của dịch bệnh\nNowcast\nForecast\nPrediction/Projection/Scenario"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#nowcast-forecast",
+    "href": "Slide_Conclusion.html#nowcast-forecast",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Nowcast-Forecast",
+    "text": "Nowcast-Forecast\n\nLeung K, Wu JT, Leung GM. Nat Commun 2021;12(1):1501."
+  },
+  {
+    "objectID": "Slide_Conclusion.html#predictionprojectionscenario",
+    "href": "Slide_Conclusion.html#predictionprojectionscenario",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Prediction/Projection/Scenario",
+    "text": "Prediction/Projection/Scenario\n\nFerguson N, Laydon D, Nedjati Gilani G, et al. (2020) Report 9. http://spiral.imperial.ac.uk/handle/10044/1/77482 (16/03/2020)"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#các-bước-xây-dựng-mô-hình",
+    "href": "Slide_Conclusion.html#các-bước-xây-dựng-mô-hình",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Các bước xây dựng mô hình",
+    "text": "Các bước xây dựng mô hình\n1. Thiết kế mô hình\n2. Ước lượng tham số\n\nChạy mô hình\nDiễn giải kết quả"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#khuynh-hướng-tương-lai",
+    "href": "Slide_Conclusion.html#khuynh-hướng-tương-lai",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Khuynh hướng tương lai",
+    "text": "Khuynh hướng tương lai\nMô hình động học cho các vụ dịch mới nổi\nMô hình theo thời gian thực (real-time modeling)\nĐộng học theo không gian & thời gian (đối với các bệnh lưu hành)"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#adam-j-kucharski-et-al.-2020",
+    "href": "Slide_Conclusion.html#adam-j-kucharski-et-al.-2020",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Adam J Kucharski et al. (2020)",
+    "text": "Adam J Kucharski et al. (2020)\n\nKucharski AJ, Klepac P, Conlan AJK, et al. (2020) The Lancet Infectious Diseases;20(10):1151–60."
+  },
+  {
+    "objectID": "Slide_Conclusion.html#adam-j-kucharski-et-al.-2020-1",
+    "href": "Slide_Conclusion.html#adam-j-kucharski-et-al.-2020-1",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Adam J Kucharski et al. (2020)",
+    "text": "Adam J Kucharski et al. (2020)\n\nKucharski AJ, Klepac P, Conlan AJK, et al. (2020) The Lancet Infectious Diseases;20(10):1151–60."
+  },
+  {
+    "objectID": "Slide_Conclusion.html#adam-j-kucharski-et-al.-2020-2",
+    "href": "Slide_Conclusion.html#adam-j-kucharski-et-al.-2020-2",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "Adam J Kucharski et al. (2020)",
+    "text": "Adam J Kucharski et al. (2020)\n\nKucharski AJ, Klepac P, Conlan AJK, et al. (2020) The Lancet Infectious Diseases;20(10):1151–60."
+  },
+  {
+    "objectID": "Slide_Conclusion.html#r_t-sốt-xuất-huyết",
+    "href": "Slide_Conclusion.html#r_t-sốt-xuất-huyết",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "\\(R_t\\) & Sốt xuất huyết",
+    "text": "\\(R_t\\) & Sốt xuất huyết\n\nPinho STR, Ferreira CP, Esteva L et al. () Phil. Trans. R. Soc. A (2010) 368, 5679–5693"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#r_t-sốt-xuất-huyết-1",
+    "href": "Slide_Conclusion.html#r_t-sốt-xuất-huyết-1",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "\\(R_t\\) & Sốt xuất huyết",
+    "text": "\\(R_t\\) & Sốt xuất huyết\n\nOng J, Soh S, Ho SH, et al. (2022) PLOS Computational Biology;18(1):e1009791, Pinho STR, Ferreira CP, Esteva L et al. () Phil. Trans. R. Soc. A (2010) 368, 5679–5693"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#r_t-sốt-xuất-huyết-2",
+    "href": "Slide_Conclusion.html#r_t-sốt-xuất-huyết-2",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "\\(R_t\\) & Sốt xuất huyết",
+    "text": "\\(R_t\\) & Sốt xuất huyết\n\nOng J, Soh S, Ho SH, et al. (2022) PLOS Computational Biology;18(1):e1009791"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#r_t-sốt-xuất-huyết-3",
+    "href": "Slide_Conclusion.html#r_t-sốt-xuất-huyết-3",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "\\(R_t\\) & Sốt xuất huyết",
+    "text": "\\(R_t\\) & Sốt xuất huyết\n\nOng J, Soh S, Ho SH, et al. (2022) PLOS Computational Biology;18(1):e1009791"
+  },
+  {
+    "objectID": "Slide_Conclusion.html#cám-ơn-anh-chị-đã-tham-gia-buổi-học",
+    "href": "Slide_Conclusion.html#cám-ơn-anh-chị-đã-tham-gia-buổi-học",
+    "title": "Tóm tắt và một số điểm cần lưu ý",
+    "section": "CÁM ƠN ANH CHỊ ĐÃ THAM GIA BUỔI HỌC !",
+    "text": "CÁM ƠN ANH CHỊ ĐÃ THAM GIA BUỔI HỌC !\nPhản hồi về khoá học"
   },
   {
     "objectID": "references.html",
@@ -133,25 +252,263 @@
     "text": "Spatial epidemiology\n\nBooks\n\nLawson AB, Banerjee S, Haining RP, Ugarte MD, eds. Handbook of Spatial Epidemiology. 1st edition. Chapman and Hall/CRC; 2016.\nGelfand AE, Diggle P, Guttorp P, Fuentes M, eds. Handbook of Spatial Statistics. 1st edition. CRC Press; 2010.\nDiggle P. Model-Based Geostatistics for Global Public Health: Methods and Applications. Taylor & Francis; 2019.\nElliott P, ed. Spatial Epidemiology: Methods and Applications. Reprint. Oxford Univ. Press; 2006.\nDiggle PJ, Ribeiro PJ. Model-Based Geostatistics. Springer London NetLibrary, Inc. [distributor]\nDiggle P. Statistical Analysis of Spatial and Spatio-Temporal Point Patterns. Third edition. CRC Press, Taylor & Francis Group; 2014.\nBanerjee S, Carlin BP, Gelfand AE. Hierarchical Modeling and Analysis for Spatial Data. Second edition. CRC Press, Taylor & Francis Group; 2015.\nBivand R, Pebesma EJ, Gómez-Rubio V. Applied Spatial Data Analysis with R. Springer; 2008.\nWaller LA, Carlin BP. Disease mapping. In: Chapman & Hall/CRC Handbooks of Modern Statistical Methods. Vol 2010. NIH Public Access; 2010:217. Accessed January 24, 2023. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4180601/\n\n\n\nPapers\n\nBhatia S, Lassmann B, Cohn E, et al. Using digital surveillance tools for near real-time mapping of the risk of infectious disease spread. npj Digit Med. 2021;4(1):1-10. doi:10.1038/s41746-021-00442-3\nBrown PE. Model-Based Geostatistics the Easy Way. Journal of Statistical Software. 2015;63:1-24. doi:10.18637/jss.v063.i12\nMeyer S, Held L, Höhle M. Spatio-Temporal Analysis of Epidemic Phenomena Using the R Package surveillance. Journal of Statistical Software. 2017;77:1-55. doi:10.18637/jss.v077.i11\nMeyer S, Held L. Power-law models for infectious disease spread. The Annals of Applied Statistics. 2014;8(3):1612-1639. doi:10.1214/14-AOAS743\nMeyer S, Held L. Incorporating social contact data in spatio-temporal models for infectious disease spread. Biostatistics. 2017;18(2):338-351. doi:10.1093/biostatistics/kxw051\nSaran S, Singh P, Kumar V, Chauhan P. Review of Geospatial Technology for Infectious Disease Surveillance: Use Case on COVID-19. J Indian Soc Remote Sens. 2020;48(8):1121-1138. doi:10.1007/s12524-020-01140-5\nPigott DM, Howes RE, Wiebe A, et al. Prioritising Infectious Disease Mapping. PLOS Neglected Tropical Diseases. 2015;9(6):e0003756. doi:10.1371/journal.pntd.0003756\nHay SI, Battle KE, Pigott DM, et al. Global mapping of infectious disease. Philosophical Transactions of the Royal Society B: Biological Sciences. 2013;368(1614):20120250. doi:10.1098/rstb.2012.0250\nBest N, Richardson S, Thomson A. A comparison of Bayesian spatial models for disease mapping. Stat Methods Med Res. 2005;14(1):35-59. doi:10.1191/0962280205sm388oa\nGiorgi E, Diggle PJ, Snow RW, Noor AM. Geostatistical Methods for Disease Mapping and Visualisation Using Data from Spatio-temporally Referenced Prevalence Surveys. International Statistical Review. 2018;86(3):571-597. doi:10.1111/insr.12268\nLopez-Quılez A, Munoz F. Review of spatio-temporal models for disease mapping.\nColy S, Charras-Garrido M, Abrial D, Yao-Lafourcade AF. Spatiotemporal Disease Mapping Applied to Infectious Diseases. Procedia Environmental Sciences. 2015;26:32-37. doi:10.1016/j.proenv.2015.05.019\nBerke O. Exploratory disease mapping: kriging the spatial risk function from regional count data. International Journal of Health Geographics. 2004;3(1):18. doi:10.1186/1476-072X-3-18\nTatem AJ, Adamo S, Bharti N, et al. Mapping populations at risk: improving spatial demographic data for infectious disease modeling and metric derivation. Population Health Metrics. 2012;10(1):8. doi:10.1186/1478-7954-10-8\n\n\n\nCourses\n\n2021, Introduction to Model-based Geostatistics for Global Public Health. The Tropical Disease Epidemiology group at the Centre for Health Informatics Computing and Statistics in Lancaster University, on 20-22 April 2021."
   },
   {
-    "objectID": "Slide_Intro.html#savitz-da-wellenius-ga.-2022-mar-1kwac037.",
-    "href": "Slide_Intro.html#savitz-da-wellenius-ga.-2022-mar-1kwac037.",
+    "objectID": "Slide_Intro.html#nội-dung",
+    "href": "Slide_Intro.html#nội-dung",
     "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Savitz DA, Wellenius GA. 2022 Mar 1;kwac037.",
-    "text": "Savitz DA, Wellenius GA. 2022 Mar 1;kwac037."
+    "section": "Nội dung",
+    "text": "Nội dung\n\nDịch tễ học bệnh truyền nhiễm\nHệ số lây nhiễm\nMô hình toán học bệnh truyền nhiễm"
   },
   {
-    "objectID": "Slide_Intro.html#vấn-đề-của-nghiên-cứu-cắt-ngang",
-    "href": "Slide_Intro.html#vấn-đề-của-nghiên-cứu-cắt-ngang",
+    "objectID": "Slide_Intro.html#diễn-tiến-bệnh-truyền-nhiễm",
+    "href": "Slide_Intro.html#diễn-tiến-bệnh-truyền-nhiễm",
     "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Vấn đề của nghiên cứu cắt ngang",
-    "text": "Vấn đề của nghiên cứu cắt ngang\n\nContemporaneous Exposure May Not Be Etiologically Relevant\nDisease Prevalence May Be a Poor Proxy for Disease Incidence\nThe Association between Exposure and Disease May Be Susceptible to Reverse Causality"
+    "section": "Diễn tiến bệnh truyền nhiễm",
+    "text": "Diễn tiến bệnh truyền nhiễm"
   },
   {
-    "objectID": "Slide_Intro.html#đã",
-    "href": "Slide_Intro.html#đã",
+    "objectID": "Slide_Intro.html#các-giai-đoạn-của-một-vụ-dịch",
+    "href": "Slide_Intro.html#các-giai-đoạn-của-một-vụ-dịch",
     "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Đã",
-    "text": "Đã"
+    "section": "Các giai đoạn của một vụ dịch",
+    "text": "Các giai đoạn của một vụ dịch"
+  },
+  {
+    "objectID": "Slide_Intro.html#những-câu-hỏi-cần-trả-lời",
+    "href": "Slide_Intro.html#những-câu-hỏi-cần-trả-lời",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Những câu hỏi cần trả lời",
+    "text": "Những câu hỏi cần trả lời\n\n\nLiệu vụ dịch có bùng phát hay không?\nVụ dịch sẽ có tác động như thế nào đến y tế công cộng? (mức độ nghiêm trọng của vụ dịch)\nLiệu có thể kiểm soát được vụ dịch hay không?\nBiện pháp nào là phù hợp để kiểm soát vụ dịch?\nLiệu biện pháp can thiệp đang được sử dụng có hiệu quả không và chúng ta có thể cải thiện biện pháp này như thế nào?"
+  },
+  {
+    "objectID": "Slide_Intro.html#khả-năng-lây-truyền-transmissibility-của-dịch",
+    "href": "Slide_Intro.html#khả-năng-lây-truyền-transmissibility-của-dịch",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Khả năng lây truyền (transmissibility) của dịch",
+    "text": "Khả năng lây truyền (transmissibility) của dịch\n\nHệ số lây nhiễm (reproductive number, \\(R\\))\nTốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\))"
+  },
+  {
+    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-r",
+    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-r",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Hệ số lây nhiễm \\(R\\)",
+    "text": "Hệ số lây nhiễm \\(R\\)\nSố ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó."
+  },
+  {
+    "objectID": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate",
+    "href": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate)",
+    "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate)\nThể hiện số ca nhiễm tăng lên trong một đơn vị thời gian.\n\nPhụ thuộc vào hai thông số:\n\nhệ số lây nhiễm (reproductive number)\nkhoảng thời gian giữa hai thế hệ lây nhiễm (generation time)."
+  },
+  {
+    "objectID": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-1",
+    "href": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-1",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate)",
+    "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate)\n\\(r\\) có thể được ước tính theo công thức\n\\[\nr = \\dfrac{R-1}{Tg}\n\\]\nVới \\(R\\) là hệ số lây nhiễm và \\(T_g\\) là khoảng thời gian trung bình giữa hai thế hệ lây nhiễm."
+  },
+  {
+    "objectID": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-2",
+    "href": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-2",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate)",
+    "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate)\nỞ giai đoạn đầu dịch, số ca mới mắc sẽ tăng theo cấp số nhân và tỉ lệ theo:\n\\[exp[\\frac{(R_0 - 1)}{T_g}t]\\]\nVới \\(R_0\\) là hệ số lây nhiễm cơ bản."
+  },
+  {
+    "objectID": "Slide_Intro.html#thời-gian-thế-hệ-t_g",
+    "href": "Slide_Intro.html#thời-gian-thế-hệ-t_g",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Thời gian thế hệ \\(T_g\\)",
+    "text": "Thời gian thế hệ \\(T_g\\)\nThời gian trung bình từ lúc 1 ca bị lây nhiễm đến khi ca tiếp theo bị lây nhiễm từ ca này (khái niệm này định nghĩa theo khả năng lây nhiễm)."
+  },
+  {
+    "objectID": "Slide_Intro.html#thời-gian-thế-hệ-t_g-1",
+    "href": "Slide_Intro.html#thời-gian-thế-hệ-t_g-1",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Thời gian thế hệ \\(T_g\\)",
+    "text": "Thời gian thế hệ \\(T_g\\)"
+  },
+  {
+    "objectID": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-3",
+    "href": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-3",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate)",
+    "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate)"
+  },
+  {
+    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-1",
+    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-1",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Hệ số lây nhiễm",
+    "text": "Hệ số lây nhiễm\nSố ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó.\nCần phân biệt giữa hệ số lây nhiễm cơ bản (\\(R_0\\)) và hệ số lây nhiễm hiệu quả (\\(R_t\\))."
+  },
+  {
+    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-2",
+    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-2",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Hệ số lây nhiễm",
+    "text": "Hệ số lây nhiễm"
+  },
+  {
+    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0",
+    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Hệ số lây nhiễm cơ bản (\\(R_0\\))",
+    "text": "Hệ số lây nhiễm cơ bản (\\(R_0\\))\nSố ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó, trong dân số hoàn toàn cảm nhiễm với bệnh (tại thời điểm dịch mới xuất hiện)."
+  },
+  {
+    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0-1",
+    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0-1",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Hệ số lây nhiễm cơ bản (\\(R_0\\))",
+    "text": "Hệ số lây nhiễm cơ bản (\\(R_0\\))\n\\(R_0\\) giúp xác định khả năng lây lan của bệnh trong cộng đồng. Ví dụ về 1 bệnh nhiễm trùng không tạo miễn dịch suốt đời\n\nKhi \\(R_0\\) < 1 bệnh không lây lan\nKhi \\(R_0\\) gần bằng 1, số ca tăng dần\nKhi \\(R_0\\) lớn, bệnh lây lan và trở thành bệnh lưu hành"
+  },
+  {
+    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0-2",
+    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0-2",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Hệ số lây nhiễm cơ bản (\\(R_0\\))",
+    "text": "Hệ số lây nhiễm cơ bản (\\(R_0\\))\n\\(R_0\\) giúp xác định tốc độ lây truyền của bệnh trong cộng đồng, thông qua ước tính tốc độ tăng trưởng của dịch. \\(R_0\\) càng cao thì dịch có tốc độ tăng trưởng càng nhanh."
+  },
+  {
+    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0-3",
+    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0-3",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Hệ số lây nhiễm cơ bản (\\(R_0\\))",
+    "text": "Hệ số lây nhiễm cơ bản (\\(R_0\\))\n\\(R_0\\) giúp ước tính được quy mô vụ dịch khi kết thúc (\\(F\\))\n\\[\nF = 1 - exp\\{-R_0 \\times F\\}\n\\]\n\\(R_0\\) giúp ước tính được % số ca bệnh tại đỉnh dịch (\\(H\\))\n\\[H = 1 - \\frac{1}{R_0}\\]\nNgưỡng cân bằng của vụ dịch ~ mức độ can thiệp cần thiết để kiểm soát vụ dịch."
+  },
+  {
+    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-hiệu-quả-r_t",
+    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-hiệu-quả-r_t",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Hệ số lây nhiễm hiệu quả (\\(R_t\\))",
+    "text": "Hệ số lây nhiễm hiệu quả (\\(R_t\\))\nSố ca nhiễm trung bình từ một ca nhiễm trong quá trình diễn tiến của vụ dịch.\nCan thiệp có thể làm thay đổi \\(R_t\\), do đó chỉ số này được dùng để theo dõi và đánh giá hiệu quả của can thiệp."
+  },
+  {
+    "objectID": "Slide_Intro.html#cách-ước-lượng-hệ-số-lây-nhiễm",
+    "href": "Slide_Intro.html#cách-ước-lượng-hệ-số-lây-nhiễm",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Cách ước lượng hệ số lây nhiễm",
+    "text": "Cách ước lượng hệ số lây nhiễm\n\nCần lưu ý rằng, hệ số lây nhiễm không phải là một hằng số sinh học cơ bản!\nVề lý thuyết, hệ số lây nhiễm có thể được tính bằng công thức:\n\\[\nR = D \\times O \\times T \\times S\n\\]\nTrong đó:\n\\(D\\) (Duration) là độ dài của thời kỳ lây nhiễm.\n\\(O\\) (Opportunity) là cơ hội lây nhiễm, số lượng tiếp xúc trong một đơn vị thời gian.\n\\(T\\) (Transmission probability) là xác suất lây nhiễm thành công trong một lần tiếp xúc.\n\\(S\\) (Duration) là kích thước của dân số cảm nhiễm, % dân số có thể mắc bệnh."
+  },
+  {
+    "objectID": "Slide_Intro.html#cách-ước-lượng-hệ-số-lây-nhiễm-1",
+    "href": "Slide_Intro.html#cách-ước-lượng-hệ-số-lây-nhiễm-1",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Cách ước lượng hệ số lây nhiễm",
+    "text": "Cách ước lượng hệ số lây nhiễm\nCần sử dụng nhiều loại dữ liệu khác nhau:\n\nDữ liệu về sự lây truyền bệnh (transmission): thường không quan sát được, thường dựa vào nghiên cứu đoàn hệ trong hộ gia đình.\nDữ liệu về kiểu tiếp xúc (contact patterns): thường khó xác định được loại hình tiếp xúc liên quan, dễ dàng nhất là đối với bệnh lây truyền qua quan hệ tình dục, thường thu thập dựa vào điều tra/dữ liệu di chuyển/dữ liệu thu thập qua app điện thoại.\nDữ liệu về lịch sử tự nhiên của bệnh.\nDữ liệu về can thiệp: từ nghiên cứu can thiệp hoặc quan sát."
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-toán-học-bệnh-truyền-nhiễm-1",
+    "href": "Slide_Intro.html#mô-hình-toán-học-bệnh-truyền-nhiễm-1",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình toán học bệnh truyền nhiễm",
+    "text": "Mô hình toán học bệnh truyền nhiễm\nMô hình là sự đơn giản hoá một hệ thống phức tạp\n\nTất cả mọi người đều dùng mô hình 1 cách vô thức.\n\n\nMô hình toán học cho phép thực hiện được các phân tích chính xác, chặt chẽ và dự báo định lượng."
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-toán-học-bệnh-truyền-nhiễm-2",
+    "href": "Slide_Intro.html#mô-hình-toán-học-bệnh-truyền-nhiễm-2",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình toán học bệnh truyền nhiễm",
+    "text": "Mô hình toán học bệnh truyền nhiễm\nĐối với dịch tễ học bệnh truyền nhiễm, mô hình toán học có thể dùng cho 2 nhóm mục tiêu chính:\n\nHiểu biết thêm về vai trò và mối quan hệ của các yếu tố khác nhau ảnh hưởng đến sự xuất hiện và diễn tiến của dịch bệnh.\nDự đoán diễn tiến của dịch bệnh."
+  },
+  {
+    "objectID": "Slide_Intro.html#các-bước-xây-dựng-mô-hình",
+    "href": "Slide_Intro.html#các-bước-xây-dựng-mô-hình",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Các bước xây dựng mô hình",
+    "text": "Các bước xây dựng mô hình\n\nThiết kế mô hình\nƯớc lượng tham số\nChạy mô hình\nDiễn giải kết quả"
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-khoang",
+    "href": "Slide_Intro.html#mô-hình-khoang",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình khoang",
+    "text": "Mô hình khoang\n\nChia dân số thành nhiều khoang (phân nhóm)\n\n\nMỗi khoang có:\n\n1 biến trạng thái, thể hiện số người đang ở trong khoang này, và\n1 phương trình vi phân, thể hiện tần suất thay đổi của biến trạng thái"
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-sir",
+    "href": "Slide_Intro.html#mô-hình-sir",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình SIR",
+    "text": "Mô hình SIR"
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-sir-1",
+    "href": "Slide_Intro.html#mô-hình-sir-1",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình SIR",
+    "text": "Mô hình SIR"
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-sir-2",
+    "href": "Slide_Intro.html#mô-hình-sir-2",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình SIR",
+    "text": "Mô hình SIR"
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-sir-3",
+    "href": "Slide_Intro.html#mô-hình-sir-3",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình SIR",
+    "text": "Mô hình SIR"
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-sir-4",
+    "href": "Slide_Intro.html#mô-hình-sir-4",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình SIR",
+    "text": "Mô hình SIR"
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-sir-5",
+    "href": "Slide_Intro.html#mô-hình-sir-5",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình SIR",
+    "text": "Mô hình SIR"
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-sir-6",
+    "href": "Slide_Intro.html#mô-hình-sir-6",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình SIR",
+    "text": "Mô hình SIR"
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-sir-7",
+    "href": "Slide_Intro.html#mô-hình-sir-7",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình SIR",
+    "text": "Mô hình SIR"
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-sir-8",
+    "href": "Slide_Intro.html#mô-hình-sir-8",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình SIR",
+    "text": "Mô hình SIR"
+  },
+  {
+    "objectID": "Slide_Intro.html#mô-hình-sir-9",
+    "href": "Slide_Intro.html#mô-hình-sir-9",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Mô hình SIR",
+    "text": "Mô hình SIR"
+  },
+  {
+    "objectID": "Slide_Intro.html#kết-luận-1",
+    "href": "Slide_Intro.html#kết-luận-1",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Kết luận",
+    "text": "Kết luận\nDịch tễ học bệnh truyền nhiễm\n\nKhả năng lây nhiễm của bệnh\n\n\nHệ số lây nhiễm\n\n\nMô hình toán học bệnh truyền nhiễm\n\nMô hình khoang\nThiết kế, ước tính tham số (giả định)"
+  },
+  {
+    "objectID": "Slide_Intro.html#nội-dung-khoá-học",
+    "href": "Slide_Intro.html#nội-dung-khoá-học",
+    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
+    "section": "Nội dung khoá học",
+    "text": "Nội dung khoá học\nhttps://lampk.github.io/IDMIntro"
   },
   {
     "objectID": "Practice_2.html",
@@ -236,292 +593,5 @@
     "title": "Bài thực hành 1",
     "section": "3 Mô hình 3",
     "text": "3 Mô hình 3\nMột đặc điểm quan trọng khác của bệnh lao là tái nhiễm ngoại sinh, nghĩa là người đang nhiễm lao tiềm ẩn lại tiếp tục bị lây nhiễm vi khuẩn lao ‘bổ sung’ từ bệnh nhân lao khác, khiến họ tiến triển bệnh nhanh hơn. Hiện tượng này thường được mô hình hóa bằng cách di chuyển những người từ khoang Tiềm ẩn tiến triển chậm sang khoang Tiềm ẩn tiến triển nhanh. Mô hình này giả định rằng thời gian tiềm ẩn của những người tiến triển nhanh rất ngắn, đến mức họ không có khả năng bị tái nhiễm ngoại sinh trước khi tiến triển thành bệnh.\nBài tập 1. Tạo ra Mô hình 3 bằng cách thêm quá trình tái nhiễm ngoại sinh vào sơ đồ dòng chảy của Mô hình 2.\n\n\n\n\nflowchart LR\n  S[Cảm nhiễm] -- Bị nhiễm --> LS[Tiềm ẩn chậm]\n  S -- Bị nhiễm --> LF[Tiềm ẩn nhanh]\n  LF -- Tiến triển --> D[Bệnh]\n  LS -- Tiến triển --> D\n  LS --> LF\n  D -- Hồi phục --> LS\n\n\n\n\n\n\n\n\nBài tập 2. Mô hình 3 cần thêm 1 số tham số, hãy ghi ra và mô tả các tham số này.\n\nTốc độ tái nhiễm ngoại sinh là \\(r \\beta \\frac{D}{N}\\), với \\(r\\) là mức độ cảm nhiễm tương đối của nhóm Tiềm ẩn tiến triển chậm so với nhóm Cảm nhiễm\n\nr > 1: Nhóm Tiềm ẩn tiến triển chậm dễ bị nhiễm hơn nhóm Cảm nhiễm\nr = 1: Nhóm Tiềm ẩn tiến triển chậm và nhóm Cảm nhiễm có mức độ cảm nhiễm như nhau\nr < 1: Nhóm Tiềm ẩn tiến triển chậm khó bị nhiễm hơn nhóm Cảm nhiễm\n\n\nBài tập 3. Viết phương trình vi phân bằng biểu thức toán học cho Mô hình 3.\n\n\\[\\frac{dS}{dt} = bN - \\mu S - \\beta \\frac{D}{N}S\\] (giống Mô hình 1 & 2)\n\\[\\frac{dL_{F}}{dt} = f \\beta \\frac{D}{N}S - \\mu L_{F} - \\gamma_{F}L_{F} + r \\beta \\frac{D}{N}L_{S}\\]\n\\[\\frac{dL_{S}}{dt} = (1 - f) \\beta \\frac{D}{N}S - \\mu L_{S} - \\gamma_{F}L_{S} + \\sigma D - r \\beta \\frac{D}{N}L_{S}\\]\n\\[\\frac{dD}{dt} = \\gamma_{F}L_{F} + \\gamma_{S}L_{S} - (\\mu + \\alpha)D - \\sigma D\\] (giống Mô hình 2)"
-  },
-  {
-    "objectID": "Slide_Intro.html#nội-dung",
-    "href": "Slide_Intro.html#nội-dung",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Nội dung",
-    "text": "Nội dung\n\nDịch tễ học bệnh truyền nhiễm\nHệ số lây nhiễm\nMô hình toán học bệnh truyền nhiễm"
-  },
-  {
-    "objectID": "Slide_Intro.html#diễn-tiến-bệnh-truyền-nhiễm",
-    "href": "Slide_Intro.html#diễn-tiến-bệnh-truyền-nhiễm",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Diễn tiến bệnh truyền nhiễm",
-    "text": "Diễn tiến bệnh truyền nhiễm"
-  },
-  {
-    "objectID": "Slide_Intro.html#các-giai-đoạn-của-một-vụ-dịch",
-    "href": "Slide_Intro.html#các-giai-đoạn-của-một-vụ-dịch",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Các giai đoạn của một vụ dịch",
-    "text": "Các giai đoạn của một vụ dịch"
-  },
-  {
-    "objectID": "Slide_Intro.html#khả-năng-lây-truyền-transmissibility-của-dịch",
-    "href": "Slide_Intro.html#khả-năng-lây-truyền-transmissibility-của-dịch",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Khả năng lây truyền (transmissibility) của dịch",
-    "text": "Khả năng lây truyền (transmissibility) của dịch\n\nHệ số lây nhiễm (reproductive number, \\(R\\))\nTốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\))"
-  },
-  {
-    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-r",
-    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-r",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Hệ số lây nhiễm \\(R\\)",
-    "text": "Hệ số lây nhiễm \\(R\\)\nSố ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó."
-  },
-  {
-    "objectID": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-r",
-    "href": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-r",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\))",
-    "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\))\nThể hiện số ca nhiễm tăng lên trong một đơn vị thời gian.\nPhụ thuộc vào hai thông số:\n\nhệ số lây nhiễm (reproductive number)\nkhoảng thời gian giữa hai thế hệ lây nhiễm (generation time)."
-  },
-  {
-    "objectID": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-r-1",
-    "href": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-r-1",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\))",
-    "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\))\n\\(r\\) có thể được ước tính theo công thức\n\\[\nr = \\dfrac{R-1}{Tg}\n\\]\nVới \\(R\\) là hệ số lây nhiễm và \\(T_g\\) là khoảng thời gian trung bình giữa hai thế hệ lây nhiễm."
-  },
-  {
-    "objectID": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-r-2",
-    "href": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-r-2",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\))",
-    "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\))\nỞ giai đoạn đầu dịch, số ca mới mắc sẽ tăng theo cấp số nhân và tỉ lệ theo:\n\\[exp[\\frac{(R_0 - 1)}{T_g}t]\\]\nVới \\(R_0\\) là hệ số lây nhiễm cơ bản."
-  },
-  {
-    "objectID": "Slide_Intro.html#thời-gian-thế-hệ-t_g",
-    "href": "Slide_Intro.html#thời-gian-thế-hệ-t_g",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Thời gian thế hệ \\(T_g\\)",
-    "text": "Thời gian thế hệ \\(T_g\\)\nThời gian trung bình từ lúc 1 ca bị lây nhiễm đến khi ca tiếp theo bị lây nhiễm từ ca này (khái niệm này định nghĩa theo khả năng lây nhiễm)."
-  },
-  {
-    "objectID": "Slide_Intro.html#thời-gian-thế-hệ-t_g-1",
-    "href": "Slide_Intro.html#thời-gian-thế-hệ-t_g-1",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Thời gian thế hệ \\(T_g\\)",
-    "text": "Thời gian thế hệ \\(T_g\\)"
-  },
-  {
-    "objectID": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-r-3",
-    "href": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-r-3",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\))",
-    "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate, \\(r\\))"
-  },
-  {
-    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-1",
-    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-1",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Hệ số lây nhiễm",
-    "text": "Hệ số lây nhiễm\nSố ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó.\nCần phân biệt giữa hệ số lây nhiễm cơ bản (\\(R_0\\)) và hệ số lây nhiễm hiệu quả (\\(R_t\\))."
-  },
-  {
-    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-2",
-    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-2",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Hệ số lây nhiễm",
-    "text": "Hệ số lây nhiễm"
-  },
-  {
-    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0",
-    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Hệ số lây nhiễm cơ bản (\\(R_0\\))",
-    "text": "Hệ số lây nhiễm cơ bản (\\(R_0\\))\nSố ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong suốt khoảng thời gian lây bệnh của ca nhiễm đó, trong dân số hoàn toàn cảm nhiễm với bệnh (tại thời điểm dịch mới xuất hiện)."
-  },
-  {
-    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0-1",
-    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0-1",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Hệ số lây nhiễm cơ bản (\\(R_0\\))",
-    "text": "Hệ số lây nhiễm cơ bản (\\(R_0\\))\n\\(R_0\\) giúp xác định khả năng lây lan của bệnh trong cộng đồng. Ví dụ về 1 bệnh nhiễm trùng không tạo miễn dịch suốt đời\n\nKhi \\(R_0\\) < 1 bệnh không lây lan\nKhi \\(R_0\\) gần bằng 1, số ca tăng dần\nKhi \\(R_0\\) lớn, bệnh lây lan và trở thành bệnh lưu hành"
-  },
-  {
-    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0-2",
-    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0-2",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Hệ số lây nhiễm cơ bản (\\(R_0\\))",
-    "text": "Hệ số lây nhiễm cơ bản (\\(R_0\\))\n\\(R_0\\) giúp xác định tốc độ lây truyền của bệnh trong cộng đồng, thông qua ước tính tốc độ tăng trưởng của dịch. \\(R_0\\) càng cao thì dịch có tốc độ tăng trưởng càng nhanh."
-  },
-  {
-    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0-3",
-    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-cơ-bản-r_0-3",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Hệ số lây nhiễm cơ bản (\\(R_0\\))",
-    "text": "Hệ số lây nhiễm cơ bản (\\(R_0\\))\n\\(R_0\\) giúp ước tính được quy mô vụ dịch khi kết thúc (\\(F\\))\n\\[\nF = 1 - exp\\{-R_0 \\times F\\}\n\\]\n\\(R_0\\) giúp ước tính được % số ca bệnh tại đỉnh dịch (\\(H\\))\n\\[H = 1 - \\frac{1}{R_0}\\]\nNgưỡng cân bằng của vụ dịch ~ mức độ can thiệp cần thiết để kiểm soát vụ dịch."
-  },
-  {
-    "objectID": "Slide_Intro.html#hệ-số-lây-nhiễm-hiệu-quả-r_t",
-    "href": "Slide_Intro.html#hệ-số-lây-nhiễm-hiệu-quả-r_t",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Hệ số lây nhiễm hiệu quả (\\(R_t\\))",
-    "text": "Hệ số lây nhiễm hiệu quả (\\(R_t\\))\nSố ca nhiễm trung bình từ một ca nhiễm trong quá trình diễn tiến của vụ dịch.\nCan thiệp có thể làm thay đổi \\(R_t\\), do đó chỉ số này được dùng để theo dõi và đánh giá hiệu quả của can thiệp."
-  },
-  {
-    "objectID": "Slide_Intro.html#cách-ước-lượng-hệ-số-lây-nhiễm",
-    "href": "Slide_Intro.html#cách-ước-lượng-hệ-số-lây-nhiễm",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Cách ước lượng hệ số lây nhiễm",
-    "text": "Cách ước lượng hệ số lây nhiễm\nCần lưu ý rằng, hệ số lây nhiễm không phải là một hằng số sinh học cơ bản!\nVề lý thuyết, hệ số lây nhiễm có thể được tính bằng công thức:\n\\[\nR = D \\times O \\times T \\times S\n\\]\nTrong đó:\n\\(D\\) (Duration) là độ dài của thời kỳ lây nhiễm.\n\\(O\\) (Opportunity) là cơ hội lây nhiễm, thể hiện bằng số lượng tiếp xúc trong một đơn vị thời gian.\n\\(T\\) (Transmission probability) là xác suất lây nhiễm thành công trong một lần tiếp xúc.\n\\(S\\) (Duration) là kích thước của dân số cảm nhiễm, thể hiện bằng % dân số có thể mắc bệnh."
-  },
-  {
-    "objectID": "Slide_Intro.html#cách-ước-lượng-hệ-số-lây-nhiễm-1",
-    "href": "Slide_Intro.html#cách-ước-lượng-hệ-số-lây-nhiễm-1",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Cách ước lượng hệ số lây nhiễm",
-    "text": "Cách ước lượng hệ số lây nhiễm\nCần sử dụng nhiều loại dữ liệu khác nhau:\n\nDữ liệu về sự lây truyền bệnh (transmission): thường không quan sát được, thường dựa vào nghiên cứu đoàn hệ trong hộ gia đình.\nDữ liệu về kiểu tiếp xúc (contact patterns): thường khó xác định được loại hình tiếp xúc liên quan, dễ dàng nhất là đối với bệnh lây truyền qua quan hệ tình dục, thường thu thập dựa vào điều tra/dữ liệu di chuyển/dữ liệu thu thập qua app điện thoại.\nDữ liệu về lịch sử tự nhiên của bệnh.\nDữ liệu về can thiệp: từ nghiên cứu can thiệp hoặc quan sát."
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-toán-học-bệnh-truyền-nhiễm-1",
-    "href": "Slide_Intro.html#mô-hình-toán-học-bệnh-truyền-nhiễm-1",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình toán học bệnh truyền nhiễm",
-    "text": "Mô hình toán học bệnh truyền nhiễm\nMô hình là sự đơn giản hoá một hệ thống phức tạp\n\nTất cả mọi người đều dùng mô hình 1 cách vô thức.\n\n\nMô hình toán học cho phép thực hiện được các phân tích chính xác, chặt chẽ và dự báo định lượng."
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-toán-học-bệnh-truyền-nhiễm-2",
-    "href": "Slide_Intro.html#mô-hình-toán-học-bệnh-truyền-nhiễm-2",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình toán học bệnh truyền nhiễm",
-    "text": "Mô hình toán học bệnh truyền nhiễm\nĐối với dịch tễ học bệnh truyền nhiễm, mô hình toán học có thể dùng cho 2 nhóm mục tiêu chính:\n\nHiểu biết thêm về vai trò và mối quan hệ của các yếu tố khác nhau ảnh hưởng đến sự xuất hiện và diễn tiến của dịch bệnh.\nDự đoán diễn tiến của dịch bệnh."
-  },
-  {
-    "objectID": "Slide_Intro.html#các-bước-xây-dựng-mô-hình",
-    "href": "Slide_Intro.html#các-bước-xây-dựng-mô-hình",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Các bước xây dựng mô hình",
-    "text": "Các bước xây dựng mô hình\n\nThiết kế mô hình\nƯớc lượng tham số\nChạy mô hình\nDiễn giải kết quả"
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-khoang",
-    "href": "Slide_Intro.html#mô-hình-khoang",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình khoang",
-    "text": "Mô hình khoang\n\nChia dân số thành nhiều khoang (phân nhóm)\n\n\nmỗi khoang có:\n\n1 biến trạng thái, thể hiện số người đang ở trong khoang này, và\n1 phương trình vi phân, thể hiện tần suất thay đổi của biến trạng thái"
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-sir",
-    "href": "Slide_Intro.html#mô-hình-sir",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình SIR",
-    "text": "Mô hình SIR"
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-sir-1",
-    "href": "Slide_Intro.html#mô-hình-sir-1",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình SIR",
-    "text": "Mô hình SIR"
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-sir-2",
-    "href": "Slide_Intro.html#mô-hình-sir-2",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình SIR",
-    "text": "Mô hình SIR"
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-sir-3",
-    "href": "Slide_Intro.html#mô-hình-sir-3",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình SIR",
-    "text": "Mô hình SIR"
-  },
-  {
-    "objectID": "Slide_Intro.html#kết-luận",
-    "href": "Slide_Intro.html#kết-luận",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Kết luận",
-    "text": "Kết luận\nDịch tễ học bệnh truyền nhiễm\n\nKhả năng lây nhiễm của bệnh\n\n\nHệ số lây nhiễm\n\n\nMô hình toán học bệnh truyền nhiễm\n\nMô hình khoang\nThiết kế, ước tính tham số (giả định)"
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-sir-4",
-    "href": "Slide_Intro.html#mô-hình-sir-4",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình SIR",
-    "text": "Mô hình SIR"
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-sir-5",
-    "href": "Slide_Intro.html#mô-hình-sir-5",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình SIR",
-    "text": "Mô hình SIR"
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-sir-6",
-    "href": "Slide_Intro.html#mô-hình-sir-6",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình SIR",
-    "text": "Mô hình SIR"
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-sir-7",
-    "href": "Slide_Intro.html#mô-hình-sir-7",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình SIR",
-    "text": "Mô hình SIR"
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-sir-8",
-    "href": "Slide_Intro.html#mô-hình-sir-8",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình SIR",
-    "text": "Mô hình SIR"
-  },
-  {
-    "objectID": "Slide_Intro.html#mô-hình-sir-9",
-    "href": "Slide_Intro.html#mô-hình-sir-9",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Mô hình SIR",
-    "text": "Mô hình SIR"
-  },
-  {
-    "objectID": "Slide_Intro.html#kết-luận-1",
-    "href": "Slide_Intro.html#kết-luận-1",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Kết luận",
-    "text": "Kết luận\nDịch tễ học bệnh truyền nhiễm\n\nKhả năng lây nhiễm của bệnh\n\n\nHệ số lây nhiễm\n\n\nMô hình toán học bệnh truyền nhiễm\n\nMô hình khoang\nThiết kế, ước tính tham số (giả định)"
-  },
-  {
-    "objectID": "Slide_Intro.html#nội-dung-khoá-học",
-    "href": "Slide_Intro.html#nội-dung-khoá-học",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Nội dung khoá học",
-    "text": "Nội dung khoá học\nhttps://lampk.github.io/IDMIntro"
-  },
-  {
-    "objectID": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate",
-    "href": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate)",
-    "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate)\nThể hiện số ca nhiễm tăng lên trong một đơn vị thời gian.\nPhụ thuộc vào hai thông số:\n\nhệ số lây nhiễm (reproductive number)\nkhoảng thời gian giữa hai thế hệ lây nhiễm (generation time)."
-  },
-  {
-    "objectID": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-1",
-    "href": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-1",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate)",
-    "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate)\n\\(r\\) có thể được ước tính theo công thức\n\\[\nr = \\dfrac{R-1}{Tg}\n\\]\nVới \\(R\\) là hệ số lây nhiễm và \\(T_g\\) là khoảng thời gian trung bình giữa hai thế hệ lây nhiễm."
-  },
-  {
-    "objectID": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-2",
-    "href": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-2",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate)",
-    "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate)\nỞ giai đoạn đầu dịch, số ca mới mắc sẽ tăng theo cấp số nhân và tỉ lệ theo:\n\\[exp[\\frac{(R_0 - 1)}{T_g}t]\\]\nVới \\(R_0\\) là hệ số lây nhiễm cơ bản."
-  },
-  {
-    "objectID": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-3",
-    "href": "Slide_Intro.html#tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-3",
-    "title": "Giới thiệu về Mô hình toán học trong bệnh truyền nhiễm",
-    "section": "Tốc độ tăng trưởng của dịch (epidemic growth rate)",
-    "text": "Tốc độ tăng trưởng của dịch (epidemic growth rate)"
   }
 ]

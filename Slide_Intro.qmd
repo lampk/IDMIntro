@@ -48,6 +48,19 @@ library(gtExtras)
 
 ![](figures/epidemic_phases.png)
 
+## Những câu hỏi cần trả lời
+
+. . .
+
+* Liệu vụ dịch có bùng phát hay không?
+
+* Vụ dịch sẽ có tác động như thế nào đến y tế công cộng? (mức độ nghiêm trọng của vụ dịch)
+
+* Liệu có thể kiểm soát được vụ dịch hay không?
+
+* Biện pháp nào là phù hợp để kiểm soát vụ dịch?
+
+* Liệu biện pháp can thiệp đang được sử dụng có hiệu quả không và chúng ta có thể cải thiện biện pháp này như thế nào?
 
 ## Khả năng lây truyền (transmissibility) của dịch
 
@@ -62,6 +75,8 @@ Số ca nhiễm trung bình từ một ca nhiễm điển hình ban đầu trong
 ## Tốc độ tăng trưởng của dịch (epidemic growth rate)
 
 Thể hiện số ca nhiễm tăng lên trong một đơn vị thời gian.
+
+. . .
 
 Phụ thuộc vào hai thông số: 
 
@@ -151,6 +166,8 @@ Can thiệp có thể làm thay đổi $R_t$, do đó chỉ số này được d
 
 ## Cách ước lượng hệ số lây nhiễm 
 
+. . .
+
 Cần lưu ý rằng, hệ số lây nhiễm không phải là một hằng số sinh học cơ bản!
 
 Về lý thuyết, hệ số lây nhiễm có thể được tính bằng công thức:
@@ -163,11 +180,11 @@ Trong đó:
 
 $D$ (Duration) là độ dài của thời kỳ lây nhiễm.
 
-$O$ (Opportunity) là cơ hội lây nhiễm, thể hiện bằng số lượng tiếp xúc trong một đơn vị thời gian.
+$O$ (Opportunity) là cơ hội lây nhiễm, số lượng tiếp xúc trong một đơn vị thời gian.
 
 $T$ (Transmission probability) là xác suất lây nhiễm thành công trong một lần tiếp xúc.
 
-$S$ (Duration) là kích thước của dân số cảm nhiễm, thể hiện bằng % dân số có thể mắc bệnh.
+$S$ (Duration) là kích thước của dân số cảm nhiễm, % dân số có thể mắc bệnh.
 
 ## Cách ước lượng hệ số lây nhiễm 
 
@@ -221,7 +238,7 @@ Chia dân số thành nhiều khoang (phân nhóm)
 
 . . .
 
-mỗi khoang có:
+Mỗi khoang có:
 
 * 1 biến trạng thái, thể hiện số người đang ở trong khoang này, và
 

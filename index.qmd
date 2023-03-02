@@ -16,7 +16,7 @@ bibliography: references.bib
 csl: the-new-england-journal-of-medicine.csl
 ---
 
-### Giới thiệu chung
+### Giới thiệu chung {-}
 
 Để đánh giá và kiểm soát dịch bệnh truyền nhiễm một cách hiệu quả, việc ước tính được mức độ lây nhiễm của bệnh trong cộng đồng, thông qua chỉ số hệ số lây nhiễm, có vai trò rất quan trọng. Ngoài việc giúp đánh giá được diễn tiến hiện tại của dịch, hệ số lây nhiễm còn có thể được dùng để so sánh và đánh giá hiệu quả của các biện pháp can thiệp trong các tình huống khác nhau, từ đó đóng góp nguồn thông tin quan trọng để cơ quan chức năng lựa chọn và đưa ra giải pháp phòng ngừa và kiểm soát dịch bệnh tối ưu. Để ước tính được hệ số lây nhiễm và ứng dụng hiệu quả chỉ số dịch tễ này, chúng ta cần đến các mô hình toán học về dịch tễ học bệnh truyền nhiễm. Trong thời gian gần đây, đặc biệt là trong đại dịch COVID-19, các mô hình này đã được ứng dụng rộng rãi và là công cụ đóng góp đắc lực vào nỗ lực kiểm soát dịch bệnh truyền nhiễm tại nhiều quốc gia trên thế giới.
 
@@ -26,7 +26,7 @@ Từ đề xuất của lãnh đạo HCDC nhằm từng bước giới thiệu v
 
 -   Giới thiệu định nghĩa, cách tính toán và ứng dụng hệ số lây nhiễm trong đánh giá và kiểm soát dịch bệnh truyền nhiễm.
 
-### Chương trình
+### Chương trình  {-}
 
 +-------------+---------------+-------------------------------------------+----------------------------------+
 | Ngày        | Giờ           | Nội dung                                  | Giảng viên                       |
@@ -52,22 +52,17 @@ Từ đề xuất của lãnh đạo HCDC nhằm từng bước giới thiệu v
 |             |               | **Tính toán hệ số lây nhiễm bằng Excel**  |                                  |
 +-------------+---------------+-------------------------------------------+----------------------------------+
 
-## Nội dung
+Nội dung khoá học được tham khảo và dựa theo cấu trúc của khoá học "Introduction to mathematical models of the Epidemiology & Control of Infectious Diseases" tại Singapore, 13-16/10/2022, do GS Azra Ghani và MRC Centre for Global Infectious Disease Analysis (Imperial College London) & Lee Kong Chian School of Medicine (Nanyang Technical University) tổ chức.
 
--   Infectious diseases and mathematical models.
+### Người trình bày {-}
 
--   Introduction to designing infectious disease models.
+* Phùng Khánh Lâm, TS.BS., giảng viên Bộ môn Dịch tễ học, Khoa Y tế công cộng, Đại học Y Dược TPHCM.
+* Ong Phúc Thịnh, BS., nghiên cứu sinh tại Đại học Oxford, thành viên nhóm Mô hình toán tại Đơn vị nghiên cứu lâm sàng Đại học Oxford. 
 
--   The herd effect in infectious disease epidemiology
+### Slide {-}
 
--   Ý nghĩa, ứng dụng và cách tính Ro, Rt. Dự đoán khi nào là đỉnh dịch, dịch sẽ kéo dài bao lâu, số người cảm nhiễm/tử vong. Sử dụng vẽ bằng excel.
+[Lý thuyết 1](https://lampk.github.io/IDMIntro/Slide_Intro.html)
 
-## Vì sao có workshop này?
+Lý thuyết 2:
 
--   Khoá học "Introduction to mathematical models of the Epidemiology & Control of Infectious Diseases"
-
--   Singapore, 13-16/10/2022
-
--   MRC Centre for Global Infectious Disease Analysis (Imperial College London) & Lee Kong Chian School of Medicine (Nanyang Technical University)
-
--   GS Azra Ghani và cộng sự
+[Tóm tắt và một số điểm lưu ý](https://lampk.github.io/IDMIntro/Slide_Conclusion.html)

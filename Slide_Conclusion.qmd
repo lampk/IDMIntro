@@ -1,0 +1,202 @@
+---
+title: "Tóm tắt và một số điểm cần lưu ý"
+subtitle: ""
+author: "Phùng Khánh Lâm, Ong Phúc Thịnh"
+date: "02/03/2023"
+institute: "Khoa YTCC - ĐHYD TPHCM, OUCRU"
+format: 
+  revealjs:
+    theme: [default, css/lampk.scss]
+    slide-number: c/t
+    chalkboard: true
+    self-contained: false
+    preview-links: auto
+    scrollable: true
+    zoom: true
+    menu: false
+title-slide-attributes:
+  data-background-color: "#002147"
+  data-color: "#ffffff"
+  data-link-color: "#ffffff"
+  data-visibility: "uncounted"
+  data-text-align: "left"
+editor: source
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(gt)
+library(gtExtras)
+```
+
+## Nội dung khoá học
+
+* Dịch tễ học bệnh truyền nhiễm
+
+* Hệ số lây nhiễm
+
+* Mô hình toán học bệnh truyền nhiễm
+
+* Tính toán hệ số lây nhiễm
+
+## Dịch tễ học bệnh truyền nhiễm 
+
+Khái niệm
+
+Khả năng lây nhiễm của dịch
+
+* Hệ số lây nhiễm
+* Tốc độ tăng trưởng
+
+## Hệ số lây nhiễm
+
+. . .
+
+$R_0$, $R_t$
+
+. . .
+
+$R_0$ không phải là một hằng số sinh học cơ bản
+
+. . .
+
+$R$ thay đổi theo thời gian (D, O, T, S)
+
+. . .
+
+$R ~ 1$
+
+* $R > 1$: Stochastic fadeout
+* $R < 1$: Metapopulation dynamics
+* Sự đồng nhất của dân số
+
+## Ước tính hệ số lây nhiễm
+
+Nhiều phương pháp ước tính
+
+Phụ thuộc giả định về khoảng thời gian thế hệ
+
+Độ trễ của dữ liệu (báo cáo vs nhiễm bệnh)
+
+Dữ liệu không đầy đủ ở thời điểm hiện tại 
+
+Quan sát không đầy đủ
+
+Cửa sổ đánh giá
+
+## Ước tính hệ số lây nhiễm
+
+R
+
+* EpiEstim
+* EpiNow2
+
+## Mô hình toán học bệnh truyền nhiễm
+
+* Hiểu biết thêm về vai trò và mối quan hệ của các yếu tố.
+
+* Dự đoán diễn tiến của dịch bệnh.
+
+## Dự đoán diễn tiến của dịch bệnh
+
+Nowcast
+
+Forecast
+
+Prediction/Projection/Scenario
+
+## Nowcast-Forecast
+
+::: footer
+Leung K, Wu JT, Leung GM. Nat Commun 2021;12(1):1501.
+:::
+
+![](figures/prediction.png)
+
+## Prediction/Projection/Scenario
+
+::: footer
+Ferguson N, Laydon D, Nedjati Gilani G, et al. (2020) Report 9. http://spiral.imperial.ac.uk/handle/10044/1/77482 (16/03/2020)
+:::
+
+![](figures/prediction2.png)
+
+## Các bước xây dựng mô hình
+
+**1. Thiết kế mô hình**
+
+**2. Ước lượng tham số**
+
+3. Chạy mô hình
+
+4. Diễn giải kết quả
+
+## Khuynh hướng tương lai
+
+Mô hình động học cho các vụ dịch mới nổi
+
+Mô hình theo thời gian thực (real-time modeling)
+
+Động học theo không gian & thời gian (đối với các bệnh lưu hành)
+
+## Adam J Kucharski et al. (2020)
+
+::: footer
+Kucharski AJ, Klepac P, Conlan AJK, et al. (2020) The Lancet Infectious Diseases;20(10):1151–60. 
+:::
+
+![](figures/kucharski_01.png)
+
+## Adam J Kucharski et al. (2020)
+
+::: footer
+Kucharski AJ, Klepac P, Conlan AJK, et al. (2020) The Lancet Infectious Diseases;20(10):1151–60. 
+:::
+
+![](figures/kucharski_02.png)
+
+## Adam J Kucharski et al. (2020)
+
+::: footer
+Kucharski AJ, Klepac P, Conlan AJK, et al. (2020) The Lancet Infectious Diseases;20(10):1151–60. 
+:::
+
+![](figures/kucharski_03.png)
+
+## $R_t$ & Sốt xuất huyết
+
+::: footer
+Pinho STR, Ferreira CP, Esteva L et al. () Phil. Trans. R. Soc. A (2010) 368, 5679–5693
+:::
+
+![](figures/Ong_01.png)
+
+## $R_t$ & Sốt xuất huyết
+
+::: footer
+Ong J, Soh S, Ho SH, et al. (2022) PLOS Computational Biology;18(1):e1009791, Pinho STR, Ferreira CP, Esteva L et al. () Phil. Trans. R. Soc. A (2010) 368, 5679–5693
+:::
+
+![](figures/Ong_02.png)
+
+## $R_t$ & Sốt xuất huyết
+
+::: footer
+Ong J, Soh S, Ho SH, et al. (2022) PLOS Computational Biology;18(1):e1009791
+:::
+
+![](figures/Ong_03.png)
+
+## $R_t$ & Sốt xuất huyết
+
+::: footer
+Ong J, Soh S, Ho SH, et al. (2022) PLOS Computational Biology;18(1):e1009791
+:::
+
+![](figures/Ong_04.png)
+
+## CÁM ƠN ANH CHỊ ĐÃ THAM GIA BUỔI HỌC !
+
+Phản hồi về khoá học
+
+![](figures/QRcode.png)

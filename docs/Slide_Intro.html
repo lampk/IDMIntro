@@ -355,6 +355,18 @@
 <h2>Các giai đoạn của một vụ dịch</h2>
 
 <img data-src="figures/epidemic_phases.png" class="r-stretch"></section>
+<section id="những-câu-hỏi-cần-trả-lời" class="slide level2">
+<h2>Những câu hỏi cần trả lời</h2>
+<div class="fragment">
+<ul>
+<li><p>Liệu vụ dịch có bùng phát hay không?</p></li>
+<li><p>Vụ dịch sẽ có tác động như thế nào đến y tế công cộng? (mức độ nghiêm trọng của vụ dịch)</p></li>
+<li><p>Liệu có thể kiểm soát được vụ dịch hay không?</p></li>
+<li><p>Biện pháp nào là phù hợp để kiểm soát vụ dịch?</p></li>
+<li><p>Liệu biện pháp can thiệp đang được sử dụng có hiệu quả không và chúng ta có thể cải thiện biện pháp này như thế nào?</p></li>
+</ul>
+</div>
+</section>
 <section id="khả-năng-lây-truyền-transmissibility-của-dịch" class="slide level2">
 <h2>Khả năng lây truyền (transmissibility) của dịch</h2>
 <ul>
@@ -369,11 +381,13 @@
 <section id="tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate" class="slide level2">
 <h2>Tốc độ tăng trưởng của dịch (epidemic growth rate)</h2>
 <p>Thể hiện số ca nhiễm tăng lên trong một đơn vị thời gian.</p>
+<div class="fragment">
 <p>Phụ thuộc vào hai thông số:</p>
 <ul>
 <li><p>hệ số lây nhiễm (reproductive number)</p></li>
 <li><p>khoảng thời gian giữa hai thế hệ lây nhiễm (generation time).</p></li>
 </ul>
+</div>
 </section>
 <section id="tốc-độ-tăng-trưởng-của-dịch-epidemic-growth-rate-1" class="slide level2">
 <h2>Tốc độ tăng trưởng của dịch (epidemic growth rate)</h2>
@@ -449,6 +463,7 @@ F = 1 - exp\{-R_0 \times F\}
 </section>
 <section id="cách-ước-lượng-hệ-số-lây-nhiễm" class="slide level2">
 <h2>Cách ước lượng hệ số lây nhiễm</h2>
+<div class="fragment">
 <p>Cần lưu ý rằng, hệ số lây nhiễm không phải là một hằng số sinh học cơ bản!</p>
 <p>Về lý thuyết, hệ số lây nhiễm có thể được tính bằng công thức:</p>
 <p><span class="math display">\[
@@ -456,9 +471,10 @@ R = D \times O \times T \times S
 \]</span></p>
 <p>Trong đó:</p>
 <p><span class="math inline">\(D\)</span> (Duration) là độ dài của thời kỳ lây nhiễm.</p>
-<p><span class="math inline">\(O\)</span> (Opportunity) là cơ hội lây nhiễm, thể hiện bằng số lượng tiếp xúc trong một đơn vị thời gian.</p>
+<p><span class="math inline">\(O\)</span> (Opportunity) là cơ hội lây nhiễm, số lượng tiếp xúc trong một đơn vị thời gian.</p>
 <p><span class="math inline">\(T\)</span> (Transmission probability) là xác suất lây nhiễm thành công trong một lần tiếp xúc.</p>
-<p><span class="math inline">\(S\)</span> (Duration) là kích thước của dân số cảm nhiễm, thể hiện bằng % dân số có thể mắc bệnh.</p>
+<p><span class="math inline">\(S\)</span> (Duration) là kích thước của dân số cảm nhiễm, % dân số có thể mắc bệnh.</p>
+</div>
 </section>
 <section id="cách-ước-lượng-hệ-số-lây-nhiễm-1" class="slide level2">
 <h2>Cách ước lượng hệ số lây nhiễm</h2>
@@ -508,7 +524,7 @@ R = D \times O \times T \times S
 <p>Chia dân số thành nhiều khoang (phân nhóm)</p>
 </div>
 <div class="fragment">
-<p>mỗi khoang có:</p>
+<p>Mỗi khoang có:</p>
 <ul>
 <li><p>1 biến trạng thái, thể hiện số người đang ở trong khoang này, và</p></li>
 <li><p>1 phương trình vi phân, thể hiện tần suất thay đổi của biến trạng thái</p></li>
