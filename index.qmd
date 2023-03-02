@@ -63,6 +63,6 @@ Nội dung khoá học được tham khảo và dựa theo cấu trúc của kho
 
 [Lý thuyết 1](https://lampk.github.io/IDMIntro/Slide_Intro.html)
 
-Lý thuyết 2:
+[Lý thuyết 2](https://lampk.github.io/IDMIntro/Slide_Day2.html)
 
 [Tóm tắt và một số điểm lưu ý](https://lampk.github.io/IDMIntro/Slide_Conclusion.html)

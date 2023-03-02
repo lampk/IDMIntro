@@ -38,7 +38,7 @@ knitr::opts_chunk$set(
 
 ## Ước lượng hệ số lây nhiễm bằng phương pháp tăng trưởng theo cấp số nhân (hay tăng trưởng lũy thừa, exponential growth)
 
-Chúng ta sẽ tìm hiểu cách ước lượng hệ số lây nhiễm cơ bản ($R_{0}$) bằng Excel, sử dụng dữ liệu chuỗi thời gian của các ca SARS-CoV-2 được báo cáo tại London vào tháng 2 và tháng 3 năm 2020. Dữ liệu chuỗi thời gian là tập tin 'Estimating_R0_part1.xls'.
+Chúng ta sẽ tìm hiểu cách ước lượng hệ số lây nhiễm cơ bản ($R_{0}$) bằng Excel, sử dụng dữ liệu chuỗi thời gian của các ca SARS-CoV-2 được báo cáo tại London vào tháng 2 và tháng 3 năm 2020. Dữ liệu chuỗi thời gian là tập tin [Estimating_R0_part1.xlsx](Estimating_R0_part_1.xlsx).
 
 ### Ước lượng tốc độ phát triển dịch bệnh của một ổ dịch
 
@@ -70,15 +70,23 @@ Thời gian số ca tăng gấp đôi = \$\frac{ln(2)}{r} = \$ (ngày)
 
 Bấm vào PivotTable trong tab Insert. Một cửa sổ sẽ xuất hiện yêu cầu bạn chọn dữ liệu mà muốn phân tích. Chọn cột B (ngày_bắt_đầu). Chúng ta sẽ đặt kết quả tính được ngay trong sheet này (Existing Worksheet). Bấm OK.
 
+![](figures/pivotTable.png)
+
 Bạn sẽ thấy một Bảng xuất hiện ở bên phải màn hình. Chúng ta cần chọn tính số lần mỗi ngày xuất hiện trong danh sách dòng. Nhấp vào "onset_date" ở bảng trên cùng. (Bạn có thể thấy biến "Months" xuất hiện, hãy bỏ qua nó)
 
 Sau đó, kéo "ngày_bắt đầu" vào phần Values ở dưới cùng bên phải của bảng
 
+![](figures/pivotFields.png)
+
 Tỷ lệ mắc hàng ngày sẽ xuất hiện trong bảng tính
+
+![](figures/pivotDailyIncidence.png)
 
 Sao chép số mới mắc hàng ngày vào tab Task 2 và ước tính tốc độ tăng theo cấp số nhân bằng cách sử dụng cùng một cửa sổ thời gian với dữ liệu hàng tuần. Nếu muốn thử dùng một phương pháp khác, bạn có thể ước tính tốc độ tăng trưởng bằng cách sử dụng hồi quy tuyến tính thay vì sử dụng công thức được đưa ra trong biểu thức 1.
 
 Trong Excel, bạn có thể chạy hồi quy tuyến tính bằng hàm LINEST(). LINEST() xuất ra độ dốc (slope) và giao điểm với trục tung (intercept), do đó nó cần hai ô để xuất kết quả. Chọn hai ô (ví dụ: H3 và I3) và chèn công thức hồi quy tuyến tính, chỉ định giá trị y làm đối số (argument) thứ nhất và giá trị x làm đối số thứ hai.
+
+![](figures/linest.png)
 
 Kiểm tra hiệu suất của mô hình trên dữ liệu chuỗi thời gian mở rộng.
 
@@ -100,17 +108,19 @@ với $g(t)$ là phân phối thời gian thế hệ (xác suất thời gian th
 
 Có thể viết phương trình $R_0$ cho 3 mô hình đơn giản sau:
 
-Thế hệ rời rạc (discrete generation): $R = exp(rT_g)$
+Thế hệ rời rạc (discrete generation): $R_0 = exp(rT_g)$
 
-SIR: $R = 1 + rD$
+SIR: $R_0 = 1 + rD$
 
-SEIR: $R = (1 + rD)(1 + rL)$
+SEIR: $R_0 = (1 + rD)(1 + rL)$
 
 với $D$ là thời gian lây nhiễm trung bình (từ lúc có khả năng lây cho đến khi hồi phục) và $L$ là thời gian tiềm ẩn trung bình (từ lúc bị nhiễm đến khi có khả năng lây)
 
 ### Thời gian thế hệ của SARS-CoV-2 và cúm mùa
 
 Biểu đồ sau thể hiện phân bố thời gian thế hệ của SARS-CoV-2 (nguồn: Cereda và cộng sự, arxiv, 2020) và cúm mùa (nguồn: Ferguson và cộng sự, Nature, 2005). Thời gian thế hệ trung bình của SARS-CoV-2 là 6,6 ngày và của bệnh cúm là 2,6 ngày.
+
+![](figures/sars_flu.png)
 
 Bạn có nghĩ rằng sự khác biệt giữa sự phân bố của SARS-CoV-2 và bệnh cúm là vấn đề cần kiểm soát không? Tại sao?
 

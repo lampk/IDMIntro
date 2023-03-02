@@ -1,0 +1,84 @@
+---
+title: "Bài thực hành 1"
+format:
+  pdf:
+    number-sections: true
+    colorlinks: true
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+library(shiny)
+library(tidyverse)
+library(webexercises)
+library(gt)
+library(glue)
+
+knitr::opts_chunk$set(
+  echo = FALSE,
+  results = "hold",
+  out.width = '100%',
+  fig.width = 8,
+  fig.height = 5,
+  fig.align = 'center',
+  fig.cap = TRUE
+)
+```
+
+Trong bài tập này chúng ta sẽ dùng sơ đồ dòng chảy để mô tả diễn tiến tự nhiên của một bệnh truyền nhiễm (trong trường hợp này là bệnh lao) và viết các phương trình vi phân.
+
+Để đơn giản, chúng ta sẽ không xem xét mô hình *điều trị* mà chỉ xem xét diễn tiến tự nhiên của bệnh khi không điều trị. Chúng ta sẽ bắt đầu bằng cách viết một mô hình đơn giản, sau đó tìm cách làm cho mô hình thực tế hơn (và phức tạp hơn!).
+
+Nên sử dụng bút chì khi làm bài tập để dễ dàng thay đổi khi cần.
+
+## Mô hình 1
+
+Các đặc điểm quan trọng của bệnh lao phổi mà chúng ta muốn thể hiện trong mô hình này là:
+
+1.  Khi một người bị nhiễm bệnh, ban đầu họ sẽ trải qua giai đoạn nhiễm trùng **tiềm ẩn** (nghĩa là họ không có triệu chứng) trước khi tiến triển thành **bệnh**.
+
+2.  Những người mắc bệnh có thể 'hồi phục' (tức là hết bệnh) nhưng vi khuẩn vẫn tồn tại trong cơ thể, một thời gian sau họ có thể **tái phát** thành một đợt bệnh khác.
+
+3.  Sự nhiễm trùng là **suốt đời**. (Một số ý kiến cho rằng có một số trường hợp hoàn toàn 'khỏi' nhiễm trùng mà không cần điều trị, nhưng trong bài tập này chúng tôi giả định rằng điều này không xảy ra.)
+
+4.  Chỉ những người bị bệnh (có triệu chứng) mới có khả năng **lây nhiễm**.
+
+**Bài tập 1.** Vẽ sơ đồ dòng chảy để thể hiện các đặc điểm này của bệnh lao, cố gắng sử dụng càng ít khoang càng tốt. Viết chú thích bằng từ ngữ lên các mũi tên.
+
+**HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
+
+**Bài tập 2.** Viết các phương trình vi phân mô tả sự vận động của mô hình này (mô tả bằng chữ)
+
+**HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
+
+**Bài tập 3.** Chuyển chú thích bằng từ ngữ trên các mũi tên thành các biểu thức toán học bằng cách kí hiệu các tham số bằng chữ cái Hy Lạp và mô tả mối liên hệ giữa chúng bằng các phép tính
+
+**Bài tập 4.** Viết lại phương trình vi phân bằng biểu thức toán học
+
+**HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
+
+## Mô hình 2
+
+Một đặc điểm quan trọng của bệnh lao là sự thay đổi tốc độ tiến triển từ nhiễm trùng tiềm ẩn sang bệnh: một số người thuộc loại 'tiến triển nhanh' (phát bệnh chỉ trong vòng vài năm từ lúc nhiễm) hoặc 'tiến triển chậm' (mất nhiều thời gian hơn để phát bệnh và thậm chí có thể chết mà chưa từng biểu hiện bệnh).
+
+Để mô tả sự đa dạng trong kiểu hình bệnh này trong mô hình, thay vì chỉ có 1 'khoang tàu' chứa những người nhiễm trùng tiềm ẩn duy nhất, chúng ta có thể chia thành 2 khoang 'song song': một khoang là người tiến triển nhanh ($L_{F}$) và một khoang là người tiến triển chậm ($L_{S}$). Chúng ta có thể sửa **Mô hình 1** thành **Mô hình 2** bằng cách thêm một 'ngã ba' ở mũi tên từ khoang *Cảm nhiễm* đi tới các khoang *Nhiễm trùng tiềm ẩn*. Cả hai khoang *Nhiễm trùng tiềm ẩn* đều đi tới khoang *Bệnh*.
+
+**Bài tập 1.** Vẽ sơ đồ dòng chảy để thể hiện Mô hình 2, giả định rằng tất cả những người 'khỏi bệnh' đều quay lại khoang *Tiềm ẩn tiến triển chậm*
+
+**Bài tập 2.** Mô hình 2 cần thêm 1 số tham số, hãy ghi ra và mô tả các tham số này
+
+**HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
+
+**Bài tập 3.** Viết phương trình vi phân bằng biểu thức toán học cho Mô hình 2
+
+**HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
+
+## Mô hình 3
+
+Một đặc điểm quan trọng khác của bệnh lao là **tái nhiễm ngoại sinh**, nghĩa là người đang nhiễm lao tiềm ẩn lại tiếp tục bị lây nhiễm vi khuẩn lao 'bổ sung' từ bệnh nhân lao khác, khiến họ tiến triển bệnh nhanh hơn. Hiện tượng này thường được mô hình hóa bằng cách di chuyển những người từ khoang Tiềm ẩn tiến triển chậm sang khoang Tiềm ẩn tiến triển nhanh. Mô hình này giả định rằng thời gian tiềm ẩn của những người tiến triển nhanh rất ngắn, đến mức họ không có khả năng bị tái nhiễm ngoại sinh trước khi tiến triển thành bệnh.
+
+**Bài tập 1.** Tạo ra Mô hình 3 bằng cách thêm quá trình tái nhiễm ngoại sinh vào sơ đồ dòng chảy của Mô hình 2.
+
+**Bài tập 2.** Mô hình 3 cần thêm 1 số tham số, hãy ghi ra và mô tả các tham số này.
+
+**Bài tập 3.** Viết phương trình vi phân bằng biểu thức toán học cho Mô hình 3.

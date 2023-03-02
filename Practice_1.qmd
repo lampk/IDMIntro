@@ -55,7 +55,7 @@ Các đặc điểm quan trọng của bệnh lao phổi mà chúng ta muốn th
 4.  Chỉ những người bị bệnh (có triệu chứng) mới có khả năng **lây nhiễm**.
 
 ::: panel-tabset
-**Bài tập 1.** Vẽ sơ đồ dòng chảy để thể hiện các đặc điểm này của bệnh lao, cố gắng sử dụng càng ít khoang tàu càng tốt. Viết chú thích bằng từ ngữ lên các mũi tên.
+**Bài tập 1.** Vẽ sơ đồ dòng chảy để thể hiện các đặc điểm này của bệnh lao, cố gắng sử dụng càng ít khoang càng tốt. Viết chú thích bằng từ ngữ lên các mũi tên.
 
 **HÃY BÁO CHO GIẢNG VIÊN BIẾT KHI NHÓM BẠN LÀM XONG PHẦN NÀY**
 
@@ -193,9 +193,8 @@ $$\frac{dL_{S}}{dt} = (1 - f) \beta \frac{D}{N}S - \mu L_{S} - \gamma_{F}L_{S} +
 $$\frac{dD}{dt} = \gamma_{F}L_{F} + \gamma_{S}L_{S} - (\mu + \alpha)D - \sigma D$$ (giống Mô hình 2)
 :::
 
-
 <!-- Print button -->
 
 <br/>
-<p><input type="button" value="In trang này" onClick="window.print()"></p>
 
+<p><input type="button" value="In trang này" onClick="window.print()"></p>
